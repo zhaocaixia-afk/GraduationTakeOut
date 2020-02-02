@@ -7,14 +7,11 @@ function resolve(dir){
 module.exports = {
     // 浏览器配置
     devServer:{
-        port:8080,
-        host:'localhost',
         open:true
     },
     // 文件别名
     chainWebpack:(config) => {
         config.resolve.alias
-        .set('@',resolve('./src'))
         .set('assets',resolve('./src/assets'))
         .set('components',resolve('./src/components'))
         .set('router',resolve('./src/router'))
