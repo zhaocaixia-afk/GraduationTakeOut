@@ -1,21 +1,17 @@
 <template>
-    <div class="tab_bar">
+    <div class="tab-bar">
         <slot></slot>
     </div>
 </template>
 
 <script>
-// import TabBarItem from './TabBarItem'
     export default {
-        name: 'TabBar',
-        components: {
-            // TabBarItem
-        }
+        name: 'TabBar'
     }
 </script>
 
 <style lang="scss" scoped>
-.tab_bar{
+.tab-bar{
     display: flex;
     position: fixed;
     bottom: 0;
