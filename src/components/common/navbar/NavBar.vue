@@ -31,14 +31,15 @@
     line-height: 44px;
     text-align: center;
     .left{
-        width: 60px;
-        font-size: 24px;
+        width: 40px;
+        font-size: 20px;
     }
     .right{
         width: 80px;
     }
     .center{
         flex: 1;
+        font-size: 18px;
     }
 }
 </style>

@@ -1,12 +1,15 @@
+import axios from 'axios'
+
+const BASE_URL = '/api'
+
 export function request(config){
     // 1.创建axios实例
     const instance = axios.create({
-        baseURL: 'http://localhost:4000/api/',
+        baseURL: BASE_URL,
         timeout: 5000
     });
     // 3.请求拦截
     instance.interceptors.request.use(config => {
-    	//必要步骤
         return config
     },err => {
         console.log(err)
