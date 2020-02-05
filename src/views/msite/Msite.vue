@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="msite">
         <nav-bar bgColor="red">
             <div slot="left">
                 <i class="el-icon-search"></i>
@@ -9,12 +9,119 @@
                 登录|注册
             </div>
         </nav-bar>
-        Msite
+        <scroll ref="scroll" class="scroll">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </scroll>
     </div>
 </template>
 
 <script>
 import NavBar from 'components/common/navbar/NavBar'
+import Scroll from 'components/common/scroll/Scroll'
 
 import { getURL } from 'network/msite'
 
@@ -42,11 +149,27 @@ import { getURL } from 'network/msite'
             }
         },
         components: {
-            NavBar
+            NavBar,
+            Scroll
         }
     }
 </script>
 
 <style lang="scss" scoped>
+.msite{
+    height: 100vh;
+    // position: relative;
+    .scroll {
+    overflow: hidden;
+    // 方法一:
+    height: calc(100% - 94px);
 
+    // 方法二:
+    // position: absolute;
+    // top: 44px;
+    // bottom: 49px;
+    // left: 0;
+    // right: 0;
+  }
+}
 </style>
