@@ -12,3 +12,10 @@ export function getFoodCategorys(){
         url: '/index_category'
     })
 }
+// 3.获取商铺列表
+export function getShops(data){
+    return request({
+        url: '/shops',
+        data: data
+    })
+}

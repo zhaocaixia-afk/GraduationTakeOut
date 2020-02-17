@@ -3,10 +3,12 @@ import axios from 'axios'
 const BASE_URL = '/api'
 
 export function request(config){
+    const data = config.data ? config.data : ''
     // 1.创建axios实例
     const instance = axios.create({
         baseURL: BASE_URL,
-        timeout: 5000
+        timeout: 5000,
+        data: data
     });
     // 3.请求拦截
     instance.interceptors.request.use(config => {

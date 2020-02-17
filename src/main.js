@@ -13,6 +13,10 @@ FastClick.attach(document.body)
 import VueAwesomeSwiper from 'vue-awesome-swiper'
 import 'swiper/dist/css/swiper.css'
 Vue.use(VueAwesomeSwiper)
+// 4.iconfont
+import './assets/icon/iconfont.css'
+// 5.事件总线
+Vue.prototype.$bus = new Vue()
 
 Vue.config.productionTip = false
 

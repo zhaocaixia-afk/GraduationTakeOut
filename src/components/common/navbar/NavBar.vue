@@ -30,6 +30,7 @@
     height: 44px;
     line-height: 44px;
     text-align: center;
+    color: white;
     .left{
         width: 40px;
         font-size: 20px;

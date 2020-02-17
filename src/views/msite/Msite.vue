@@ -12,15 +12,22 @@
     <scroll ref="scroll" class="scroll">
       <swiper :options="swiperOption">
         <swiper-slide v-for="(cateList, index1) in categorysArr" :key="index1">
-          <a href="javascript:;" v-for="(cate,index2) in cateList" :key="index2">
-            <img
-              :src="`${baseImgUrl}${cate.image_url}`"
-            />
+          <a
+            href="javascript:;"
+            v-for="(cate, index2) in cateList"
+            :key="index2"
+          >
+            <img :src="`${baseImgUrl}${cate.image_url}`" />
             <span>{{ cate.title }}</span>
           </a>
         </swiper-slide>
         <div class="swiper-pagination" slot="pagination"></div>
       </swiper>
+      <div class="recommend">
+        <i class="iconfont icongengduo"></i>
+        <span>附近商家</span>
+      </div>
+      <shops-list :shops-list="shops"></shops-list>
     </scroll>
   </div>
 </template>
@@ -29,8 +36,11 @@
 import NavBar from "components/common/navbar/NavBar";
 import Scroll from "components/common/scroll/Scroll";
 import { swiper, swiperSlide } from "vue-awesome-swiper";
+import ShopsList from "components/content/shops/ShopsList";
 
-import { getURL, getFoodCategorys } from "network/msite";
+import { getURL, getFoodCategorys, getShops } from "network/msite";
+
+import { debounce } from "common/util";
 
 export default {
   name: "Msite",
@@ -48,7 +58,8 @@ export default {
         }
       },
       categorysList: [],
-      baseImgUrl: "https://fuss10.elemecdn.com"
+      baseImgUrl: "https://fuss10.elemecdn.com",
+      shops: []
     };
   },
   computed: {
@@ -73,6 +84,14 @@ export default {
   created() {
     this.getAddress();
     this.getFoodCategorys();
+    this.getShops();
+  },
+  mounted() {
+    // 仿抖动操作
+    const refresh = debounce(this.$refs.scroll.refresh, 50);
+    this.$bus.$on("itemImageLoad", () => {
+      refresh()
+    });
   },
   methods: {
     // 1.根据经纬度获取地理信息
@@ -92,13 +111,25 @@ export default {
         // console.log(this.categorysList)
         // console.log(this.categorysArr);
       }
+    },
+    // 3.商铺列表
+    async getShops() {
+      const result = await getShops({
+        latitude: this.latitude,
+        longitude: this.longitude
+      });
+      console.log(result);
+      if (result.code === 0) {
+        this.shops = result.data;
+      }
     }
   },
   components: {
     NavBar,
     Scroll,
     swiper,
-    swiperSlide
+    swiperSlide,
+    ShopsList
   }
 };
 </script>
@@ -119,7 +150,7 @@ export default {
     // right: 0;
     .swiper-container {
       height: 200px;
-      border-bottom: 8px solid rgb(245,245,245);
+      border-bottom: 8px solid rgb(245, 245, 245);
       .swiper-wrapper {
         .swiper-slide {
           display: flex;
@@ -134,11 +165,18 @@ export default {
             align-items: center;
             font-size: 14px;
             img {
-                width: 50px;
-                height: 50px;
+              width: 50px;
+              height: 50px;
             }
           }
         }
+      }
+    }
+    .recommend {
+      color: rgb(136, 136, 136);
+      padding-top: 5px;
+      i {
+        margin: 0 5px;
       }
     }
   }
