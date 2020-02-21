@@ -118,7 +118,6 @@ export default {
         latitude: this.latitude,
         longitude: this.longitude
       });
-      console.log(result);
       if (result.code === 0) {
         this.shops = result.data;
       }
@@ -134,7 +133,7 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .msite {
   height: 100vh;
   // position: relative;
@@ -150,7 +149,7 @@ export default {
     // right: 0;
     .swiper-container {
       height: 200px;
-      border-bottom: 8px solid rgb(245, 245, 245);
+      border-bottom: 10px solid rgb(245, 245, 245);
       .swiper-wrapper {
         .swiper-slide {
           display: flex;

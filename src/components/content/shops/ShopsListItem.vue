@@ -15,12 +15,12 @@
       </div>
       <div class="second-line">
         <p class="min-free">
-          <span class="minPrice">起送￥20</span>
-          <span class="delivery-free">免配送费</span>
+          <span class="minPrice">起送¥{{shop.float_minimum_order_amount}}</span>
+          <span class="delivery-free">{{shop.float_delivery_fee ? `配送费${shop.float_delivery_fee}` : "免配送费"}}</span>
         </p>
         <p class="time-distance">
-          <span class="time">40分钟</span>
-          <span class="distance">1.0km</span>
+          <span class="time">{{shop.order_lead_time}}分钟</span>
+          <span class="distance">{{shop.distance}}km</span>
         </p>
       </div>
       <div class="three-line">
@@ -108,6 +108,16 @@ export default {
         display: flex;
         justify-content: space-between;
         color: rgb(128,128,128);
+        .min-free{
+          .minPrice{
+            margin-right: 5px;
+          }
+        }
+        .time-distance{
+          .time{
+            margin-right: 5px;
+          }
+        }
       }
       .three-line{
         font-size: 15px;
