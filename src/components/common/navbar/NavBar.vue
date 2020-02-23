@@ -32,7 +32,7 @@
     text-align: center;
     color: white;
     .left{
-        width: 40px;
+        width: 80px;
         font-size: 20px;
     }
     .right{
