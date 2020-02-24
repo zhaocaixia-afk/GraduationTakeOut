@@ -3,7 +3,9 @@
         <nav-bar bgColor="red">
             <div slot="center">我的</div>
         </nav-bar>
-        <profile-header/>
+        <router-link to="/login">
+            <profile-header/>
+        </router-link>
         <profile-info/>
         <profile-list-view :list="orderList"/>
         <profile-list-view :list="serviceList"/>

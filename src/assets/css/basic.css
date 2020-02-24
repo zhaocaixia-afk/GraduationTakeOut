@@ -30,6 +30,9 @@ a {
   text-decoration: none;
   color: #666;
 }
+button{
+  border: none;
+}
 .clearfix::after {
   clear: both;
   display: block;
