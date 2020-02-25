@@ -108,16 +108,11 @@ export default {
       const result = await getFoodCategorys();
       if (result.code === 0) {
         this.categorysList = result.data;
-        // console.log(this.categorysList)
-        // console.log(this.categorysArr);
       }
     },
     // 3.商铺列表
     async getShops() {
-      const result = await getShops({
-        latitude: this.latitude,
-        longitude: this.longitude
-      });
+      const result = await getShops();
       if (result.code === 0) {
         this.shops = result.data;
       }

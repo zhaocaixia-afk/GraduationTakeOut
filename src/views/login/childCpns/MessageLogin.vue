@@ -1,19 +1,17 @@
 <template>
-  <el-form ref="MessageLoginRef" :model="messageModel" class="message-login">
-    <el-form-item class="phone">
+  <el-form ref="MessageLoginRef" :model="messageModel" :rules="messageRules" class="message-login">
+    <el-form-item class="phone" prop="phone">
       <el-input
         type="tel"
-        maxlength="11"
         placeholder="手机号"
         v-model="messageModel.phone"
       >
-        <el-button slot="append">获取验证码</el-button>
+        <el-button slot="append" :disabled="!rightPhone" @click.prevent="getCode">{{computTime > 0 ? `已发送(${computTime}s)` : '获取验证码'}}</el-button>
       </el-input>
     </el-form-item>
-    <el-form-item class="code">
+    <el-form-item class="code" prop="code">
       <el-input
         type="tel"
-        maxlength="8"
         placeholder="验证码"
         v-model="messageModel.code"
       ></el-input>
@@ -28,15 +26,76 @@
   </el-form>
 </template>
 <script>
+import { reqSendCode } from 'network/login'
 export default {
   name: "MessageLogin",
   data() {
+    // 1.自定义校验规则(手机号he验证码)
+    var checkPhone = (rule,value,cb) => {
+      if(!value){
+        return cb(new Error('手机号不能为空'))
+      }
+      const regPhone = /^1(3|4|5|6|7|8|9)\d{9}$/
+      if(regPhone.test(value)){
+        return cb()
+      }
+      cb(new Error('请输入合法的手机号'))
+    }
+    var checkCode = (rule,value,cb) => {
+      if(!value){
+        return cb(new Error('验证码不能为空'))
+      }
+      const regCode = /^\d{6}$/
+      if(regCode.test(value)){
+        return cb()
+      }
+      cb(new Error('请输入正确的验证码'))
+    }
     return {
       messageModel: {
-        phone: '',
+        phone: '17311688120',
         code: ''
+      },
+      messageRules: {
+        phone: [
+          { required: true, message: '请输入手机号码', trigger: 'blur' },
+          { validator: checkPhone, trigger: 'blur' }
+        ],
+        code: [
+          { required: true, message: '请输入验证码', trigger: 'blur' },
+          { validator: checkCode, trigger: 'blur' }
+        ]
+      },
+      computTime: 0
+    }
+  },
+  computed: {
+    rightPhone(){
+      return /^1(3|4|5|6|7|8|9)\d{9}$/.test(this.messageModel.phone)
+    }
+  },
+  methods: {
+    // 1.获取短信验证码he倒计时
+    async getCode(){
+      if(!this.computTime){
+        this.computTime = 30
+        this.timeId = setInterval(() => {
+          this.computTime--
+          if(this.computTime <= 0){
+            clearInterval(this.timeId)
+          }
+        },1000)
+        const result = await reqSendCode(this.messageModel.phone)
+        // 获取短信失败
+        if(result.code === 1){  
+          if(this.computTime){
+            this.computTime = 0
+            clearInterval(this.timeId)
+            this.timeId = undefined
+          }
+        }
       }
-    };
+    }
   }
 };
 </script>

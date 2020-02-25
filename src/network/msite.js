@@ -13,9 +13,8 @@ export function getFoodCategorys(){
     })
 }
 // 3.获取商铺列表
-export function getShops(data){
+export function getShops(){
     return request({
-        url: '/shops',
-        data: data
+        url: '/shops'
     })
 }
