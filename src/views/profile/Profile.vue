@@ -3,7 +3,7 @@
         <nav-bar bgColor="red">
             <div slot="center">我的</div>
         </nav-bar>
-        <router-link to="/login">
+        <router-link :to="userInfo._id ? '/home' : '/login'">
             <profile-header/>
         </router-link>
         <profile-info/>
@@ -19,6 +19,8 @@ import ProfileHeader from './childCnps/ProfileHeader'
 import ProfileInfo from './childCnps/ProfileInfo'
 import ProfileListView from './childCnps/ProfileListView'
 
+import { mapState } from 'vuex'
+
     export default {
         name: 'Profile',
         data(){
@@ -32,6 +34,11 @@ import ProfileListView from './childCnps/ProfileListView'
                     { icon: 'icon_fuwu', text: '服务中心' }
                 ]
             }
+        },
+        computed: {
+            ...mapState({
+                userInfo: state => state.login.userInfo
+            })
         },
         components: {
             NavBar,

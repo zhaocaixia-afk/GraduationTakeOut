@@ -2,7 +2,7 @@
   <div class="message-login">
     <el-form ref="MessageLoginRef" :model="messageModel" :rules="messageRules">
       <el-form-item class="phone" prop="phone">
-        <el-input type="tel" placeholder="手机号" v-model="messageModel.phone">
+        <el-input type="tel" placeholder="手机号" v-model="messageModel.phone" clearable>
           <el-button
             slot="append"
             :disabled="!rightPhone"
@@ -18,6 +18,7 @@
           type="tel"
           placeholder="验证码"
           v-model="messageModel.code"
+          clearable
         ></el-input>
       </el-form-item>
       <section class="login-hint">
@@ -25,16 +26,23 @@
         <a href="javascript:;">《用户服务协议》</a>
       </section>
       <el-form-item class="btn">
-        <el-button>登录</el-button>
+        <el-button @click="phoneLogin">登录</el-button>
       </el-form-item>
     </el-form>
 
-    <alert-tip :alertText="showText" v-if="alertShow" @closeTip="closeTip"></alert-tip>
+    <alert-tip
+      :alertText="showText"
+      v-if="alertShow"
+      @closeTip="closeTip"
+    ></alert-tip>
   </div>
 </template>
 <script>
-import { reqSendCode } from "network/login";
-import AlertTip from "../../../components/common/alertTip/AlertTip";
+import { reqSendCode, phoneLogin } from "network/login";
+import AlertTip from "components/common/alertTip/AlertTip";
+
+// import { mapActions } from 'vuex'
+
 export default {
   name: "MessageLogin",
   data() {
@@ -75,8 +83,9 @@ export default {
         ]
       },
       computTime: 0,
-      showText: '',
-      alertShow: false
+      showText: "",
+      alertShow: false,
+      isClick: false
     };
   },
   computed: {
@@ -85,8 +94,10 @@ export default {
     }
   },
   methods: {
+    // ...mapActions(['saveUserInfo']),
     // 1.获取短信验证码he倒计时
     async getCode() {
+      // 1.1 开启倒计时
       if (!this.computTime) {
         this.computTime = 30;
         this.timeId = setInterval(() => {
@@ -95,28 +106,63 @@ export default {
             clearInterval(this.timeId);
           }
         }, 1000);
+        // 1.2 获取短信验证码
         const result = await reqSendCode(this.messageModel.phone);
-        // 获取短信失败
+        // 1.3 展示错误信息he停止计时器
         if (result.code === 1) {
-          // 调用抽离的函数
-          this.showAlert(result.msg)
-          if (this.computTime) {
-            this.computTime = 0;
-            clearInterval(this.timeId);
-            this.timeId = undefined;
-          }
+          this.showAlert(result.msg);
+          this.stopTime();
         }
       }
+      // 1.2 获取验证码按钮是否点击(未获取验证码,乱输入,登录)
+      this.isClick = true
     },
     // 2.提示框抽离成一个函数
-    showAlert(showText){
-      this.alertShow = true
-      this.showText = showText
+    showAlert(showText) {
+      this.alertShow = true;
+      this.showText = showText;
     },
     // 3.提示框组件回调的关闭提示框函数
-    closeTip(){
-      this.alertShow = false
-      this.showText = ''
+    closeTip() {
+      this.alertShow = false;
+      this.showText = "";
+    },
+    // 4.手机号码和验证码登录
+    phoneLogin() {
+      this.$refs.MessageLoginRef.validate(async valid => {
+        // 4.1 表单验证
+        if(!valid) return;
+        // 4.2 是否点击获取验证码按钮
+        if(!this.isClick){
+          this.showAlert('短信验证码错误')
+          return;
+        }
+        // 4.3 登录请求
+        const result = await phoneLogin(this.messageModel);
+        // 4.4 停止计时器(是否登录成功)
+        this.stopTime();
+        // 4.5 判断是否登录成功
+        console.log(result);
+        if (result.code === 0) {
+          const user = result.data;
+          console.log(user)
+          // 4.5.1 将user保存到vuex中
+          this.$store.dispatch('saveUserInfo',user)
+          // 4.5.2 跳转到个人中心界面
+          this.$router.replace('/profile')
+        } else {
+          // 4.5.3 提示错误信息
+          this.showAlert(result.msg);
+        }
+      });
+    },
+    // 5.停掉计时器的方法
+    stopTime() {
+      if (this.computTime) {
+        this.computTime = 0;
+        clearInterval(this.timeId);
+        this.timeId = undefined;
+      }
     }
   },
   components: {

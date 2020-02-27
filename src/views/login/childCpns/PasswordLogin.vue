@@ -21,11 +21,13 @@
       <img src="http://localhost:4000/captcha" alt="captcha" />
     </el-form-item>
     <el-form-item class="btn">
-      <el-button>登录</el-button>
+      <el-button @click="passwordLogin">登录</el-button>
     </el-form-item>
   </el-form>
 </template>
 <script>
+import {passwordLogin} from '../../../network/login'
+import axios from 'axios';
 export default {
   name: "PasswordLogin",
   data() {
@@ -47,7 +49,17 @@ export default {
           { required: true, message: '请输入验证码', trigger: 'blur' }
         ]
       }
-    };
+    }
+  },
+  methods: {
+    passwordLogin(){
+      this.$refs.passwordRef.validate( valid => {
+        if( !valid ) return;
+        passwordLogin(this.passwordModel).then(res => {
+          console.log(res)
+        })
+      })
+    }
   }
 };
 </script>
