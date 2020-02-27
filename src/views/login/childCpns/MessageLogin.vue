@@ -38,13 +38,14 @@
   </div>
 </template>
 <script>
-import { reqSendCode, phoneLogin } from "network/login";
-import AlertTip from "components/common/alertTip/AlertTip";
+import { reqSendCode, phoneLogin } from "network/login"
+import AlertTip from "components/common/alertTip/AlertTip"
 
-// import { mapActions } from 'vuex'
+import {loginMixin} from 'common/mixin'
 
 export default {
   name: "MessageLogin",
+  mixins: [loginMixin],
   data() {
     // 1.自定义校验规则(手机号he验证码)
     var checkPhone = (rule, value, cb) => {
@@ -85,7 +86,8 @@ export default {
       computTime: 0,
       showText: "",
       alertShow: false,
-      isClick: false
+      isClick: false,   //是否点击获取验证码按钮
+      // result: {}  //登录请求后的对象
     };
   },
   computed: {
@@ -94,7 +96,6 @@ export default {
     }
   },
   methods: {
-    // ...mapActions(['saveUserInfo']),
     // 1.获取短信验证码he倒计时
     async getCode() {
       // 1.1 开启倒计时
@@ -138,22 +139,21 @@ export default {
           return;
         }
         // 4.3 登录请求
-        const result = await phoneLogin(this.messageModel);
+        this.result = await phoneLogin(this.messageModel);
         // 4.4 停止计时器(是否登录成功)
         this.stopTime();
         // 4.5 判断是否登录成功
-        console.log(result);
-        if (result.code === 0) {
-          const user = result.data;
-          console.log(user)
-          // 4.5.1 将user保存到vuex中
-          this.$store.dispatch('saveUserInfo',user)
-          // 4.5.2 跳转到个人中心界面
-          this.$router.replace('/profile')
-        } else {
-          // 4.5.3 提示错误信息
-          this.showAlert(result.msg);
-        }
+        this.loginResult()  // mixin里面的函数
+        // if (this.result.code === 0) {
+        //   const user = this.result.data
+        //   // 4.5.1 将user保存到vuex中
+        //   this.$store.dispatch('saveUserInfo',user)
+        //   // 4.5.2 跳转到个人中心界面
+        //   this.$router.replace('/profile')
+        // } else {
+        //   // 4.5.3 提示错误信息
+        //   this.showAlert(this.result.msg);
+        // }
       });
     },
     // 5.停掉计时器的方法

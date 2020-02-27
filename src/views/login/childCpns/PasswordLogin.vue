@@ -27,14 +27,16 @@
 </template>
 <script>
 import {passwordLogin} from '../../../network/login'
-import axios from 'axios';
+// import axios from 'axios';
+import {loginMixin} from '../../../common/mixin'
 export default {
   name: "PasswordLogin",
+  mixins: [loginMixin],
   data() {
     return {
       passwordModel: {
-        name: "",
-        pwd: "",
+        name: "abc",
+        pwd: "123",
         captcha: ""
       },
       passwordRules: {
@@ -53,11 +55,10 @@ export default {
   },
   methods: {
     passwordLogin(){
-      this.$refs.passwordRef.validate( valid => {
+      this.$refs.passwordRef.validate(async valid => {
         if( !valid ) return;
-        passwordLogin(this.passwordModel).then(res => {
-          console.log(res)
-        })
+        this.result = await passwordLogin(this.passwordModel)
+        this.loginResult()
       })
     }
   }
