@@ -19,6 +19,12 @@ import IconSvg from 'components/common/iconSvg/IconSvg'
 Vue.component('icon-svg',IconSvg)
 // 5.事件总线
 Vue.prototype.$bus = new Vue()
+// 6.图片懒加载
+import VueLazyload from 'vue-lazyload'
+import loading from 'assets/img/msite/loading.gif'
+Vue.set(VueLazyload,{
+  loading
+})
 
 Vue.config.productionTip = false
 

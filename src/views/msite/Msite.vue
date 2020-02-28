@@ -6,11 +6,12 @@
       </div>
       <div slot="center">{{ address.address }}</div>
       <div slot="right">
-        登录|注册
+        <i class="el-icon-user" v-if="userInfo._id"></i>
+        <span v-else>登录|注册</span>
       </div>
     </nav-bar>
     <scroll ref="scroll" class="scroll">
-      <swiper :options="swiperOption">
+      <swiper :options="swiperOption" v-if="categorysList.length">
         <swiper-slide v-for="(cateList, index1) in categorysArr" :key="index1">
           <a
             href="javascript:;"
@@ -23,6 +24,7 @@
         </swiper-slide>
         <div class="swiper-pagination" slot="pagination"></div>
       </swiper>
+      <img v-else src="~assets/img/msite/msite_back.svg" alt="">
       <div class="recommend">
         <i class="iconfont icongengduo"></i>
         <span>附近商家</span>
@@ -41,6 +43,8 @@ import ShopsList from "components/content/shops/ShopsList";
 import { getURL, getFoodCategorys, getShops } from "network/msite";
 
 import { debounce } from "common/util";
+
+import { mapState } from 'vuex';
 
 export default {
   name: "Msite",
@@ -63,28 +67,31 @@ export default {
     };
   },
   computed: {
+    ...mapState({
+      userInfo: state => state.login.userInfo
+    }),
     // 1.食品分类列表 拆分 一个二维数组
     categorysArr() {
       const { categorysList } = this;
-      const arr = [];
-      let minArr = [];
+      const arr = []
+      let minArr = []
       categorysList.forEach(c => {
-        minArr.push(c);
+        minArr.push(c)
 
         if (minArr.length === 8) {
-          minArr = [];
+          minArr = []
         }
         if (minArr.length === 1) {
-          arr.push(minArr);
+          arr.push(minArr)
         }
       });
       return arr;
     }
   },
   created() {
-    this.getAddress();
-    this.getFoodCategorys();
-    this.getShops();
+    this.getAddress()
+    this.getFoodCategorys()
+    this.getShops()
   },
   mounted() {
     // 仿抖动操作
@@ -96,25 +103,24 @@ export default {
   methods: {
     // 1.根据经纬度获取地理信息
     async getAddress() {
-      const geohash = `${this.latitude},${this.longitude}`;
-      const result = await getURL(geohash);
+      const geohash = `${this.latitude},${this.longitude}`
+      const result = await getURL(geohash)
       if (result.code === 0) {
-        this.address = result.data;
-        // console.log(this.address)
+        this.address = result.data
       }
     },
     // 2.食品分类列表
     async getFoodCategorys() {
-      const result = await getFoodCategorys();
+      const result = await getFoodCategorys()
       if (result.code === 0) {
         this.categorysList = result.data;
       }
     },
     // 3.商铺列表
     async getShops() {
-      const result = await getShops();
+      const result = await getShops()
       if (result.code === 0) {
-        this.shops = result.data;
+        this.shops = result.data
       }
     }
   },

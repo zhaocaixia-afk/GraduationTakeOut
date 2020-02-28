@@ -37,6 +37,9 @@
     }
     .right{
         width: 80px;
+        i{
+            font-size: 20px;
+        }
     }
     .center{
         flex: 1;
