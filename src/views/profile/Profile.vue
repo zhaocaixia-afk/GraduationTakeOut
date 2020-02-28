@@ -3,8 +3,8 @@
         <nav-bar bgColor="red">
             <div slot="center">我的</div>
         </nav-bar>
-        <router-link :to="userInfo._id ? '/home' : '/login'">
-            <profile-header/>
+        <router-link :to="userInfo._id ? '/userInfo' : '/login'">
+            <profile-header :userInfo="userInfo"/>
         </router-link>
         <profile-info/>
         <profile-list-view :list="orderList"/>
@@ -13,7 +13,7 @@
 </template>
 
 <script>
-import NavBar from '../../components/common/navbar/NavBar'
+import NavBar from 'components/common/navbar/NavBar'
 
 import ProfileHeader from './childCnps/ProfileHeader'
 import ProfileInfo from './childCnps/ProfileInfo'

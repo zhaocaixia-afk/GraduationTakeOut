@@ -84,10 +84,7 @@ export default {
         ]
       },
       computTime: 0,
-      showText: "",
-      alertShow: false,
-      isClick: false,   //是否点击获取验证码按钮
-      // result: {}  //登录请求后的对象
+      isClick: false   //是否点击获取验证码按钮
     };
   },
   computed: {
@@ -118,16 +115,7 @@ export default {
       // 1.2 获取验证码按钮是否点击(未获取验证码,乱输入,登录)
       this.isClick = true
     },
-    // 2.提示框抽离成一个函数
-    showAlert(showText) {
-      this.alertShow = true;
-      this.showText = showText;
-    },
-    // 3.提示框组件回调的关闭提示框函数
-    closeTip() {
-      this.alertShow = false;
-      this.showText = "";
-    },
+    // 2和3: 提示框的显示和确认抽离到mixin
     // 4.手机号码和验证码登录
     phoneLogin() {
       this.$refs.MessageLoginRef.validate(async valid => {
@@ -144,16 +132,6 @@ export default {
         this.stopTime();
         // 4.5 判断是否登录成功
         this.loginResult()  // mixin里面的函数
-        // if (this.result.code === 0) {
-        //   const user = this.result.data
-        //   // 4.5.1 将user保存到vuex中
-        //   this.$store.dispatch('saveUserInfo',user)
-        //   // 4.5.2 跳转到个人中心界面
-        //   this.$router.replace('/profile')
-        // } else {
-        //   // 4.5.3 提示错误信息
-        //   this.showAlert(this.result.msg);
-        // }
       });
     },
     // 5.停掉计时器的方法
@@ -164,9 +142,6 @@ export default {
         this.timeId = undefined;
       }
     }
-  },
-  components: {
-    AlertTip
   }
 };
 </script>

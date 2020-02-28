@@ -8,6 +8,8 @@ const Profile = () => import(/* webpackChunkName: "profile" */ 'views/profile/Pr
 
 const Login = () => import(/* webpackChunkName: "login" */ 'views/login/Login')
 
+const UserInfo = () => import(/* webpackChunkName: "userInfo" */ 'views/userInfo/UserInfo')
+
 Vue.use(VueRouter)
 
 const routes = [
@@ -16,7 +18,8 @@ const routes = [
   { path: '/search', component: Search, meta: {showFooter: true} },
   { path: '/order', component: Order, meta: {showFooter: true} },
   { path: '/profile', component: Profile, meta: {showFooter: true} },
-  { path: '/login', component: Login }
+  { path: '/login', component: Login },
+  { path: '/userInfo', component: UserInfo }
 ]
 
 const router = new VueRouter({
