@@ -5,11 +5,11 @@
     </div>
     <div class="login-info">
       <div class="login" v-if="!userInfo.phone">
-        {{ userInfo.name ? userInfo.name : "登录/注册" }}
+        {{ userInfo.name ? userInfo.name : '登录/注册' }}
       </div>
       <div class="phone">
         <img src="~assets/img/profile/phone.svg" />
-        {{ userInfo.phone ? userInfo.phone : "暂无绑定手机号" }}
+        {{ userInfo.phone ? userInfo.phone : '暂无绑定手机号' }}
       </div>
     </div>
     <div class="arrow">
@@ -19,19 +19,19 @@
 </template>
 <script>
 export default {
-  name: "Profile",
+  name: 'Profile',
   data() {
-    return {};
+    return {}
   },
   props: {
     userInfo: {
       type: Object,
       default() {
-        return {};
+        return {}
       }
     }
   }
-};
+}
 </script>
 <style scoped lang="scss">
 .profile-header {

@@ -1,17 +1,17 @@
 <template>
-    <svg class="svg-icon" aria-hidden="true">
-        <use :xlink:href="`#${iconClass}`"></use>
-    </svg>
+  <svg class="svg-icon" aria-hidden="true">
+    <use :xlink:href="`#${iconClass}`"></use>
+  </svg>
 </template>
 <script>
 export default {
-    name: 'IconSvg',
-    props: {
-        iconClass: {
-            type: String,
-            required: true
-        }
+  name: 'IconSvg',
+  props: {
+    iconClass: {
+      type: String,
+      required: true
     }
+  }
 }
 </script>
 <style scoped lang="scss">

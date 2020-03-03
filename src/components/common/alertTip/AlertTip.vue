@@ -11,7 +11,7 @@
 </template>
 <script>
 export default {
-  name: "AlertTip",
+  name: 'AlertTip',
   props: {
     alertText: {
       type: String
@@ -19,10 +19,10 @@ export default {
   },
   methods: {
     closeTip() {
-      this.$emit("closeTip");
+      this.$emit('closeTip')
     }
   }
-};
+}
 </script>
 <style scoped lang="scss">
 .alert-tip {

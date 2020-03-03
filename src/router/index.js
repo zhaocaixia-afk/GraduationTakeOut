@@ -10,16 +10,19 @@ const Login = () => import(/* webpackChunkName: "login" */ 'views/login/Login')
 
 const UserInfo = () => import(/* webpackChunkName: "userInfo" */ 'views/userInfo/UserInfo')
 
+const Detail = () => import(/* webpackChunkName: "detail" */ 'views/detail/Detail')
+
 Vue.use(VueRouter)
 
 const routes = [
   { path: '', redirect: '/msite' },
-  { path: '/msite', component: Msite, meta: {showFooter: true} },
-  { path: '/search', component: Search, meta: {showFooter: true} },
-  { path: '/order', component: Order, meta: {showFooter: true} },
-  { path: '/profile', component: Profile, meta: {showFooter: true} },
+  { path: '/msite', component: Msite, meta: { showFooter: true } },
+  { path: '/search', component: Search, meta: { showFooter: true } },
+  { path: '/order', component: Order, meta: { showFooter: true } },
+  { path: '/profile', component: Profile, meta: { showFooter: true } },
   { path: '/login', component: Login },
-  { path: '/userInfo', component: UserInfo }
+  { path: '/userInfo', component: UserInfo },
+  { path: '/detail', component: Detail }
 ]
 
 const router = new VueRouter({

@@ -1,24 +1,22 @@
 // const SAVE_USER_INFO = 'saveUserInfo'
 
 const state = {
-    userInfo: {}
+  userInfo: {}
 }
 const mutations = {
-    SaveUserInfo(state,payload){
-        state.userInfo = payload
-    }
+  SaveUserInfo(state, payload) {
+    state.userInfo = payload
+  }
 }
 const actions = {
-    saveUserInfo(context,payload){
-        context.commit('SaveUserInfo',payload)
-    }
+  saveUserInfo(context, payload) {
+    context.commit('SaveUserInfo', payload)
+  }
 }
-const getters = {
-
-}
+const getters = {}
 export default {
-    state,
-    mutations,
-    actions,
-    getters
+  state,
+  mutations,
+  actions,
+  getters
 }

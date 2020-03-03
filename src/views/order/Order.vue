@@ -1,15 +1,13 @@
 <template>
-    <div>
-        Order
-    </div>
+  <div>
+    Order
+  </div>
 </template>
 
 <script>
-    export default {
-        name: 'Order'
-    }
+export default {
+  name: 'Order'
+}
 </script>
 
-<style lang="scss" scoped>
-
-</style>
+<style lang="scss" scoped></style>

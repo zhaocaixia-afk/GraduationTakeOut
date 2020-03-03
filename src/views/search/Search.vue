@@ -1,15 +1,13 @@
 <template>
-    <div>
-        Search
-    </div>
+  <div>
+    Search
+  </div>
 </template>
 
 <script>
-    export default {
-        name: 'Search'
-    }
+export default {
+  name: 'Search'
+}
 </script>
 
-<style lang="scss" scoped>
-
-</style>
+<style lang="scss" scoped></style>

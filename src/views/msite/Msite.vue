@@ -13,18 +13,14 @@
     <scroll ref="scroll" class="scroll">
       <swiper :options="swiperOption" v-if="categorysList.length">
         <swiper-slide v-for="(cateList, index1) in categorysArr" :key="index1">
-          <a
-            href="javascript:;"
-            v-for="(cate, index2) in cateList"
-            :key="index2"
-          >
+          <a href="javascript:;" v-for="(cate, index2) in cateList" :key="index2">
             <img :src="`${baseImgUrl}${cate.image_url}`" />
             <span>{{ cate.title }}</span>
           </a>
         </swiper-slide>
         <div class="swiper-pagination" slot="pagination"></div>
       </swiper>
-      <img v-else src="~assets/img/msite/msite_back.svg" alt="">
+      <img v-else src="~assets/img/msite/msite_back.svg" alt="" />
       <div class="recommend">
         <i class="iconfont icongengduo"></i>
         <span>附近商家</span>
@@ -35,19 +31,19 @@
 </template>
 
 <script>
-import NavBar from "components/common/navbar/NavBar";
-import Scroll from "components/common/scroll/Scroll";
-import { swiper, swiperSlide } from "vue-awesome-swiper";
-import ShopsList from "components/content/shops/ShopsList";
+import NavBar from 'components/common/navbar/NavBar'
+import Scroll from 'components/common/scroll/Scroll'
+import { swiper, swiperSlide } from 'vue-awesome-swiper'
+import ShopsList from 'components/content/shops/ShopsList'
 
-import { getURL, getFoodCategorys, getShops } from "network/msite";
+import { getURL, getFoodCategorys, getShops } from 'network/msite'
 
-import { debounce } from "common/util";
+import { debounce } from 'common/util'
 
-import { mapState } from 'vuex';
+import { mapState } from 'vuex'
 
 export default {
-  name: "Msite",
+  name: 'Msite',
   data() {
     return {
       latitude: 29.569186, // 纬度
@@ -57,14 +53,14 @@ export default {
       swiperOption: {
         loop: true,
         pagination: {
-          el: ".swiper-pagination",
+          el: '.swiper-pagination',
           clickable: true
         }
       },
       categorysList: [],
-      baseImgUrl: "https://fuss10.elemecdn.com",
+      baseImgUrl: 'https://fuss10.elemecdn.com',
       shops: []
-    };
+    }
   },
   computed: {
     ...mapState({
@@ -72,7 +68,7 @@ export default {
     }),
     // 1.食品分类列表 拆分 一个二维数组
     categorysArr() {
-      const { categorysList } = this;
+      const { categorysList } = this
       const arr = []
       let minArr = []
       categorysList.forEach(c => {
@@ -84,8 +80,8 @@ export default {
         if (minArr.length === 1) {
           arr.push(minArr)
         }
-      });
-      return arr;
+      })
+      return arr
     }
   },
   created() {
@@ -95,10 +91,10 @@ export default {
   },
   mounted() {
     // 仿抖动操作
-    const refresh = debounce(this.$refs.scroll.refresh, 50);
-    this.$bus.$on("itemImageLoad", () => {
+    const refresh = debounce(this.$refs.scroll.refresh, 50)
+    this.$bus.$on('itemImageLoad', () => {
       refresh()
-    });
+    })
   },
   methods: {
     // 1.根据经纬度获取地理信息
@@ -113,7 +109,7 @@ export default {
     async getFoodCategorys() {
       const result = await getFoodCategorys()
       if (result.code === 0) {
-        this.categorysList = result.data;
+        this.categorysList = result.data
       }
     },
     // 3.商铺列表
@@ -131,7 +127,7 @@ export default {
     swiperSlide,
     ShopsList
   }
-};
+}
 </script>
 
 <style lang="scss" scoped>
