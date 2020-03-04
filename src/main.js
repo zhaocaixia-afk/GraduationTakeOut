@@ -2,6 +2,7 @@ import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
 import store from './store'
+// element-ui的引入
 import './plugins/element.js'
 
 // 1.normalize
@@ -25,6 +26,8 @@ import loading from 'assets/img/msite/loading.gif'
 Vue.set(VueLazyload, {
   loading
 })
+// 7.mockjs模拟数据
+import './mock/mock'
 
 Vue.config.productionTip = false
 
