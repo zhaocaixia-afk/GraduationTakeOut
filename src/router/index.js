@@ -11,6 +11,9 @@ const Login = () => import(/* webpackChunkName: "login" */ 'views/login/Login')
 const UserInfo = () => import(/* webpackChunkName: "userInfo" */ 'views/userInfo/UserInfo')
 
 const Detail = () => import(/* webpackChunkName: "detail" */ 'views/detail/Detail')
+const DetailShop = () => import(/* webpackChunkName: "detail" */ 'views/detail/childCpns/DetailGoods')
+const DetailRatings = () => import(/* webpackChunkName: "detail" */ 'views/detail/childCpns/DetailRatings')
+const DetailInfo = () => import(/* webpackChunkName: "detail" */ 'views/detail/childCpns/DetailInfo')
 
 Vue.use(VueRouter)
 
@@ -22,7 +25,15 @@ const routes = [
   { path: '/profile', component: Profile, meta: { showFooter: true } },
   { path: '/login', component: Login },
   { path: '/userInfo', component: UserInfo },
-  { path: '/detail', component: Detail }
+  {
+    path: '/detail',
+    component: Detail,
+    children: [
+      { path: '/', component: DetailShop },
+      { path: '/ratings', component: DetailRatings },
+      { path: '/info', component: DetailInfo }
+    ]
+  }
 ]
 
 const router = new VueRouter({

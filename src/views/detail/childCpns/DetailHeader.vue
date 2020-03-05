@@ -67,8 +67,6 @@
       </div>
     </div>
 
-    <div>nihao</div>
-
     <i class="el-icon-arrow-up UpRorrow" v-if="boxShow"></i>
   </div>
 </template>
@@ -141,7 +139,7 @@ export default {
   }
 
   .transition_dom {
-    transition: all 0.3s linear 0s;
+    transition: all 0.2s linear 0s;
   }
   .downUp {
     width: 100%;
