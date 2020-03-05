@@ -23,22 +23,22 @@ export default {
     },
     pullUpLoad: {
       type: Boolean,
-      default: true
+      default: false
     }
   },
   mounted() {
     // 1.初始化scroll
     this.scroll = new BScroll(this.$refs.wrapper, {
       click: true,
-      probeType: this.probeType,
-      pullUpLoad: this.pullUpLoad
+      probeType: this.probeType, //与监听滚动相关0,1,2,3
+      pullUpLoad: this.pullUpLoad //上拉加载更多
     })
     // 2.监听滚动位置
-    // if(this.probeType === 2 || this.probeType === 3){
-    //     this.scroll.on('scroll',position => {
-    //         this.$emit('scroll',position)
-    //     })
-    // };
+    if (this.probeType === 2 || this.probeType === 3) {
+      this.scroll.on('scroll', position => {
+        this.$emit('scroll', position)
+      })
+    }
     // 3.监听滚动到底部 上拉加载更多
     // if(this.pullUpLoad){
     //     this.scroll.on('pullingUp',() => {

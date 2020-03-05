@@ -3,7 +3,7 @@
     <!-- 背景图片 -->
     <div class="detail-bg" :style="`background: url('${shopInfo.bgImg}')`"></div>
     <div class="avatar">
-      <img :src="shopInfo.avatar" alt="头像" />
+      <img :src="shopInfo.avatar" alt="头像" @load="imgLoad" />
     </div>
     <p class="name">{{ shopInfo.name }}</p>
     <div class="shop-message">
@@ -95,6 +95,7 @@ export default {
     }
   },
   methods: {
+    // 1.商家详情的展开与显示
     funAnimate() {
       if (this.boxShow) {
         this.$refs.box.style.height = '36px'
@@ -102,6 +103,10 @@ export default {
         this.$refs.box.style.height = '500px'
       }
       this.boxShow = !this.boxShow
+    },
+    // 2.图片是否加载完成,导航栏的吸顶效果
+    imgLoad() {
+      this.$emit('imgLoad')
     }
   }
 }

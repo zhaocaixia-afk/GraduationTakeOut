@@ -25,6 +25,7 @@ export default {
   methods: {
     changeTab(index) {
       this.currentIndex = index
+      this.$emit('tabCurrent', index)
     }
   }
 }
@@ -32,8 +33,9 @@ export default {
 
 <style scoped lang="scss">
 .tab-control {
-  width: 90%;
-  margin: 0 auto;
+  background: white;
+  width: 100%;
+  // margin: 0 auto;
   display: flex;
   height: 44px;
   line-height: 44px;
