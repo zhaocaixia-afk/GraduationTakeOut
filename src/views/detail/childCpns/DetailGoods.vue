@@ -3,7 +3,7 @@
     <p class="recommend">商家推荐</p>
     <div class="recommend-wrapper" ref="recommendWrapper">
       <ul class="recommend-content" ref="recommendContent">
-        <el-card v-for="(item, index) in this.recommendList" :key="index">
+        <el-card v-for="(item, index) in this.recommendList" :key="index" @click.native="showGood(item)">
           <img :src="item.image" alt="" />
           <p class="good-name">{{ item.name }}</p>
           <p class="good-sellCount">月售{{ item.sellCount }}</p>
@@ -18,6 +18,9 @@
         </el-card>
       </ul>
     </div>
+
+    <!-- 商品详情 -->
+    <good :good="good" ref="good" />
   </div>
 </template>
 
@@ -27,11 +30,14 @@ import BScroll from 'better-scroll'
 import { mapState } from 'vuex'
 
 import CartControl from 'components/common/cartControl/CartControl'
+import Good from './Good'
 
 export default {
   name: 'DetailGoods',
   data() {
-    return {}
+    return {
+      good: {}
+    }
   },
   mounted() {
     this.$store.dispatch('getGoodsList', () => {
@@ -62,10 +68,17 @@ export default {
           }
         })
       }
+    },
+    // 2.点击商品,出现详情页面
+    showGood(good) {
+      this.good = good
+      // 父组件通过ref使用子组件中的方法
+      this.$refs.good.toggleShow()
     }
   },
   components: {
-    CartControl
+    CartControl,
+    Good
     // Scroll
   }
 }

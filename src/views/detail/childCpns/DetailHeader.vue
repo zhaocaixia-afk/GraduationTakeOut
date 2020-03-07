@@ -124,7 +124,7 @@ export default {
     width: 50px;
     height: 50px;
     position: absolute;
-    z-index: 9;
+    z-index: 10;
     top: 45px;
     left: 50%;
     transform: translate(-50%, 0);
