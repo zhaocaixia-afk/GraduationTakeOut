@@ -2,10 +2,10 @@
   <div class="cart-control">
     <!-- 减少符号 -->
     <transition name="move">
-      <i class="el-icon-remove"></i>
+      <i class="el-icon-remove" v-show="good.count" @click.stop="updateFoodCount(false)"></i>
     </transition>
     <!-- 中间数字 -->
-    <div class="cart-count">1</div>
+    <div class="cart-count" v-show="good.count">{{ good.count }}</div>
     <!-- 增加符号 -->
     <i class="el-icon-circle-plus" @click.stop="updateFoodCount(true)"></i>
   </div>
@@ -24,7 +24,7 @@ export default {
   },
   methods: {
     updateFoodCount(isAdd) {
-      console.log(isAdd)
+      this.$store.dispatch('updateFoodCount', { isAdd, good: this.good })
     }
   }
 }

@@ -56,7 +56,7 @@ export default {
         this.$nextTick(() => {
           if (!this.picScroll) {
             this.picScroll = new BScroll('.recommend-wrapper', {
-              click: true,
+              // click: true,
               scrollX: true
             })
           }
