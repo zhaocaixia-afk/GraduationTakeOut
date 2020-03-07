@@ -53,6 +53,76 @@
   },
   "goods": [
     {
+      "name": "推荐",
+      "foods": [
+        {
+          "name": "【新品组合】香辣鸡柳+傲娇翅尖+中可",
+          "price": 30,
+          "sellCount": 1,
+          "rating": 0,
+          "container": "香辣鸡柳+傲娇翅尖+中可",
+          "info": "鸡翅",
+          "image": "http://fuss10.elemecdn.com/8/a6/453f65f16b1391942af11511b7a90jpeg.jpeg?imageView2/1/w/750/h/750"
+        },
+        {
+          "name": "【陪伴】双人套餐",
+          "price": 60,
+          "sellCount": 4,
+          "rating": 0,
+          "container": "香辣鸡腿堡+鸡肉卷+薯条+鸡腿+1半翅+2中可",
+          "info": "鸡肉",
+          "image": "http://fuss10.elemecdn.com/8/a6/453f65f16b1391942af11511b7a90jpeg.jpeg?imageView2/1/w/750/h/750"
+        },
+        {
+          "name": "【超级会员专享】超值会员餐",
+          "price": 40,
+          "sellCount": 17,
+          "rating": 0,
+          "container": "香辣鸡腿堡+半翅+2串脆骨+中可",
+          "info": "鸡肉",
+          "image": "http://fuss10.elemecdn.com/8/a6/453f65f16b1391942af11511b7a90jpeg.jpeg?imageView2/1/w/750/h/750"
+        },
+        {
+          "name": "秘制全鸡",
+          "price": 26,
+          "oldPrice": 28,
+          "sellCount": 89,
+          "rating": 0,
+          "container": "色泽鲜美,香嫩多支,爽滑顺口",
+          "info": "鸡肉",
+          "image": "http://fuss10.elemecdn.com/8/a6/453f65f16b1391942af11511b7a90jpeg.jpeg?imageView2/1/w/750/h/750"
+        },
+        {
+          "name": "蜜汁鸡小腿5个",
+          "price": 30,
+          "sellCount": 2,
+          "rating": 0,
+          "container": "【微辣】色泽鲜美,香嫩多汁,爽滑顺口",
+          "info": "鸡腿",
+          "image": "http://fuss10.elemecdn.com/8/a6/453f65f16b1391942af11511b7a90jpeg.jpeg?imageView2/1/w/750/h/750"
+        },
+        {
+          "name": "一桶鸡",
+          "price": 30,
+          "sellCount": 114,
+          "rating": 3,
+          "container": "全翅+胸排+腿排+琵琶腿",
+          "info": "鸡肉",
+          "image": "http://fuss10.elemecdn.com/8/a6/453f65f16b1391942af11511b7a90jpeg.jpeg?imageView2/1/w/750/h/750"
+        },
+        {
+          "name": "【全家福】全家福套餐",
+          "price": 79.9,
+          "oldPrice": 125,
+          "sellCount": 5,
+          "rating": 0,
+          "container": "蜜汁全鸡+鸡肉卷+2腿堡+鸡米花+薯条+伴翅(1对)+上校鸡块+百分小吃+3中可",
+          "info": "鸡肉",
+          "image": "http://fuss10.elemecdn.com/8/a6/453f65f16b1391942af11511b7a90jpeg.jpeg?imageView2/1/w/750/h/750"
+        }
+      ]
+    },
+    {
       "name": "优惠",
       "icon": "https://fuss10.elemecdn.com/b/91/8cf4f67e0e8223931cd595dc932fepng.png",
       "foods": [

@@ -1,16 +1,16 @@
-// const SAVE_USER_INFO = 'saveUserInfo'
+const SAVE_USER_INFO = 'SaveUserInfo'
 
 const state = {
   userInfo: {}
 }
 const mutations = {
-  SaveUserInfo(state, payload) {
+  [SAVE_USER_INFO](state, payload) {
     state.userInfo = payload
   }
 }
 const actions = {
   saveUserInfo(context, payload) {
-    context.commit('SaveUserInfo', payload)
+    context.commit(SAVE_USER_INFO, payload)
   }
 }
 const getters = {}

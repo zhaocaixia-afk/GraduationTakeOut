@@ -10,6 +10,7 @@
     </scroll>
   </div>
 </template>
+
 <script>
 import { getShopsInfo } from 'network/detail'
 
@@ -29,14 +30,15 @@ export default {
         { path: '/info', text: '商家' }
       ],
       isTopFixed: false, //判读是否吸顶
-      tabOffsetTop: 0 //获取tabControl2的高度
+      tabOffsetTop: 0, //获取tabControl2的高度
+      shopGoods: []
     }
   },
   mounted() {
     this._getShopInfo()
   },
   methods: {
-    // 1.获取商品详情数据
+    // 1.获取商家详情
     async _getShopInfo() {
       const result = await getShopsInfo()
       if (result.code === 0) {
@@ -68,6 +70,7 @@ export default {
   }
 }
 </script>
+
 <style scoped lang="scss">
 .detail {
   height: 100vh;
