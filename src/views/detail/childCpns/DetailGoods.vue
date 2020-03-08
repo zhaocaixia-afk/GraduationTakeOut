@@ -1,36 +1,17 @@
 <template>
-  <div class="detail-goods">
-    <p class="recommend">商家推荐</p>
-    <div class="recommend-wrapper" ref="recommendWrapper">
-      <ul class="recommend-content" ref="recommendContent">
-        <el-card v-for="(item, index) in this.recommendList" :key="index" @click.native="showGood(item)">
-          <img :src="item.image" alt="" />
-          <p class="good-name">{{ item.name }}</p>
-          <p class="good-sellCount">月售{{ item.sellCount }}</p>
-          <div class="price-count">
-            <div class="price">
-              <p class="good-price">¥{{ item.price }}</p>
-              <p class="good-oldPrice" v-if="item.oldPrice">¥{{ item.oldPrice }}</p>
-            </div>
-            <!-- 添加组件 -->
-            <cart-control :good="item" />
-          </div>
-        </el-card>
-      </ul>
-    </div>
-
+  <div>
     <!-- 商品详情 -->
-    <good :good="good" ref="good" />
+    <!-- <good :good="good" ref="good" /> -->
   </div>
 </template>
 
 <script>
-import BScroll from 'better-scroll'
+// import BScroll from 'better-scroll'
+// import Scroll from 'components/common/scroll/Scroll'
+// import { mapState } from 'vuex'
 
-import { mapState } from 'vuex'
-
-import CartControl from 'components/common/cartControl/CartControl'
-import Good from './Good'
+// import CartControl from 'components/common/cartControl/CartControl'
+// import Good from './Good'
 
 export default {
   name: 'DetailGoods',
@@ -40,35 +21,17 @@ export default {
     }
   },
   mounted() {
-    this.$store.dispatch('getGoodsList', () => {
-      this._initScorll()
-    })
+    // this.$store.dispatch('getGoodsList', () => {
+    //   // this._initScorll()
+    // })
   },
   computed: {
     // 1.获取了推荐视频列表
-    ...mapState({
-      recommendList: state => state.detail.recommendList
-    })
+    // ...mapState({
+    //   recommendList: state => state.detail.recommendList
+    // })
   },
   methods: {
-    // 1. 横向滚动初始化
-    _initScorll() {
-      // 设置content的宽度
-      if (this.recommendList) {
-        let itemWidth = 150
-        let margin = 8
-        let width = (itemWidth + margin) * this.recommendList.length
-        this.$refs.recommendContent.style.width = width + 'px'
-        this.$nextTick(() => {
-          if (!this.picScroll) {
-            this.picScroll = new BScroll('.recommend-wrapper', {
-              // click: true,
-              scrollX: true
-            })
-          }
-        })
-      }
-    },
     // 2.点击商品,出现详情页面
     showGood(good) {
       this.good = good
@@ -77,16 +40,17 @@ export default {
     }
   },
   components: {
-    CartControl,
-    Good
+    // CartControl,
+    // Good
     // Scroll
   }
 }
 </script>
 
 <style scoped lang="scss">
-.detail-goods {
+.scroll {
   width: 100vw;
+  height: 300px;
   .recommend {
     line-height: 40px;
     font-weight: bold;

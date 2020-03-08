@@ -33,9 +33,7 @@ export default {
 
 <style scoped lang="scss">
 .tab-control {
-  background: white;
   width: 100%;
-  // margin: 0 auto;
   display: flex;
   height: 44px;
   line-height: 44px;

@@ -67,7 +67,7 @@
       </div>
     </div>
 
-    <i class="el-icon-arrow-up UpRorrow" v-if="boxShow"></i>
+    <i class="el-icon-arrow-up UpRorrow" v-if="boxShow" @click="funAnimate"></i>
   </div>
 </template>
 
@@ -100,7 +100,7 @@ export default {
       if (this.boxShow) {
         this.$refs.box.style.height = '36px'
       } else {
-        this.$refs.box.style.height = '500px'
+        this.$refs.box.style.height = '530px'
       }
       this.boxShow = !this.boxShow
     },
@@ -116,7 +116,7 @@ export default {
 .detail-header {
   position: relative;
   .detail-bg {
-    height: 80px;
+    height: 50px;
     width: 100%;
   }
   .avatar {
@@ -125,7 +125,7 @@ export default {
     height: 50px;
     position: absolute;
     z-index: 10;
-    top: 45px;
+    top: 25px;
     left: 50%;
     transform: translate(-50%, 0);
   }
@@ -149,9 +149,7 @@ export default {
   .downUp {
     width: 100%;
     font-size: 12px;
-    // height: 500px;
     height: 36px;
-    // background: blue;
     position: relative;
     .Up {
       width: 78%;
@@ -186,6 +184,7 @@ export default {
       }
     }
     .down {
+      // background: blue;
       padding: 0 20px;
       .down-discount {
         font-size: 12px;

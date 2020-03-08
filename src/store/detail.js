@@ -6,7 +6,7 @@ const SET_GOODS_LIST = 'setGoodsList'
 const state = {
   goodsList: [], //总的商品列表
   recommendList: [], //推荐商品列表
-  cartGoodsList: [] //
+  cartGoodsList: [] //购物车列表
 }
 const mutations = {
   // 1.获取goods列表
