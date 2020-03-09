@@ -8,3 +8,5 @@ export function debounce(func, delay) {
     }, delay)
   }
 }
+// 理解
+// 刚开始执行一遍，等待delay在执行一遍。中间时间段不会执行，不会刷新

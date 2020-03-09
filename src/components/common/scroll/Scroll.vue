@@ -53,16 +53,17 @@ export default {
     },
     // 2.更新操作
     refresh() {
+      // console.log('a')
       this.scroll && this.scroll.refresh()
     },
     // 3.获取scrollY
     getScrollY() {
       return this.scroll ? this.scroll.y : 0
-    },
-    // 4.加载更多
-    finishPullUp() {
-      this.scroll && this.scroll.finishPullUp()
     }
+    // 4.加载更多
+    // finishPullUp() {
+    //   this.scroll && this.scroll.finishPullUp()
+    // }
   }
 }
 </script>

@@ -107,24 +107,20 @@ export default {
       }
     }
     .content {
+      padding: 15px;
       .title {
         font-size: 16px;
-        margin: 15px 0;
         font-weight: 700;
         color: rgb(7, 17, 27);
       }
       .detail {
-        margin-bottom: 15px;
+        margin: 15px 0;
         font-size: 13px;
         color: $gray;
-        .sell-count {
-          margin: 0 12px;
-        }
       }
       .price {
         display: flex;
         justify-content: space-between;
-        padding: 0 12px;
         .now-old {
           font-weight: 700;
           .now {

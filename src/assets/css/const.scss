@@ -35,6 +35,9 @@ a {
 button {
   border: none;
 }
+li{
+  list-style: none;
+}
 .clearfix::after {
   clear: both;
   display: block;
