@@ -47,4 +47,8 @@ export default {
 }
 </script>
 
-<style scoped lang="scss"></style>
+<style scoped lang="scss">
+.detail {
+  height: 100vh;
+}
+</style>

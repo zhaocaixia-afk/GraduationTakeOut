@@ -35,6 +35,8 @@
       </scroll>
     </div>
 
+    <cart></cart>
+
     <!-- 商品详情 -->
     <good :good="good" ref="good" />
   </div>
@@ -45,6 +47,7 @@ import Scroll from 'components/common/scroll/Scroll'
 import { getShopsGoods } from 'network/detail'
 
 import CartControl from 'components/common/cartControl/CartControl'
+import Cart from 'components/common/cart/Cart'
 import Good from './Good'
 
 export default {
@@ -118,16 +121,17 @@ export default {
       if (this.currentIndex < 1) {
         this.$refs.menuWrapper.scrollTo(0, 0, 200)
       }
-      if (this.currentIndex >= 8) {
+      if (this.currentIndex >= 7) {
         // 注意数值里面添加了一个最大值
-        this.$refs.menuWrapper.scrollTo(0, -54 * (length - 9), 200)
+        this.$refs.menuWrapper.scrollTo(0, -54 * (length - 9) - 48, 200)
       }
     }
   },
   components: {
     CartControl,
     Good,
-    Scroll
+    Scroll,
+    Cart
   }
 }
 </script>
@@ -136,7 +140,8 @@ export default {
 .goods-list {
   display: flex;
   width: 100%;
-  height: 442px;
+  height: calc(100% - 172px - 44px);
+  padding-bottom: 48px;
   .menu-wrapper {
     width: 80px;
     // height: 442px;

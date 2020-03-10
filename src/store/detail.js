@@ -1,19 +1,8 @@
 import Vue from 'vue'
-// import { getShopsGoods } from 'network/detail'
-
-// const SET_GOODS_LIST = 'setGoodsList'
-
 const state = {
-  // goodsList: [], //总的商品列表
-  // recommendList: [], //推荐商品列表
   cartGoodsList: [] //购物车列表
 }
 const mutations = {
-  // // 1.获取goods列表
-  // [SET_GOODS_LIST](state, payload) {
-  //   state.goodsList = payload.goodsList
-  //   state.recommendList = payload.recommendList
-  // },
   // 2.增加
   incrementFoodCount(state, good) {
     if (!good.count) {
@@ -34,16 +23,6 @@ const mutations = {
   }
 }
 const actions = {
-  // 1.获取了goodsList,同时赋值了goodsList和recommendList
-  // async getGoodsList(context, callback) {
-  //   const result = await getShopsGoods()
-  //   if (result.code === 0) {
-  //     const goodsList = result.data
-  //     const recommendList = result.data[0].foods
-  //     context.commit(SET_GOODS_LIST, { goodsList, recommendList })
-  //     callback && callback()
-  //   }
-  // },
   // 2.同步操作,但是为了保持一个函数做单一事件原则
   updateFoodCount(context, payload) {
     if (payload.isAdd) {
@@ -53,7 +32,16 @@ const actions = {
     }
   }
 }
-const getters = {}
+const getters = {
+  // 1.总的件数count
+  totalCount(state) {
+    return state.cartGoodsList.reduce((total, item) => total + item.count, 0)
+  },
+  // 2.总的价钱
+  totalPrice(state) {
+    return state.cartGoodsList.reduce((total, item) => total + item.count * item.price, 0)
+  }
+}
 export default {
   state,
   mutations,
