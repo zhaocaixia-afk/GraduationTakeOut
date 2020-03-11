@@ -1,5 +1,5 @@
 <template>
-  <div class="shops-item" @click="$router.push('/detail')">
+  <div class="shops-item" @click="showDetail(shop.id)">
     <img :src="`${basicURL}${shop.image_path}`" alt="" class="avator" @load="imageLoad" />
     <div class="text">
       <div class="title">{{ shop.name }}</div>
@@ -49,6 +49,13 @@ export default {
     // 1.图片加载完成
     imageLoad() {
       this.$bus.$emit('itemImageLoad')
+    },
+    showDetail(id) {
+      // $router.push('/detail/' + shop.id)
+      this.$router.push({
+        path: '/detail',
+        query: { id }
+      })
     }
   }
 }

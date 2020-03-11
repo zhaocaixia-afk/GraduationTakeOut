@@ -1,13 +1,13 @@
 <template>
   <div class="detail">
     <detail-header :shop-info="shopInfo" />
-    <tab-control :tab-list="tabList" ref="tabControl2" class="tabControl2" @tabCurrent="tabCurrent" />
+    <tab-control :tab-list="tabList" :id="id" :current-path="currentPath" ref="tabControl2" class="tabControl2" />
     <router-view />
   </div>
 </template>
 
 <script>
-import { getShopsInfo } from 'network/detail'
+import { getShopInfo } from 'network/detail'
 
 import DetailHeader from './childCpns/DetailHeader'
 import TabControl from './childCpns/TabControl'
@@ -16,28 +16,38 @@ export default {
   name: 'Detail',
   data() {
     return {
+      id: 0,
       shopInfo: {},
       tabList: [
         { path: '/detail', text: '点餐' },
         { path: '/ratings', text: '评价' },
         { path: '/info', text: '商家' }
-      ]
+      ],
+      currentPath: '/detail'
     }
   },
   mounted() {
+    this.id = this.$route.query.id
+
     this._getShopInfo()
+  },
+  watch: {
+    $route: {
+      handler(val) {
+        // console.log(val.path)
+        // console.log(oldval)
+        this.currentPath = val.path
+      }
+    }
   },
   methods: {
     // 1.获取商家详情
     async _getShopInfo() {
-      const result = await getShopsInfo()
-      if (result.code === 0) {
-        this.shopInfo = result.data
+      const res = await getShopInfo({ id: this.id })
+      // console.log(res)
+      if (res.code === 0) {
+        this.shopInfo = res.data.info
       }
-      // console.log(this.shopInfo)
-    },
-    tabCurrent(index) {
-      this.$refs.tabControl2.currentIndex = index
     }
   },
   components: {

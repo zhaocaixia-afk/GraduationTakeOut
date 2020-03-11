@@ -44,11 +44,12 @@
 
 <script>
 import Scroll from 'components/common/scroll/Scroll'
-import { getShopsGoods } from 'network/detail'
 
 import CartControl from 'components/common/cartControl/CartControl'
 import Cart from 'components/common/cart/Cart'
 import Good from './Good'
+
+import { getShopGoodsList } from '../../../network/detail'
 
 export default {
   name: 'DetailGoods',
@@ -61,24 +62,22 @@ export default {
       titleList: [] //左侧title的集合,为了右侧的头部显示
     }
   },
-  created() {
-    this._getShopsGoods()
+  mounted() {
+    this._getShopGoodsList()
   },
   methods: {
-    // 1.获取商品列表
-    async _getShopsGoods() {
-      const result = await getShopsGoods()
+    async _getShopGoodsList() {
+      const result = await getShopGoodsList({ id: this.$route.query.id })
       if (result.code === 0) {
-        this.goodsList = result.data
+        this.goodsList = result.data.goods
+        this.$nextTick(() => {
+          // better-scroll的刷新
+          this.$refs.menuWrapper.refresh()
+          this.$refs.goodsWrapper.refresh()
+          this._initTops()
+          this._initTitle()
+        })
       }
-      // console.log(this.goodsList)
-      this.$nextTick(() => {
-        // better-scroll的刷新
-        this.$refs.menuWrapper.refresh()
-        this.$refs.goodsWrapper.refresh()
-        this._initTops()
-        this._initTitle()
-      })
     },
     // 2.点击商品,出现详情页面
     showGood(good) {
@@ -118,7 +117,7 @@ export default {
           this.currentIndex = i
         }
       }
-      if (this.currentIndex < 1) {
+      if (this.currentIndex <= 1) {
         this.$refs.menuWrapper.scrollTo(0, 0, 200)
       }
       if (this.currentIndex >= 7) {

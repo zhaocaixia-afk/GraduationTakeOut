@@ -91,7 +91,7 @@ export default {
   computed: {
     // 优惠总个数(三级菜单的渲染bug)
     discountTotal() {
-      return this.shopInfo.supports && this.shopInfo.supports[3].content.split('，').length
+      return this.shopInfo.supports && this.shopInfo.supports.length
     }
   },
   methods: {

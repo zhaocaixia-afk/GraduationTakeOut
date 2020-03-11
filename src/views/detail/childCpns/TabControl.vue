@@ -1,7 +1,7 @@
 <template>
   <div class="tab-control">
-    <div class="tab-item" :class="currentIndex === index ? 'active' : ''" v-for="(item, index) in tabList" :key="index" @click="changeTab(index)">
-      <router-link :to="item.path">{{ item.text }}</router-link>
+    <div class="tab-item" :class="currentIndex === index ? 'active' : ''" v-for="(item, index) in tabList" :key="index" @click="changeTab({ path: item.path })">
+      <span>{{ item.text }}</span>
     </div>
   </div>
 </template>
@@ -11,7 +11,8 @@ export default {
   name: 'TabControl',
   data() {
     return {
-      currentIndex: 0
+      currentIndex: 0,
+      pathList: ['/detail', '/ratings', '/info']
     }
   },
   props: {
@@ -20,12 +21,23 @@ export default {
       default() {
         return []
       }
+    },
+    currentPath: String,
+    id: Number
+  },
+  watch: {
+    // 监听传过来的path值
+    currentPath(val) {
+      // console.log(val)
+      this.currentIndex = this.pathList.findIndex(item => item === val)
     }
   },
   methods: {
-    changeTab(index) {
-      this.currentIndex = index
-      this.$emit('tabCurrent', index)
+    changeTab(obj) {
+      this.$router.push({
+        path: obj.path,
+        query: { id: this.id }
+      })
     }
   }
 }
@@ -43,7 +55,7 @@ export default {
     text-align: center;
   }
   .active {
-    a {
+    span {
       color: green;
       padding-bottom: 10px;
       border-bottom: 2px solid green;

@@ -4,12 +4,11 @@ const BASE_URL = '/api'
 const TIMEOUT = 5000
 
 export function request(config) {
+  // console.log(config)
   // 1.创建axios实例
   const instance = axios.create({
     baseURL: BASE_URL,
-    timeout: TIMEOUT,
-    method: config.method || 'get',
-    data: config.data || {}
+    timeout: TIMEOUT
   })
   // 3.请求拦截
   instance.interceptors.request.use(
