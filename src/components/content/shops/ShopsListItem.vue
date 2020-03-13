@@ -6,6 +6,7 @@
       <div class="first-line">
         <p class="rating-count">
           <Star :size="24" :score="shop.rating" />
+          {{ shop.rating }}
           <span class="count">月售{{ shop.rating_count }}</span>
         </p>
         <p class="delivery_mode" v-if="shop.delivery_mode.text">{{ shop.delivery_mode.text }}</p>
@@ -20,17 +21,12 @@
           <span class="distance">{{ shop.distance }}km</span>
         </p>
       </div>
-      <!-- <div class="three-line">
-        <p>55减20</p>
-        <p>55减20</p>
-        <p>55减20</p>
-      </div> -->
     </div>
   </div>
 </template>
 
 <script>
-import Star from '../../common/star/Star'
+import Star from 'common/star/Star'
 
 export default {
   name: 'ShopsListItem',
@@ -110,6 +106,7 @@ export default {
       margin: 15px 0;
       .rating-count {
         display: flex;
+        color: $orgin;
         .count {
           margin-left: 5px;
           color: $text-color;

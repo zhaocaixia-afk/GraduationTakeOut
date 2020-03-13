@@ -1,7 +1,6 @@
 <template>
   <div class="star" :class="`star-${size}`">
     <p class="star-item" v-for="(sc, index) in starClasses" :key="index" :class="sc"></p>
-    {{ score }}
   </div>
 </template>
 
@@ -37,7 +36,6 @@ export default {
 <style scoped lang="scss">
 .star {
   display: flex;
-  color: $orgin;
 }
 .star-48 {
   .star-item {
