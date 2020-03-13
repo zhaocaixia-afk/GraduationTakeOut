@@ -5,7 +5,7 @@
       <div class="title">{{ shop.name }}</div>
       <div class="first-line">
         <p class="rating-count">
-          <span class="rating">{{ shop.rating }}</span>
+          <Star :size="24" :score="shop.rating" />
           <span class="count">月售{{ shop.rating_count }}</span>
         </p>
         <p class="delivery_mode" v-if="shop.delivery_mode.text">{{ shop.delivery_mode.text }}</p>
@@ -20,16 +20,18 @@
           <span class="distance">{{ shop.distance }}km</span>
         </p>
       </div>
-      <div class="three-line">
+      <!-- <div class="three-line">
         <p>55减20</p>
         <p>55减20</p>
         <p>55减20</p>
-      </div>
+      </div> -->
     </div>
   </div>
 </template>
 
 <script>
+import Star from '../../common/star/Star'
+
 export default {
   name: 'ShopsListItem',
   data() {
@@ -57,6 +59,9 @@ export default {
         query: { id }
       })
     }
+  },
+  components: {
+    Star
   }
 }
 </script>
@@ -77,41 +82,52 @@ export default {
     border-bottom: 1px solid #eee;
     font-size: 15px;
     .title {
-      width: 220px;
-      font-size: 18px;
+      width: 200px;
+      color: #333;
+      font-size: 16px;
       font-weight: bold;
       white-space: nowrap;
       text-overflow: ellipsis;
       overflow: hidden;
-      margin-bottom: 10px;
+      margin-top: 5px;
+      &::before {
+        content: '品牌';
+        display: inline-block;
+        font-size: 11px;
+        line-height: 11px;
+        color: #333;
+        background-color: #ffd930;
+        padding: 3px;
+        border-radius: 2px;
+        margin-right: 5px;
+      }
     }
     .first-line {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      font-size: 15px;
+      font-size: 10px;
+      margin: 15px 0;
       .rating-count {
-        .rating {
-          color: rgb(243, 104, 9);
-          margin-right: 10px;
-        }
+        display: flex;
         .count {
-          color: rgb(128, 128, 128);
+          margin-left: 5px;
+          color: $text-color;
         }
       }
       .delivery_mode {
         background: rgb(3, 166, 255);
-        color: white;
+        color: $white;
         font-size: 12px;
         height: 12px;
       }
     }
     .second-line {
-      font-size: 15px;
-      margin: 6px 0;
+      font-size: 12px;
+      // margin: 10px 0;
       display: flex;
       justify-content: space-between;
-      color: rgb(128, 128, 128);
+      color: $text-color;
       .min-free {
         .minPrice {
           margin-right: 5px;
@@ -121,16 +137,6 @@ export default {
         .time {
           margin-right: 5px;
         }
-      }
-    }
-    .three-line {
-      font-size: 15px;
-      display: flex;
-      margin: 10px 0;
-      p {
-        margin-right: 6px;
-        border: 1px solid rgb(248, 182, 169);
-        color: rgb(205, 73, 48);
       }
     }
   }

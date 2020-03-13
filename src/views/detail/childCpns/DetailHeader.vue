@@ -102,7 +102,6 @@ export default {
   methods: {
     // 1.商家详情的展开与显示
     funAnimate() {
-      console.log('a')
       if (this.headerOpen) {
         this.$refs.box.style.height = '36px'
       } else {
