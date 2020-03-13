@@ -1,6 +1,7 @@
 import Vue from 'vue'
 const state = {
-  cartGoodsList: [] //购物车列表
+  cartGoodsList: [], //购物车列表
+  headerOpen: false //DetailHeader头部的展开与收缩
 }
 const mutations = {
   // 2.增加
@@ -20,6 +21,9 @@ const mutations = {
         state.cartGoodsList.splice(state.cartGoodsList.indexOf(good), 1)
       }
     }
+  },
+  headerOpen(state) {
+    state.headerOpen = !state.headerOpen
   }
 }
 const actions = {
@@ -30,6 +34,10 @@ const actions = {
     } else {
       context.commit('decrementFoodCount', payload.good)
     }
+  },
+  // DetailHeader的展开与收缩显示
+  updateHeaderOpen(context) {
+    context.commit('headerOpen')
   }
 }
 const getters = {

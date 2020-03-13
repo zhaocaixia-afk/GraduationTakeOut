@@ -19,7 +19,7 @@
                 <p class="desc" v-show="good.description">{{ good.description }}</p>
                 <div class="extra">
                   <span class="count">月售{{ good.sellCount }}份</span>
-                  <span>好评率{{ good.rating }}%</span>
+                  <span v-if="good.rating">好评率{{ good.rating }}%</span>
                 </div>
                 <div class="price-count">
                   <div class="price">
@@ -49,7 +49,7 @@ import CartControl from 'components/common/cartControl/CartControl'
 import Cart from 'components/common/cart/Cart'
 import Good from './Good'
 
-import { getShopGoodsList } from '../../../network/detail'
+import { getShopGoodsList } from 'network/detail'
 
 export default {
   name: 'DetailGoods',

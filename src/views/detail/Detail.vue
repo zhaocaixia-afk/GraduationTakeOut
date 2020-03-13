@@ -47,8 +47,12 @@ export default {
       // console.log(res)
       if (res.code === 0) {
         this.shopInfo = res.data.info
+        this.$bus.$emit('shopInfo', this.shopInfo)
       }
     }
+    // boxShow() {
+    //   // console.log('show')
+    // }
   },
   components: {
     DetailHeader,

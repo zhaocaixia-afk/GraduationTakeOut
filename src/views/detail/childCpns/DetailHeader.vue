@@ -3,7 +3,7 @@
     <!-- 背景图片 -->
     <div class="detail-bg" :style="`background: url('${shopInfo.bgImg}')`"></div>
     <div class="avatar">
-      <img :src="shopInfo.avatar" alt="头像" @load="imgLoad" />
+      <img :src="shopInfo.avatar" alt="头像" />
     </div>
     <p class="name">{{ shopInfo.name }}</p>
     <div class="shop-message">
@@ -13,7 +13,7 @@
     </div>
 
     <div class="downUp transition_dom" ref="box" @click="funAnimate">
-      <div class="Up" v-if="!boxShow">
+      <div class="Up" v-if="!headerOpen">
         <div class="up-discount">
           <p class="up-discount-title" v-if="shopInfo.supports">
             {{ shopInfo.supports[3].name }}
@@ -67,11 +67,13 @@
       </div>
     </div>
 
-    <i class="el-icon-arrow-up UpRorrow" v-if="boxShow" @click="funAnimate"></i>
+    <i class="el-icon-arrow-up UpRorrow" v-if="headerOpen" @click="funAnimate"></i>
   </div>
 </template>
 
 <script>
+import { mapState } from 'vuex'
+
 export default {
   name: 'DetailHeader',
   data() {
@@ -89,6 +91,9 @@ export default {
     }
   },
   computed: {
+    ...mapState({
+      headerOpen: state => state.detail.headerOpen
+    }),
     // 优惠总个数(三级菜单的渲染bug)
     discountTotal() {
       return this.shopInfo.supports && this.shopInfo.supports.length
@@ -97,16 +102,14 @@ export default {
   methods: {
     // 1.商家详情的展开与显示
     funAnimate() {
-      if (this.boxShow) {
+      console.log('a')
+      if (this.headerOpen) {
         this.$refs.box.style.height = '36px'
       } else {
         this.$refs.box.style.height = '530px'
       }
-      this.boxShow = !this.boxShow
-    },
-    // 2.图片是否加载完成,导航栏的吸顶效果
-    imgLoad() {
-      this.$emit('imgLoad')
+      // 修改state中的headerOpen
+      this.$store.dispatch('updateHeaderOpen')
     }
   }
 }
@@ -184,7 +187,6 @@ export default {
       }
     }
     .down {
-      // background: blue;
       padding: 0 20px;
       .down-discount {
         font-size: 12px;
@@ -230,6 +232,7 @@ export default {
     left: 50%;
     transform: translate(-50%, 0);
     color: #999;
+    z-index: 60;
   }
 }
 </style>
