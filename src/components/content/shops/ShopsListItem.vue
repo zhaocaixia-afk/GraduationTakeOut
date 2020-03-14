@@ -5,7 +5,7 @@
       <div class="title">{{ shop.name }}</div>
       <div class="first-line">
         <p class="rating-count">
-          <!-- <Star :size="24" :score="shop.rating" /> -->
+          <Star :size="24" :score="shop.rating" />
           {{ shop.rating }}
           <span class="count">月售{{ shop.rating_count }}</span>
         </p>
@@ -26,7 +26,7 @@
 </template>
 
 <script>
-// import Star from 'common/star/Star'
+import Star from 'components/common/star/Star'
 
 export default {
   name: 'ShopsListItem',
@@ -57,7 +57,7 @@ export default {
     }
   },
   components: {
-    // Star
+    Star
   }
 }
 </script>
