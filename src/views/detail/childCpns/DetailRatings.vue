@@ -9,12 +9,12 @@
       </div>
       <div class="overview-right">
         <div class="score-wrapper">
-          <star :size="36" :score="4.5" />
+          <Star :size="36" :score="4.5" />
           <span class="title">服务态度</span>
           <span class="score">4.6</span>
         </div>
         <div class="score-wrapper">
-          <star :size="36" :score="4.5" />
+          <Star :size="36" :score="4.5" />
           <span class="title">商品评分</span>
           <span class="score">4.6</span>
         </div>
