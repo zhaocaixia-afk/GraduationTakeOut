@@ -7,7 +7,7 @@
 </template>
 
 <script>
-import { getShopInfo } from 'network/detail'
+import { mapState } from 'vuex'
 
 import DetailHeader from './childCpns/DetailHeader'
 import TabControl from './childCpns/TabControl'
@@ -17,7 +17,6 @@ export default {
   data() {
     return {
       id: 0,
-      shopInfo: {},
       tabList: [
         { path: '/detail', text: '点餐' },
         { path: '/ratings', text: '评价' },
@@ -31,6 +30,11 @@ export default {
 
     this._getShopInfo()
   },
+  computed: {
+    ...mapState({
+      shopInfo: state => state.detail.shopInfo
+    })
+  },
   watch: {
     $route: {
       handler(val) {
@@ -42,17 +46,9 @@ export default {
   },
   methods: {
     // 1.获取商家详情
-    async _getShopInfo() {
-      const res = await getShopInfo({ id: this.id })
-      // console.log(res)
-      if (res.code === 0) {
-        this.shopInfo = res.data.info
-        this.$bus.$emit('shopInfo', this.shopInfo)
-      }
+    _getShopInfo() {
+      this.$store.dispatch('_getShopInfo', this.id)
     }
-    // boxShow() {
-    //   // console.log('show')
-    // }
   },
   components: {
     DetailHeader,

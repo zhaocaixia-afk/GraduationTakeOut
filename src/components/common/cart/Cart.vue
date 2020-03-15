@@ -54,19 +54,14 @@ export default {
   name: 'Cart',
   data() {
     return {
-      shopInfo: {},
       isShow: false
     }
-  },
-  mounted() {
-    this.$bus.$on('shopInfo', res => {
-      this.shopInfo = res
-    })
   },
   computed: {
     ...mapState({
       cartGoodsList: state => state.detail.cartGoodsList,
-      headerOpen: state => state.detail.headerOpen
+      headerOpen: state => state.detail.headerOpen,
+      shopInfo: state => state.detail.shopInfo
     }),
     ...mapGetters(['totalCount', 'totalPrice']),
     // 结算按钮的样式
