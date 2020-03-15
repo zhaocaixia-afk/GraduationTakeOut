@@ -43,7 +43,7 @@ const shopInfoList = [
           content: '配送费立减3元'
         },
         {
-          type: 0,
+          type: 1,
           name: '特价',
           content: '特价商品0.2元起'
         },
@@ -1975,7 +1975,7 @@ const shopRatingsList = [
       {
         userName: 'wu打你',
         comment: '味道还不错。上菜也很快。是乐山特有的甜辣味。而且打包也不收打包费。味道也很好吃。有机会下次还会来。',
-        userUrl: '',
+        userUrl: 'http://static.galileo.xiaojukeji.com/static/tms/default_header.png',
         picUrls: [{ id: -432216714, url: 'http://p1.meituan.net/shaitu/8cce9e0e358d47b654c7ad915e2b626e5153211.jpg' }],
         commentTime: '1574071919880',
         score: 3,
@@ -2005,7 +2005,7 @@ const shopRatingsList = [
       },
       {
         userName: 'Mfi940999665',
-        userUrl: '',
+        userUrl: 'http://static.galileo.xiaojukeji.com/static/tms/default_header.png',
         comment: '鸡汤饭100分！',
         picUrls: [],
         commentTime: '1579258047191',

@@ -57,8 +57,8 @@
           <div class="img-list" v-if="item.picUrls.length">
             <img :src="img.url" alt="" class="img-item" v-for="(img, index2) in item.picUrls" :key="index2" />
           </div>
-          <div class="recommend" v-if="item.recommend.length">
-            <icon-svg icon-class="iconzan" class="item-svg down"></icon-svg>
+          <div class="recommend">
+            <icon-svg :icon-class="!item.rateType ? 'iconzan' : 'iconcaishixin-'" class="item-svg up" :class="!item.rateType ? 'up' : 'down'"></icon-svg>
             <span v-for="(recommend, index3) in item.recommend" :key="index3">{{ recommend }}</span>
           </div>
         </div>
@@ -105,7 +105,7 @@ export default {
       const result = await getShopRatingsList({ id: this.$route.query.id })
       if (result.code === 0) {
         this.ratingsList = result.data.comments
-        console.log(this.ratingsList)
+        // console.log(this.ratingsList)
         this.$nextTick(() => {
           this.$refs.scroll.refresh()
         })
@@ -253,7 +253,6 @@ export default {
         width: 28px;
         height: 28px;
         border-radius: 50%;
-        background: red;
         margin-right: 10px;
       }
       .content {

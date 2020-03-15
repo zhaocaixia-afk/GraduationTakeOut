@@ -15,7 +15,7 @@ import VueAwesomeSwiper from 'vue-awesome-swiper'
 import 'swiper/dist/css/swiper.css'
 Vue.use(VueAwesomeSwiper)
 // 4.iconfont
-import './assets/icon/iconfont.js'
+import './assets/icon/iconfont'
 import IconSvg from 'components/common/iconSvg/IconSvg'
 Vue.component('icon-svg', IconSvg)
 // 5.事件总线

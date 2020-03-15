@@ -1,5 +1,6 @@
 <template>
   <div class="detail-header">
+    <i class="el-icon-arrow-left arrowLeft" @click="back"></i>
     <!-- 背景图片 -->
     <div class="detail-bg" :style="`background: url('${shopInfo.bgImg}')`"></div>
     <div class="avatar">
@@ -109,6 +110,9 @@ export default {
       }
       // 修改state中的headerOpen
       this.$store.dispatch('updateHeaderOpen')
+    },
+    back() {
+      this.$router.back()
     }
   }
 }
@@ -117,6 +121,12 @@ export default {
 <style scoped lang="scss">
 .detail-header {
   position: relative;
+  .arrowLeft {
+    position: absolute;
+    color: $white;
+    font-size: 24px;
+    margin: 5px;
+  }
   .detail-bg {
     height: 50px;
     width: 100%;

@@ -54,7 +54,6 @@ export default {
     // 2.更新操作
     refresh() {
       // console.log('a')
-      // console.log(this.scroll)
       this.scroll && this.scroll.refresh()
     },
     // 3.获取scrollY
