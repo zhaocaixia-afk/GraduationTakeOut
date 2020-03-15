@@ -31,6 +31,12 @@ const mutations = {
   },
   getShopInfo(state, shopInfo) {
     state.shopInfo = shopInfo
+  },
+  // 清空购物车
+  clearCart(state) {
+    // 清空购物车,要确保选择的数量为0
+    state.cartGoodsList.forEach(item => (item.count = 0))
+    state.cartGoodsList = []
   }
 }
 const actions = {
@@ -52,6 +58,10 @@ const actions = {
     if (res.code === 0) {
       context.commit('getShopInfo', res.data.info)
     }
+  },
+  // 4.清空购物车
+  clearCart(context) {
+    context.commit('clearCart')
   }
 }
 const getters = {

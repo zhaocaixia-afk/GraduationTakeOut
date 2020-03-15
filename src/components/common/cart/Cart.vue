@@ -116,7 +116,27 @@ export default {
       this.isShow = false
     },
     // 3.清空购物车
-    clearCart() {}
+    clearCart() {
+      this.$confirm('此操作将清空购物车, 是否继续?', '提示', {
+        confirmButtonText: '确定',
+        cancelButtonText: '取消',
+        type: 'warning',
+        center: true
+      })
+        .then(() => {
+          this.$store.dispatch('clearCart')
+          // this.$message({
+          //   type: 'success',
+          //   message: '删除成功!'
+          // })
+        })
+        .catch(() => {
+          // this.$message({
+          //   type: 'info',
+          //   message: '已取消删除'
+          //});
+        })
+    }
   },
   components: {
     CartControl,
@@ -289,6 +309,14 @@ export default {
   &.fade-leave-to {
     opacity: 0;
     background: rgba(7, 17, 27, 0);
+  }
+}
+</style>
+
+<style lang="scss">
+.el-message-box__wrapper {
+  .el-message-box {
+    width: 80%;
   }
 }
 </style>

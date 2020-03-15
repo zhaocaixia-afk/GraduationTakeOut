@@ -1,11 +1,9 @@
 import Vue from 'vue'
 
-import { Button, Form, FormItem, Input, Collapse, CollapseItem, Card } from 'element-ui'
+import { Button, Form, FormItem, Input, MessageBox } from 'element-ui'
 
 Vue.use(Button)
 Vue.use(Form)
 Vue.use(FormItem)
 Vue.use(Input)
-Vue.use(Collapse)
-Vue.use(CollapseItem)
-Vue.use(Card)
+Vue.prototype.$confirm = MessageBox.confirm
