@@ -23,7 +23,7 @@ export default {
   name: 'Login',
   data() {
     return {
-      loginWay: false //默认短信登录
+      loginWay: true //默认短信登录
     }
   },
   components: {

@@ -20,6 +20,7 @@
     <alert-tip :alertText="showText" v-if="alertShow" @closeTip="closeTip"></alert-tip>
   </div>
 </template>
+
 <script>
 import { passwordLogin } from 'network/login'
 import { loginMixin } from 'common/mixin'
@@ -61,6 +62,7 @@ export default {
   }
 }
 </script>
+
 <style scoped lang="scss">
 .el-form {
   padding: 0 30px;

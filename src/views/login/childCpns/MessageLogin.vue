@@ -21,6 +21,7 @@
     <alert-tip :alertText="showText" v-if="alertShow" @closeTip="closeTip"></alert-tip>
   </div>
 </template>
+
 <script>
 import { reqSendCode, phoneLogin } from 'network/login'
 
@@ -128,6 +129,7 @@ export default {
   }
 }
 </script>
+
 <style scoped lang="scss">
 .message-login {
   .el-form {
@@ -146,6 +148,13 @@ export default {
         font-size: 16px;
       }
     }
+  }
+}
+</style>
+<style lang="scss">
+.el-form {
+  .el-form-item {
+    margin: 20px 0;
   }
 }
 </style>

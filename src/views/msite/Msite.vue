@@ -5,10 +5,10 @@
         <i class="el-icon-search"></i>
       </div>
       <div slot="center">{{ address.address }}</div>
-      <div slot="right">
+      <router-link tag="div" :to="userInfo._id ? '/userinfo' : '/login'" slot="right">
         <i class="el-icon-user" v-if="userInfo._id"></i>
         <span v-else>登录|注册</span>
-      </div>
+      </router-link>
     </nav-bar>
     <scroll ref="scroll" class="scroll">
       <swiper :options="swiperOption" v-if="categorysList.length">
