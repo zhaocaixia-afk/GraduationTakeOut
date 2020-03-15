@@ -1936,6 +1936,161 @@ const shopGoodsList = [
     ]
   }
 ]
+// 商家评论数据
+const shopRatingsList = [
+  {
+    id: 1,
+    comments: [
+      {
+        userName: 'SevenYaoX',
+        comment:
+          '真的超级喜欢，非常支持，质量非常好，与卖家描述的完全一致，非常满意,真的很喜欢，完全超出期望值，发货速度非常快，包装非常仔细、严实，物流公司服务态度很好，运送速度很快，很满意的一次购物 各方面都特别不错吧',
+        userUrl: 'https://img.meituan.net/avatar/effc05b8498e8ff19f37acc7453546107015.jpg',
+        picUrls: [
+          { id: -236645177, url: 'http://p0.meituan.net/shaitu/56543355ceb2eb6b00e79c8a27685bdf4271599.jpg' },
+          { id: -236561646, url: 'http://p0.meituan.net/shaitu/927395d7c5e2be3ea111e6259d7c7ea1906579.jpg' },
+          { id: -236561645, url: 'http://p0.meituan.net/shaitu/6f92476651f5236d8dfc0a9787597dec1103954.jpg' }
+        ],
+        commentTime: '1582736110617',
+        recommend: ['南瓜粥', '皮蛋瘦肉粥', '扁豆焖面', '娃娃菜炖豆腐', '牛肉馅饼'],
+        score: 5,
+        rateType: 0
+      },
+      {
+        userName: '彭丽802',
+        comment:
+          '去店里吃的麻辣味的，很快就弄上来了，四季豆很好吃，还有花菜，就是那个腐竹有点咸了，是甜辣的，不怎么辣，感觉乐山好会用甜，味道不错，又买了50串打包的藤椒的，但是我吃太饱了，明天再吃，希望不要太咸就行，推荐',
+        userUrl: 'https://img.meituan.net/avatar/d66e5e784852aa266443467d4971f36e17992.jpg',
+        picUrls: [
+          { id: -431837187, url: 'http://p0.meituan.net/shaitu/a7c398b3b7dbe8d35e5c3ecf86addea23757290.jpg' },
+          { id: -431765705, url: 'http://p0.meituan.net/shaitu/76789f5f2d99bdf9d79d44c8de03f97f3242266.jpg' },
+          { id: -431765704, url: 'http://p0.meituan.net/shaitu/de2ce3b424c132b4c8ba558942d91af43061809.jpg' },
+          { id: -431837186, url: 'http://p1.meituan.net/shaitu/006cd3f6c574efc81f9878c5e297be023095670.jpg' }
+        ],
+        commentTime: '1574079425323',
+        score: 4,
+        recommend: ['扁豆焖面'],
+        rateType: 0
+      },
+      {
+        userName: 'wu打你',
+        comment: '味道还不错。上菜也很快。是乐山特有的甜辣味。而且打包也不收打包费。味道也很好吃。有机会下次还会来。',
+        userUrl: '',
+        picUrls: [{ id: -432216714, url: 'http://p1.meituan.net/shaitu/8cce9e0e358d47b654c7ad915e2b626e5153211.jpg' }],
+        commentTime: '1574071919880',
+        score: 3,
+        rateType: 1,
+        recommend: []
+      },
+      {
+        userName: '匿名用户',
+        comment: '不错不错，吃了好多次了，可以去试一试。。。。。',
+        userUrl: 'https://www.dpfile.com/ugc/user/anonymous.png',
+        picUrls: [],
+        commentTime: '1583649699161',
+        score: 5,
+        rateType: 0,
+        recommend: []
+      },
+      {
+        userName: '匿名用户',
+        userUrl: 'https://www.dpfile.com/ugc/user/anonymous.png',
+        comment:
+          '【口味】钵钵鸡的味道和鸡汤饭的味道都很赞，和叶婆婆比起来一点都不差，叶婆婆可能就是要排队，哈哈哈哈，\n【环境】环境很干净，菜都是整整齐齐摆在柜子里，素的三角，荤的七角，吃多少拿多少，红油颜色也好看，味道也很好，而且去的时候碰到他们在吃饭，他们都是直接起来为顾客服务，没有推拉',
+        picUrls: [],
+        commentTime: '1571640148731',
+        score: 4,
+        rateType: 0,
+        recommend: []
+      },
+      {
+        userName: 'Mfi940999665',
+        userUrl: '',
+        comment: '鸡汤饭100分！',
+        picUrls: [],
+        commentTime: '1579258047191',
+        score: 1,
+        rateType: 1,
+        recommend: []
+      }
+    ],
+    total: 1657
+  },
+  {
+    id: 479,
+    comments: [
+      {
+        userName: 'NsW213136757',
+        userUrl: 'https://img.meituan.net/avatar/d31306d7d0456dfc4231e08b160a61b5107999.jpg',
+        comment: '环境一般，服务热情，套餐划算，分量很足，牛肉炒饭一大碗，牛肉牛杂很好吃，豆腐雪魔芋煮起也很好吃！',
+        picUrls: [
+          { id: -601441322, url: 'http://p0.meituan.net/shaitu/0bf586ef1cf39cf86afd8f91ca96cbd92300198.jpg' },
+          { id: -601580910, url: 'http://p0.meituan.net/shaitu/25ba3251fc69fb2bf632514acac896531940863.jpg' },
+          { id: -601441321, url: 'http://p0.meituan.net/shaitu/b228f964bdaffb7c3bedbe3ce52469923016339.jpg' },
+          { id: -601580907, url: 'http://p0.meituan.net/shaitu/4539670137cd9acd6bc8bff5d7a02abf1604692.jpg' }
+        ],
+        commentTime: '1568609294879',
+        score: 5,
+        rateType: 0,
+        recommend: []
+      },
+      {
+        userName: '匿名用户',
+        userUrl: 'https://www.dpfile.com/ugc/user/anonymous.png',
+        comment: '最喜欢喝牛肉汤，特别鲜，喝了好几碗。牛肉也非常好吃，买了双人套餐，三个人吃的，份量很足。服务态度也非常好。超👍',
+        picUrls: [
+          { id: -577087542, url: 'http://p0.meituan.net/shaitu/c40814ccdadcd847e17353229c634d31754516.jpg' },
+          { id: -577087541, url: 'http://p1.meituan.net/shaitu/115250e137157aa6a2669f38c4cd6638320799.jpg' }
+        ],
+        commentTime: '1569462550835',
+        score: 4,
+        rateType: 0,
+        recommend: []
+      },
+      {
+        userName: '悦美方向',
+        userUrl: 'https://img.meituan.net/avatar/b277cd09da0c879142f8978cb0ab432092571.jpg',
+        comment: '来峨眉旅游，第一次吃传说中的跷脚牛肉，个人感觉味道不错。点了牛杂和九秒牛肉，原汤味道很好。',
+        picUrls: [{ id: -564122583, url: 'http://p0.meituan.net/shaitu/50db78e3f4118908ae45534d60c882d71777374.jpg' }],
+        commentTime: '1569835086526',
+        score: 3,
+        rateType: 1,
+        recommend: []
+      },
+      {
+        userName: 'otj878391995',
+        userUrl: '',
+        comment: '很好吃，人气旺，菜品棒',
+        picUrls: [],
+        commentTime: '1584176178066',
+        score: 4,
+        rateType: 0,
+        recommend: ['南瓜粥']
+      },
+      {
+        userName: 'lucaspanda',
+        userUrl: 'https://img.meituan.net/avatar/67272ea25e0dfdb6daac5ce663f4e44910371.jpg',
+        comment: '还行吧   李逵李鬼分不清哈',
+        picUrls: [],
+        commentTime: '1583648042792',
+        score: 4,
+        rateType: 0,
+        recommend: []
+      },
+      {
+        userName: '小帅羊！',
+        userUrl: 'https://img.meituan.net/avatar/4b5402f35bcb291f62ead2e38b13523516465.jpg',
+        comment: '好',
+        picUrls: [],
+        commentTime: '1579621743114',
+        score: 3,
+        rateType: 1,
+        recommend: []
+      }
+    ],
+    total: 1068
+  }
+]
 
 export default {
   // shopsInfo的数据,返回值
@@ -1951,6 +2106,15 @@ export default {
   getShopGoodsList: config => {
     const { id } = param2Obj(config.url)
     const data = shopGoodsList.find(item => item.id === parseInt(id))
+    return {
+      code: 0,
+      data: data
+    }
+  },
+  // shopRatingsList的数据,返回值
+  getShopRatingsList: config => {
+    const { id } = param2Obj(config.url)
+    const data = shopRatingsList.find(item => item.id === parseInt(id))
     return {
       code: 0,
       data: data

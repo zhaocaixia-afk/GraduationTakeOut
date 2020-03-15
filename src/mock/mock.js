@@ -9,5 +9,5 @@ Mock.mock('/api/getShopInfo?id=479', apiShops.getShopInfo)
 Mock.mock('/api/getShopGoodsList?id=1', apiShops.getShopGoodsList)
 Mock.mock('/api/getShopGoodsList?id=479', apiShops.getShopGoodsList)
 
-// Mock.mock('/api/info', { code: 0, data: apiData.info })
-// Mock.mock('/api/goods', { code: 0, data: apiData.goods })
+Mock.mock('/api/getShopRatingsList?id=1', apiShops.getShopRatingsList)
+Mock.mock('/api/getShopRatingsList?id=479', apiShops.getShopRatingsList)

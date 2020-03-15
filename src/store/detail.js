@@ -1,7 +1,11 @@
 import Vue from 'vue'
+
+import { getShopInfo } from '../network/detail'
+
 const state = {
   cartGoodsList: [], //购物车列表
-  headerOpen: false //DetailHeader头部的展开与收缩
+  headerOpen: false, //DetailHeader头部的展开与收缩
+  shopInfo: {}
 }
 const mutations = {
   // 2.增加
@@ -24,10 +28,13 @@ const mutations = {
   },
   headerOpen(state) {
     state.headerOpen = !state.headerOpen
+  },
+  getShopInfo(state, shopInfo) {
+    state.shopInfo = shopInfo
   }
 }
 const actions = {
-  // 2.同步操作,但是为了保持一个函数做单一事件原则
+  // 1.同步操作,但是为了保持一个函数做单一事件原则
   updateFoodCount(context, payload) {
     if (payload.isAdd) {
       context.commit('incrementFoodCount', payload.good)
@@ -35,9 +42,16 @@ const actions = {
       context.commit('decrementFoodCount', payload.good)
     }
   },
-  // DetailHeader的展开与收缩显示
+  // 2.同步操作,DetailHeader的展开与收缩显示
   updateHeaderOpen(context) {
     context.commit('headerOpen')
+  },
+  // 3.异步操作,获取DetailInfo的值
+  async _getShopInfo(context, id) {
+    const res = await getShopInfo({ id })
+    if (res.code === 0) {
+      context.commit('getShopInfo', res.data.info)
+    }
   }
 }
 const getters = {
