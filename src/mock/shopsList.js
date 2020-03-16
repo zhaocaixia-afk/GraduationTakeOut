@@ -1,5 +1,3 @@
-// import Mock from 'mockjs'
-
 function param2Obj(url) {
   const search = url.split('?')[1]
   if (!search) {

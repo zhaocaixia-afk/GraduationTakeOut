@@ -12,7 +12,7 @@
         <li class="good-list-hook" v-for="(item, index) in goodsList" :key="index" ref="goodListHook">
           <h2 class="title">{{ item.name }}</h2>
           <ul>
-            <li class="good-item" v-for="(good, index2) in item.foods" :key="index2" @click="showGood(good)">
+            <li class="good-item b-b" v-for="(good, index2) in item.foods" :key="index2" @click="showGood(good)">
               <img class="icon" :src="good.icon" alt="" />
               <div class="content">
                 <h2 class="name">{{ good.name }}</h2>
@@ -195,7 +195,6 @@ export default {
         align-items: center;
         margin: 18px;
         padding-bottom: 18px;
-        border-bottom: 1px solid rgba(7, 17, 27, 0.1);
         &:last-child {
           border-bottom: none;
         }

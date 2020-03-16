@@ -1,5 +1,6 @@
 // 公共方法
 export function debounce(func, delay) {
+  delay = delay || 300
   let timer = null
   return function(...args) {
     if (timer) clearInterval(timer)

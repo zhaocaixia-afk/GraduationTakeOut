@@ -2,7 +2,7 @@
   <div class="msite">
     <nav-bar bgColor="red">
       <div slot="left">
-        <i class="el-icon-search"></i>
+        <i class="el-icon-search" @click="goSearch"></i>
       </div>
       <div slot="center">{{ address.address }}</div>
       <router-link tag="div" :to="userInfo._id ? '/userinfo' : '/login'" slot="right">
@@ -118,6 +118,9 @@ export default {
       if (result.code === 0) {
         this.shops = result.data
       }
+    },
+    goSearch() {
+      this.$router.push('/search')
     }
   },
   components: {

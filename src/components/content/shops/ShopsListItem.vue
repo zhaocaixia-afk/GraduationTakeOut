@@ -1,7 +1,7 @@
 <template>
   <div class="shops-item" @click="showDetail(shop.id)">
     <img :src="`${basicURL}${shop.image_path}`" alt="" class="avator" @load="imageLoad" />
-    <div class="text">
+    <div class="text b-b">
       <div class="title">{{ shop.name }}</div>
       <div class="first-line">
         <p class="rating-count">
@@ -75,7 +75,7 @@ export default {
   }
   .text {
     flex: 1;
-    border-bottom: 1px solid #eee;
+    // border-bottom: 1px solid #eee;
     font-size: 15px;
     .title {
       width: 200px;

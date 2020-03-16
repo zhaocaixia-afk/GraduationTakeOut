@@ -1,9 +1,17 @@
 <template>
   <div class="user-info">
-    user-info
+    <!-- <user-header></user-header> -->
   </div>
 </template>
+
 <script>
-export default {}
+// import UserHeader from './childCpns/UserHeader'
+export default {
+  name: 'UserHeader',
+  components: {
+    // UserHeader
+  }
+}
 </script>
+
 <style scoped></style>

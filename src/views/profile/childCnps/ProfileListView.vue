@@ -1,11 +1,12 @@
 <template>
   <div class="profile-list-view">
-    <div class="list-item" v-for="(item, index) in list" :key="index">
+    <div class="list-item b-b" v-for="(item, index) in list" :key="index">
       <icon-svg :icon-class="item.icon" class="item-svg"></icon-svg>
       <span class="text">{{ item.text }}</span>
     </div>
   </div>
 </template>
+
 <script>
 export default {
   name: 'ProfileListView',
@@ -19,6 +20,7 @@ export default {
   }
 }
 </script>
+
 <style scoped lang="scss">
 .profile-list-view {
   border-top: 18px solid #f8f8f8;
@@ -26,7 +28,6 @@ export default {
     height: 50px;
     background: #fff;
     margin-left: 16px;
-    border-bottom: 1px solid #f8f8f8;
     display: flex;
     align-items: center;
     .item-svg {
