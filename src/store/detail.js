@@ -1,6 +1,6 @@
 import Vue from 'vue'
 
-import { getShopInfo } from '../network/detail'
+import { getShopInfo } from 'network/detail'
 
 const state = {
   cartGoodsList: [], //购物车列表
@@ -54,7 +54,7 @@ const actions = {
   },
   // 3.异步操作,获取DetailInfo的值
   async _getShopInfo(context, id) {
-    const res = await getShopInfo({ id })
+    const res = await getShopInfo(id)
     if (res.code === 0) {
       context.commit('getShopInfo', res.data.info)
     }

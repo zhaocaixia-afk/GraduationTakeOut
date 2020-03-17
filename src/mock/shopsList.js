@@ -1,17 +1,17 @@
-function param2Obj(url) {
-  const search = url.split('?')[1]
-  if (!search) {
-    return {}
-  }
-  return JSON.parse(
-    '{"' +
-      decodeURIComponent(search)
-        .replace(/"/g, '\\"')
-        .replace(/&/g, '","')
-        .replace(/=/g, '":"') +
-      '"}'
-  )
-}
+// function param2Obj(url) {
+//   const search = url.split('?')[1]
+//   if (!search) {
+//     return {}
+//   }
+//   return JSON.parse(
+//     '{"' +
+//       decodeURIComponent(search)
+//         .replace(/"/g, '\\"')
+//         .replace(/&/g, '","')
+//         .replace(/=/g, '":"') +
+//       '"}'
+//   )
+// }
 
 // 商家详情数组
 const shopInfoList = [
@@ -2090,10 +2090,15 @@ const shopRatingsList = [
   }
 ]
 
+function getLast(url) {
+  const length = url.split('/').length
+  return url.split('/')[length - 1]
+}
+
 export default {
   // shopsInfo的数据,返回值
   getShopInfo: config => {
-    const { id } = param2Obj(config.url)
+    const id = getLast(config.url)
     const data = shopInfoList.find(item => item.id === parseInt(id))
     return {
       code: 0,
@@ -2102,7 +2107,7 @@ export default {
   },
   // shopGoodsList的数据,返回值
   getShopGoodsList: config => {
-    const { id } = param2Obj(config.url)
+    const id = getLast(config.url)
     const data = shopGoodsList.find(item => item.id === parseInt(id))
     return {
       code: 0,
@@ -2111,7 +2116,7 @@ export default {
   },
   // shopRatingsList的数据,返回值
   getShopRatingsList: config => {
-    const { id } = param2Obj(config.url)
+    const id = getLast(config.url)
     const data = shopRatingsList.find(item => item.id === parseInt(id))
     return {
       code: 0,

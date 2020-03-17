@@ -27,12 +27,13 @@
 
 <script>
 import Star from 'components/common/star/Star'
+import { BASIC_IMG } from 'common/const'
 
 export default {
   name: 'ShopsListItem',
   data() {
     return {
-      basicURL: 'https://fuss10.elemecdn.com'
+      basicURL: BASIC_IMG
     }
   },
   props: {

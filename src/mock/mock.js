@@ -7,11 +7,8 @@ import apiSearch from './search'
 // const apiGetSearch = '/api/getSearch'
 Mock.mock(RegExp('/api/getSearch' + '.*'), apiSearch.getSearchList)
 
-Mock.mock('/api/getShopInfo?id=1', apiShops.getShopInfo)
-Mock.mock('/api/getShopInfo?id=479', apiShops.getShopInfo)
+Mock.mock(/\/api\/getShopInfo\/\d+/, apiShops.getShopInfo)
 
-Mock.mock('/api/getShopGoodsList?id=1', apiShops.getShopGoodsList)
-Mock.mock('/api/getShopGoodsList?id=479', apiShops.getShopGoodsList)
+Mock.mock(/\/api\/getShopGoodsList\/\d+/, apiShops.getShopGoodsList)
 
-Mock.mock('/api/getShopRatingsList?id=1', apiShops.getShopRatingsList)
-Mock.mock('/api/getShopRatingsList?id=479', apiShops.getShopRatingsList)
+Mock.mock(/\/api\/getShopRatingsList\/\d+/, apiShops.getShopRatingsList)

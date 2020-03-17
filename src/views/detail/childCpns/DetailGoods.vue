@@ -64,10 +64,14 @@ export default {
   },
   mounted() {
     this._getShopGoodsList()
+    // console.log(this.$route.query.id)
+    // getShopGoodsList1(this.$route.query.id).then(res => {
+    //   console.log(res)
+    // })
   },
   methods: {
     async _getShopGoodsList() {
-      const result = await getShopGoodsList({ id: this.$route.query.id })
+      const result = await getShopGoodsList(this.$route.query.id)
       if (result.code === 0) {
         this.goodsList = result.data.goods
         this.$nextTick(() => {
