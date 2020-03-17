@@ -592,21 +592,21 @@ export default {
       // "值".indexOf("")的值为0
       data = shopsList.filter(item => item.name.indexOf(keyword) !== -1)
     }
-
-    return {
-      code: 0,
-      data: data
-    }
-    // if (!data.length) {
-    //   return {
-    //     code: 1,
-    //     data: '很抱歉！无搜索结果'
-    //   }
-    // } else {
-    //   return {
-    //     code: 0,
-    //     data: data
-    //   }
+    // console.log(data)
+    // return {
+    //   code: 0,
+    //   data: data
     // }
+    if (!data.length) {
+      return {
+        code: 1,
+        data: '很抱歉！无搜索结果'
+      }
+    } else {
+      return {
+        code: 0,
+        data: data
+      }
+    }
   }
 }

@@ -312,11 +312,3 @@ export default {
   }
 }
 </style>
-
-<style lang="scss">
-.el-message-box__wrapper {
-  .el-message-box {
-    width: 80%;
-  }
-}
-</style>

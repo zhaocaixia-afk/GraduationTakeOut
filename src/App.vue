@@ -15,4 +15,10 @@ export default {
 }
 </script>
 
-<style lang="scss"></style>
+<style lang="scss">
+.el-message-box__wrapper {
+  .el-message-box {
+    width: 80%;
+  }
+}
+</style>

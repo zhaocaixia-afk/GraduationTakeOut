@@ -1,8 +1,8 @@
 <template>
   <div class="search">
     <div class="form">
-      <i class="el-icon-back" @click="$router.back()"></i>
-      <el-input placeholder="请输入内容" clearable v-model="keyword" autofocus @clear.native="clearInput" @change="enter"> </el-input>
+      <i class="el-icon-back" @click="goRouterBack"></i>
+      <el-input placeholder="请输入内容" clearable v-model="keyword" @clear.native="clearInput" @focus="inputFocus"> </el-input>
       <p @click="submit">搜索</p>
     </div>
 
@@ -25,12 +25,14 @@
       </li>
     </scroll>
 
-    <div v-else>
+    <div v-if="historyShow">
       <history-search :obj="historySearch">
-        <i slot="delete" class="el-icon-delete"></i>
+        <i slot="delete" class="el-icon-delete" @click="clearStore"></i>
       </history-search>
       <history-search :obj="searchFind" />
     </div>
+
+    <div v-show="sorry" class="sorry">很抱歉！无搜索结果</div>
   </div>
 </template>
 
@@ -38,7 +40,8 @@
 import { getSearchList } from 'network/search'
 import HistorySearch from './childCpns/HistorySearch'
 import Scroll from 'components/common/scroll/Scroll'
-import { debounce } from 'common/util'
+import { debounce, setStore, getStore, unsetStore } from 'common/util'
+import { SEARCH_LIST, BASIC_IMG } from '../../common/const'
 
 export default {
   name: 'Search',
@@ -46,49 +49,105 @@ export default {
     return {
       keyword: '',
       searchList: [],
-      basicURL: 'https://fuss10.elemecdn.com',
+      basicURL: BASIC_IMG,
       historySearch: {
         searchTitle: '历史搜索',
-        list: ['蓝色告白', '麻辣烫', '华莱士', '海底捞', '冒菜', '星巴克', '汉堡', '炸鸡']
+        list: []
       },
       searchFind: {
         searchTitle: '搜索发现',
         list: ['蓝色告白', '麻辣烫', '华莱士', '海底捞', '冒菜', '星巴克', '汉堡', '炸鸡']
-      }
+      },
+      sorry: false,
+      historyShow: true
     }
   },
   watch: {
-    keyword() {
-      this.debounce()
+    keyword(value) {
+      if (value === '') {
+        // 不会搜索了,但此时数组有值
+        this.searchList = []
+        this.sorry = false
+        this.historyShow = true
+      } else {
+        this.historyShow = false
+        this.debounce()
+      }
     }
+  },
+  mounted() {
+    // 初次进入null
+    this.historySearch.list = getStore(SEARCH_LIST) || []
   },
   created() {
     this.debounce = debounce(this._getSearchList, 300)
   },
   methods: {
-    // 1.点击搜索
+    // 1.点击搜索,问题会触发两次(失去焦点那次,和点击搜索那次)
     submit() {
       this.keyword = this.keyword.trim()
       if (this.keyword) {
-        this._getSearchList(this.keyword)
+        this.saveSearchList()
+        // 前面已经搜索无结果,这里就不应该提交
+        if (!this.sorry) {
+          this._getSearchList()
+        }
       }
     },
     // 2.搜索请求函数
     async _getSearchList() {
       const res = await getSearchList(this.keyword)
+      // console.log(res)
       if (!res.code) {
         this.searchList = res.data
-        console.log(this.searchList)
+        this.sorry = false
+      } else {
+        this.searchList = []
+        this.sorry = true
       }
     },
     // 3.点击input上的清空图标
     clearInput() {
       this._getSearchList()
     },
-    // 4.失去焦点或者按回车键(手机端没有什么意义,看是否与键盘搜索有关)
-    enter() {
-      this._getSearchList()
+    // 5.保存historyList数组
+    saveSearchList() {
+      if (this.keyword === '') return
+      let arr = this.historySearch.list
+      if (arr.indexOf(this.keyword) === -1) {
+        arr.unshift(this.keyword)
+      }
+      setStore(SEARCH_LIST, arr)
+    },
+    // 6.回退按钮
+    goRouterBack() {
+      this.$router.back()
+    },
+    // 7.获取焦点时,历史搜索页面消失
+    inputFocus() {
+      this.historyShow = false
+    },
+    // 8.清空历史搜索记录
+    clearStore() {
+      this.$confirm('点击确定将清空历史记录, 是否继续?', '提示', {
+        confirmButtonText: '确定',
+        cancelButtonText: '取消',
+        type: 'warning',
+        center: true
+      })
+        .then(() => {
+          unsetStore(SEARCH_LIST)
+          this.historySearch.list = getStore(SEARCH_LIST)
+        })
+        .catch(() => {})
     }
+    // 4.失去焦点或者按回车键(手机端没有什么意义,看是否与键盘搜索按钮有关)
+    // 问题：应该有,但是失去焦点和提交会导致两次触发
+    // @change="enter"
+    // enter() {
+    //   this.saveSearchList()
+    //   this._getSearchList()
+    // },
   },
   components: {
     HistorySearch,
@@ -157,6 +216,10 @@ export default {
         }
       }
     }
+  }
+  .sorry {
+    text-align: center;
+    line-height: 30px;
   }
 }
 </style>
