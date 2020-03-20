@@ -5,8 +5,8 @@
         <i class="el-icon-search" @click="goSearch"></i>
       </div>
       <div slot="center">{{ address.address }}</div>
-      <router-link tag="div" :to="userInfo._id ? '/userinfo' : '/login'" slot="right">
-        <i class="el-icon-user" v-if="userInfo._id"></i>
+      <router-link tag="div" :to="userInfo ? '/userinfo' : '/login'" slot="right">
+        <i class="el-icon-user" v-if="userInfo !== null"></i>
         <span v-else>登录|注册</span>
       </router-link>
     </nav-bar>
@@ -40,10 +40,11 @@ import { getURL, getFoodCategorys, getShops } from 'network/msite'
 
 import { debounce } from 'common/util'
 
-import { mapState } from 'vuex'
+import { userInfo } from 'common/mixin'
 
 export default {
   name: 'Msite',
+  mixins: [userInfo],
   data() {
     return {
       latitude: 29.569186, // 纬度
@@ -63,9 +64,6 @@ export default {
     }
   },
   computed: {
-    ...mapState({
-      userInfo: state => state.login.userInfo
-    }),
     // 1.食品分类列表 拆分 一个二维数组
     categorysArr() {
       const { categorysList } = this

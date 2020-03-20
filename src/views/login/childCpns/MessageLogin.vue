@@ -89,10 +89,10 @@ export default {
           }
         }, 1000)
         // 1.2 获取短信验证码
-        const result = await reqSendCode(this.messageModel.phone)
+        const res = await reqSendCode(this.messageModel.phone)
         // 1.3 展示错误信息he停止计时器
-        if (result.code === 1) {
-          this.showAlert(result.msg)
+        if (res.code === 1) {
+          this.showAlert(res.msg)
           this.stopTime()
         }
       }

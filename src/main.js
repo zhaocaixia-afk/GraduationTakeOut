@@ -29,6 +29,14 @@ Vue.set(VueLazyload, {
 // 7.mockjs模拟数据
 import './mock/mock'
 
+// 解决问题:vue-router.esm.js?8c4f:2051 Uncaught (in promise) undefined
+// import Router from 'vue-router'
+// const routerPush = Router.prototype.push
+// Router.prototype.push = function push(location) {
+//   return routerPush.call(this, location).catch(error => error)
+// }
+// npm i vue-router@3.0 -S
+
 Vue.config.productionTip = false
 
 new Vue({

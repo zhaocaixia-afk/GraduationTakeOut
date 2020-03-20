@@ -1,4 +1,6 @@
-import AlertTip from '../components/common/alertTip/AlertTip.vue'
+import AlertTip from 'components/common/alertTip/AlertTip.vue'
+import { setSession, getSession } from './util'
+import { USER_INFO } from './const'
 
 export const loginMixin = {
   data() {
@@ -13,8 +15,8 @@ export const loginMixin = {
     loginResult() {
       if (this.result.code === 0) {
         const user = this.result.data
-        // 4.5.1 将user保存到vuex中
-        this.$store.dispatch('saveUserInfo', user)
+        // 4.5.1 将user保存到sessionStorage中
+        setSession(USER_INFO, user)
         // 4.5.2 跳转到个人中心界面
         this.$router.replace('/profile')
       } else {
@@ -35,5 +37,16 @@ export const loginMixin = {
   },
   components: {
     AlertTip
+  }
+}
+
+export const userInfo = {
+  data() {
+    return {
+      userInfo: {}
+    }
+  },
+  created() {
+    this.userInfo = getSession(USER_INFO)
   }
 }

@@ -1,6 +1,7 @@
 <template>
   <div id="app">
     <router-view></router-view>
+
     <main-tab-bar v-show="$route.meta.showFooter" />
   </div>
 </template>

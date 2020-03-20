@@ -1,6 +1,9 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 
+import { getSession } from '../common/util'
+import { USER_INFO } from '../common/const'
+
 const Msite = () => import(/* webpackChunkName: "msite" */ 'views/msite/Msite')
 const Search = () => import(/* webpackChunkName: "search" */ 'views/search/Search')
 const Order = () => import(/* webpackChunkName: "order" */ 'views/order/Order')
@@ -40,6 +43,16 @@ const router = new VueRouter({
   mode: 'history',
   base: process.env.BASE_URL,
   routes
+})
+
+router.beforeEach((to, from, next) => {
+  if (to.path === '/msite' || to.path === '/login') return next()
+
+  // 获取token
+  const tokenUserInfo = getSession(USER_INFO)
+  // console.log(tokenUserInfo)
+  if (!tokenUserInfo) return next('/login')
+  next()
 })
 
 export default router

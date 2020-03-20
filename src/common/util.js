@@ -32,3 +32,26 @@ export function unsetStore(key) {
   localStorage.removeItem(key)
   return true
 }
+
+// sessionStorage存储
+export function setSession(key, value) {
+  value = typeof value === 'object' ? JSON.stringify(value) : value
+  window.sessionStorage.setItem(key, value)
+  return true
+}
+// sessionStorage获取
+export function getSession(key) {
+  var tem = ''
+  try {
+    tem = window.sessionStorage.getItem(key)
+    tem = JSON.parse(tem)
+  } catch (e) {
+    tem = window.sessionStorage.getItem(key)
+  }
+  return tem
+}
+// sessionStorage删除
+export function clearSession() {
+  window.sessionStorage.clear()
+  return true
+}

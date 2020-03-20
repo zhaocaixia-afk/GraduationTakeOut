@@ -41,7 +41,7 @@ import { getSearchList } from 'network/search'
 import HistorySearch from './childCpns/HistorySearch'
 import Scroll from 'components/common/scroll/Scroll'
 import { debounce, setStore, getStore, unsetStore } from 'common/util'
-import { SEARCH_LIST, BASIC_IMG } from '../../common/const'
+import { SEARCH_LIST, BASIC_IMG } from 'common/const'
 
 export default {
   name: 'Search',
@@ -86,12 +86,12 @@ export default {
     // 1.点击搜索,问题会触发两次(失去焦点那次,和点击搜索那次)
     submit() {
       this.keyword = this.keyword.trim()
-      if (this.keyword) {
-        this.saveSearchList()
-        // 前面已经搜索无结果,这里就不应该提交
-        if (!this.sorry) {
-          this._getSearchList()
-        }
+      if (this.keyword === '') return
+      this.saveSearchList()
+      // 前面已经搜索无结果,这里就不应该提交
+      // 问题:这里只能清空keyword
+      if (!this.sorry) {
+        this._getSearchList()
       }
     },
     // 2.搜索请求函数
@@ -108,7 +108,7 @@ export default {
     },
     // 3.点击input上的清空图标
     clearInput() {
-      this._getSearchList()
+      // this._getSearchList()
     },
     // 5.保存historyList数组
     saveSearchList() {
