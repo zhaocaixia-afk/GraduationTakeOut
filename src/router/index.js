@@ -18,6 +18,8 @@ const DetailShop = () => import(/* webpackChunkName: "detail" */ 'views/detail/c
 const DetailRatings = () => import(/* webpackChunkName: "detail" */ 'views/detail/childCpns/DetailRatings')
 const DetailInfo = () => import(/* webpackChunkName: "detail" */ 'views/detail/childCpns/DetailInfo')
 
+const ConfirmOrder = () => import(/* webpackChunkName: "confirmOrder" */ 'views/confirmOrder/ConfirmOrder.vue')
+
 Vue.use(VueRouter)
 
 const routes = [
@@ -29,14 +31,15 @@ const routes = [
   { path: '/login', component: Login },
   { path: '/userInfo', component: UserInfo },
   {
-    path: '/detail',
+    path: '/detail/:id',
     component: Detail,
     children: [
-      { path: '/', component: DetailShop },
-      { path: '/ratings', component: DetailRatings },
-      { path: '/info', component: DetailInfo }
+      { path: '/', component: DetailShop, name: 'detail' },
+      { path: '/ratings/:id', component: DetailRatings, name: 'ratings' },
+      { path: '/info/:id', component: DetailInfo, name: 'info' }
     ]
-  }
+  },
+  { path: '/confirmOrder', component: ConfirmOrder }
 ]
 
 const router = new VueRouter({

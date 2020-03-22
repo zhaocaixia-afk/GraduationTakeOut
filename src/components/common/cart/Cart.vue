@@ -18,7 +18,7 @@
         </div>
         <div class="content-right">
           <!-- 动态添加enough和not-enough -->
-          <div class="pay" :class="payClass">{{ patText }}</div>
+          <button class="pay" :class="payClass" @click="goConfirmOrder" :disabled="payClass !== 'enough'">{{ patText }}</button>
         </div>
       </div>
 
@@ -29,11 +29,11 @@
             <span class="empty" @click="clearCart">清空</span>
           </div>
           <scroll class="scroll" ref="scroll">
-            <li class="food" v-for="(food, index) in cartGoodsList" :key="index">
+            <li class="food" v-for="(food, index) in selectList" :key="index">
               <span class="name">{{ food.name }}</span>
               <div class="price-count">
                 <span class="price">¥{{ food.price }}</span>
-                <cart-control :good="food"></cart-control>
+                <cart-control :good="food" :top-level="food.topLevel"></cart-control>
               </div>
             </li>
           </scroll>
@@ -47,6 +47,7 @@
 
 <script>
 import { mapState, mapGetters } from 'vuex'
+import { getStore } from 'common/util'
 import CartControl from 'components/common/cartControl/CartControl'
 import Scroll from '../scroll/Scroll'
 
@@ -54,16 +55,24 @@ export default {
   name: 'Cart',
   data() {
     return {
-      isShow: false
+      isShow: false,
+
+      selectList: [],
+      totalCount: 0,
+      totalPrice: 0
     }
+  },
+  mounted() {
+    this.selectList = getStore(`cart${this.$route.params.id}`) || []
+    this.total()
   },
   computed: {
     ...mapState({
-      cartGoodsList: state => state.detail.cartGoodsList,
       headerOpen: state => state.detail.headerOpen,
       shopInfo: state => state.detail.shopInfo
     }),
-    ...mapGetters(['totalCount', 'totalPrice']),
+    ...mapGetters(['getCartList']),
+
     // 结算按钮的样式
     payClass() {
       return this.totalPrice >= this.shopInfo.minPrice ? 'enough' : 'not-enough'
@@ -82,11 +91,9 @@ export default {
     },
     // 购物车列表是否显示
     listShow() {
-      // if (this.headerOpen) {
-      //   this.updateIsShow()
-      // }
       // 1.作用是：当购物车列表减到0时，消失掉
       if (!this.totalCount) {
+        // ESLint控制不能在computed中修改data数据
         this.updateIsShow()
         return false
       }
@@ -96,15 +103,22 @@ export default {
           this.$refs.scroll.refresh()
         })
       }
-      // 3.DetailHeader控制cart显示
-      // if (this.headerOpen) {
-      //   this.updateIsShow()
-      // }
       return this.isShow
-      // console.log(this.isShow)
+    }
+  },
+  watch: {
+    // 监听存储发生改变时候
+    getCartList: function(val) {
+      this.selectList = val
+      this.total()
     }
   },
   methods: {
+    // 统计数量,统计价格(在mounted和watch中调用)
+    total() {
+      this.totalCount = this.selectList.reduce((total, item) => total + item.count, 0)
+      this.totalPrice = this.selectList.reduce((total, item) => total + item.count * item.price, 0)
+    },
     // 1.isShow的切换
     toggleShow() {
       if (this.totalCount > 0) {
@@ -124,18 +138,15 @@ export default {
         center: true
       })
         .then(() => {
-          this.$store.dispatch('clearCart')
-          // this.$message({
-          //   type: 'success',
-          //   message: '删除成功!'
-          // })
+          this.$store.dispatch('clearCart', this.$route.params.id)
+          // 先输入1,后输入ok
+          // console.log('ok')
         })
-        .catch(() => {
-          // this.$message({
-          //   type: 'info',
-          //   message: '已取消删除'
-          //});
-        })
+        .catch(() => {})
+    },
+    // 4.点击跳转到订单确认页面
+    goConfirmOrder() {
+      console.log('a')
     }
   },
   components: {
@@ -215,19 +226,20 @@ export default {
     }
     .content-right {
       width: 105px;
-      // background: blue;
+      text-align: center;
       .pay {
+        width: 100%;
+        height: 100%;
         line-height: 48px;
-        text-align: center;
         font-size: 12px;
         font-weight: 700;
         color: #fff;
         &.not-enough {
           background: #2b333b;
+          // :disabled: false;
         }
         &.enough {
           background: #00b43c;
-          // color: #fff;
         }
       }
     }

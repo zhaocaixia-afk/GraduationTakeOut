@@ -26,7 +26,7 @@
                     <span class="now">¥{{ good.price }}</span>
                     <span class="old" v-if="good.oldPrice">¥{{ good.oldPrice }}</span>
                   </div>
-                  <cart-control :good="good" />
+                  <cart-control :good="good" :top-level="index" />
                 </div>
               </div>
             </li>
@@ -51,6 +51,11 @@ import Good from './Good'
 
 import { getShopGoodsList } from 'network/detail'
 
+import { getSession, getStore, setStore } from 'common/util'
+import { NOW_SHOP } from 'common/const'
+
+import { mapGetters } from 'vuex'
+
 export default {
   name: 'DetailGoods',
   data() {
@@ -62,25 +67,41 @@ export default {
       titleList: [] //左侧title的集合,为了右侧的头部显示
     }
   },
+  computed: {
+    ...mapGetters(['getGoodsList'])
+  },
+  watch: {
+    // 监听存储发生改变时候
+    getGoodsList: function(val) {
+      this.goodsList = val
+    }
+  },
   mounted() {
-    this._getShopGoodsList()
-    // console.log(this.$route.query.id)
-    // getShopGoodsList1(this.$route.query.id).then(res => {
-    //   console.log(res)
-    // })
+    // 存在不请求
+    if (!getStore(this.$route.params.id)) {
+      this._getShopGoodsList()
+    } else {
+      this.goodsList = getStore(this.$route.params.id)
+      this.shuaxin()
+    }
   },
   methods: {
+    shuaxin() {
+      this.$nextTick(() => {
+        // better-scroll的刷新
+        this.$refs.menuWrapper.refresh()
+        this.$refs.goodsWrapper.refresh()
+        this._initTops()
+        this._initTitle()
+      })
+    },
     async _getShopGoodsList() {
-      const result = await getShopGoodsList(this.$route.query.id)
+      const result = await getShopGoodsList(getSession(NOW_SHOP) || this.$route.params.id)
       if (result.code === 0) {
         this.goodsList = result.data.goods
-        this.$nextTick(() => {
-          // better-scroll的刷新
-          this.$refs.menuWrapper.refresh()
-          this.$refs.goodsWrapper.refresh()
-          this._initTops()
-          this._initTitle()
-        })
+        // 存储
+        setStore(this.$route.params.id, this.goodsList)
+        this.shuaxin()
       }
     },
     // 2.点击商品,出现详情页面

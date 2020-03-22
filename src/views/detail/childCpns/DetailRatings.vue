@@ -74,6 +74,9 @@ import Star from 'components/common/star/Star'
 import { getShopRatingsList } from 'network/detail'
 import { mapState } from 'vuex'
 
+import { getSession } from 'common/util'
+import { NOW_SHOP } from 'common/const'
+
 export default {
   name: 'DetailRatings',
   data() {
@@ -85,9 +88,6 @@ export default {
   },
   created() {
     this._getShopRatingsList()
-    // getShopRatingsList1(this.$route.query.id).then(res => {
-    //   console.log(res)
-    // })
   },
   computed: {
     ...mapState({
@@ -105,7 +105,7 @@ export default {
   methods: {
     // 1.获取到的评论列表
     async _getShopRatingsList() {
-      const result = await getShopRatingsList(this.$route.query.id)
+      const result = await getShopRatingsList(getSession(NOW_SHOP))
       if (result.code === 0) {
         this.ratingsList = result.data.comments
         // console.log(this.ratingsList)

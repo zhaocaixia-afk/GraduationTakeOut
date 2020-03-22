@@ -1,13 +1,16 @@
 <template>
   <div class="detail">
     <detail-header :shop-info="shopInfo" />
-    <tab-control :tab-list="tabList" :id="id" :current-path="currentPath" ref="tabControl2" class="tabControl2" />
+    <tab-control :tab-list="tabList" class="tabControl2" :active-name="activeName" />
     <router-view />
   </div>
 </template>
 
 <script>
 import { mapState } from 'vuex'
+
+import { setSession, getSession } from 'common/util'
+import { NOW_SHOP } from 'common/const'
 
 import DetailHeader from './childCpns/DetailHeader'
 import TabControl from './childCpns/TabControl'
@@ -16,18 +19,16 @@ export default {
   name: 'Detail',
   data() {
     return {
-      id: 0,
       tabList: [
-        { path: '/detail', text: '点餐' },
-        { path: '/ratings', text: '评价' },
-        { path: '/info', text: '商家' }
+        { path: '/detail', text: '点餐', name: 'detail' },
+        { path: '/ratings', text: '评价', name: 'ratings' },
+        { path: '/info', text: '商家', name: 'info' }
       ],
-      currentPath: '/detail'
+      activeName: 'detail'
     }
   },
   mounted() {
-    this.id = this.$route.query.id
-
+    setSession(NOW_SHOP, this.$route.params.id)
     this._getShopInfo()
   },
   computed: {
@@ -38,16 +39,15 @@ export default {
   watch: {
     $route: {
       handler(val) {
-        // console.log(val.path)
-        // console.log(oldval)
-        this.currentPath = val.path
+        // console.log(val) // ratings/1
+        this.activeName = val.name
       }
     }
   },
   methods: {
     // 1.获取商家详情
     _getShopInfo() {
-      this.$store.dispatch('_getShopInfo', this.id)
+      this.$store.dispatch('_getShopInfo', getSession(NOW_SHOP))
     }
   },
   components: {

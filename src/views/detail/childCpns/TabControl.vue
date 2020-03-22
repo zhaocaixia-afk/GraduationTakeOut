@@ -1,12 +1,15 @@
 <template>
   <div class="tab-control">
-    <div class="tab-item" :class="currentIndex === index ? 'active' : ''" v-for="(item, index) in tabList" :key="index" @click="changeTab({ path: item.path })">
+    <div class="tab-item" v-for="(item, index) in tabList" :key="index" @click="changeTab(item.path)" :class="{ active: item.name === activeName }">
       <span>{{ item.text }}</span>
     </div>
   </div>
 </template>
 
 <script>
+import { getSession } from 'common/util'
+import { NOW_SHOP } from 'common/const'
+
 export default {
   name: 'TabControl',
   data() {
@@ -22,21 +25,21 @@ export default {
         return []
       }
     },
-    currentPath: String,
-    id: Number
+    activeName: String
+    // currentPath: String,
+    // id: Number
   },
   watch: {
-    // 监听传过来的path值
-    currentPath(val) {
-      // console.log(val)
-      this.currentIndex = this.pathList.findIndex(item => item === val)
-    }
+    // // 监听传过来的path值
+    // currentPath(val) {
+    //   // console.log(val)
+    //   this.currentIndex = this.pathList.findIndex(item => item === val)
+    // }
   },
   methods: {
-    changeTab(obj) {
+    changeTab(path) {
       this.$router.push({
-        path: obj.path,
-        query: { id: this.id }
+        path: `${path}/${getSession(NOW_SHOP)}`
       })
     }
   }

@@ -147,7 +147,6 @@ export default {
           width: 80px;
           height: 80px;
           display: inline-block;
-          background: red;
         }
       }
     }

@@ -17,110 +17,104 @@
 const shopInfoList = [
   {
     id: 1,
-    info: {
-      name: '享多味汉堡炸鸡(斑竹湾店)',
-      avatar: 'https://fuss10.elemecdn.com/8/40/02872ce8aefe75c16d3190e75ad61jpeg.jpeg',
-      bgImg: 'https://fuss10.elemecdn.com/f/5c/ead54394c3de198d3e6d3e9111bbfpng.png',
-      score: 4.6,
-      sellCount: 468,
-      description: '蜂鸟专送',
-      minPrice: 15,
-      deliveryPrice: 1,
-      oldDeliveryPrice: 4,
-      deliveryTime: 30,
-      distance: '1.5km',
-      supports: [
-        {
-          type: 0,
-          name: '满减',
-          content: '满26元减11元，满40元减20元，满60元减25元'
-        },
-        {
-          type: 0,
-          name: '配送',
-          content: '配送费立减3元'
-        },
-        {
-          type: 1,
-          name: '特价',
-          content: '特价商品0.2元起'
-        },
-        {
-          type: 0,
-          name: '首单',
-          content: '饿了么新用户首单立减20元'
-        }
-      ],
-      bulletin:
-        '享多味:美食每刻味你而来活动开始了,本月推出新品香辣鸡柳9.9元,傲椒鸡尖7元。本月6.16.26号进店选购香鸡肉卷买一送一,伴翅买一送一,黑椒鸡块买一送一。还有天天特价欢迎大家进店选购哦!支持电话订餐(17380388387)',
-      pics: [
-        'https://fuss10.elemecdn.com/f/7f/d1422ec824a0a9d1fb879c57ab533jpeg.jpeg',
-        'https://fuss10.elemecdn.com/6/82/2cd3d681f5e93292b3eb49d6b412ajpeg.jpeg',
-        'https://fuss10.elemecdn.com/8/93/4cf527b6462eea634f69755374f88jpeg.jpeg',
-        'https://fuss10.elemecdn.com/3/f2/2a8796ba025a5773fd685a95ac369jpeg.jpeg',
-        'https://fuss10.elemecdn.com/a/c4/5a78f477fd616a51ce33586a76ddbjpeg.jpeg'
-      ],
-      foodScore: 4.6,
-      serviceScore: 4.7,
-      deliveryScore: 4.7,
-      category: '汉堡薯条/炸鸡炸串',
-      address: '乐山市市中区肖坝路163号',
-      phone: '17380388387',
-      workTime: '09:00-00:00'
-    }
+    name: '享多味汉堡炸鸡(斑竹湾店)',
+    avatar: 'https://fuss10.elemecdn.com/8/40/02872ce8aefe75c16d3190e75ad61jpeg.jpeg',
+    bgImg: 'https://fuss10.elemecdn.com/f/5c/ead54394c3de198d3e6d3e9111bbfpng.png',
+    score: 4.6,
+    sellCount: 468,
+    description: '蜂鸟专送',
+    minPrice: 15,
+    deliveryPrice: 1,
+    deliveryTime: 30,
+    distance: '1.5km',
+    supports: [
+      {
+        type: 0,
+        name: '满减',
+        content: '满26元减11元，满40元减20元，满60元减25元'
+      },
+      {
+        type: 0,
+        name: '配送',
+        content: '配送费立减3元'
+      },
+      {
+        type: 1,
+        name: '特价',
+        content: '特价商品0.2元起'
+      },
+      {
+        type: 0,
+        name: '首单',
+        content: '饿了么新用户首单立减20元'
+      }
+    ],
+    bulletin:
+      '享多味:美食每刻味你而来活动开始了,本月推出新品香辣鸡柳9.9元,傲椒鸡尖7元。本月6.16.26号进店选购香鸡肉卷买一送一,伴翅买一送一,黑椒鸡块买一送一。还有天天特价欢迎大家进店选购哦!支持电话订餐(17380388387)',
+    pics: [
+      'https://fuss10.elemecdn.com/f/7f/d1422ec824a0a9d1fb879c57ab533jpeg.jpeg',
+      'https://fuss10.elemecdn.com/6/82/2cd3d681f5e93292b3eb49d6b412ajpeg.jpeg',
+      'https://fuss10.elemecdn.com/8/93/4cf527b6462eea634f69755374f88jpeg.jpeg',
+      'https://fuss10.elemecdn.com/3/f2/2a8796ba025a5773fd685a95ac369jpeg.jpeg',
+      'https://fuss10.elemecdn.com/a/c4/5a78f477fd616a51ce33586a76ddbjpeg.jpeg'
+    ],
+    foodScore: 4.6,
+    serviceScore: 4.7,
+    deliveryScore: 4.7,
+    category: '汉堡薯条/炸鸡炸串',
+    address: '乐山市市中区肖坝路163号',
+    phone: '17380388387',
+    workTime: '09:00-00:00'
   },
   {
     id: 479,
-    info: {
-      name: '老王家峨眉酥肉豆腐脑(乐山滟澜洲店)',
-      avatar: 'https://fuss10.elemecdn.com/8/40/02872ce8aefe75c16d3190e75ad61jpeg.jpeg',
-      bgImg: 'https://fuss10.elemecdn.com/f/5c/ead54394c3de198d3e6d3e9111bbfpng.png',
-      score: 4.6,
-      sellCount: 64,
-      description: '蜂鸟专送',
-      minPrice: 15,
-      deliveryPrice: 1,
-      oldDeliveryPrice: 4,
-      deliveryTime: 30,
-      distance: '1.5km',
-      supports: [
-        {
-          type: 0,
-          name: '满减',
-          content: '满26元减11元，满40元减20元，满60元减25元'
-        },
-        {
-          type: 1,
-          name: '会员',
-          content: '超级会员领6元无门槛红包'
-        },
-        {
-          type: 0,
-          name: '配送',
-          content: '配送费立减3元'
-        },
-        {
-          type: 0,
-          name: '首单',
-          content: '饿了么新用户首单立减12元'
-        }
-      ],
-      bulletin: '欢迎光临,用餐高峰期请提前下单,谢谢',
-      pics: [
-        'https://fuss10.elemecdn.com/f/7f/d1422ec824a0a9d1fb879c57ab533jpeg.jpeg',
-        'https://fuss10.elemecdn.com/6/82/2cd3d681f5e93292b3eb49d6b412ajpeg.jpeg',
-        'https://fuss10.elemecdn.com/8/93/4cf527b6462eea634f69755374f88jpeg.jpeg',
-        'https://fuss10.elemecdn.com/3/f2/2a8796ba025a5773fd685a95ac369jpeg.jpeg',
-        'https://fuss10.elemecdn.com/a/c4/5a78f477fd616a51ce33586a76ddbjpeg.jpeg'
-      ],
-      foodScore: 4.5,
-      serviceScore: 4.8,
-      deliveryScore: 5.0,
-      category: '川湘菜/煎饼',
-      address: '乐山市市中区青江路南段1332号',
-      phone: '13628187972',
-      workTime: '8:30/20:30'
-    }
+    name: '老王家峨眉酥肉豆腐脑(乐山滟澜洲店)',
+    avatar: 'https://fuss10.elemecdn.com/8/40/02872ce8aefe75c16d3190e75ad61jpeg.jpeg',
+    bgImg: 'https://fuss10.elemecdn.com/f/5c/ead54394c3de198d3e6d3e9111bbfpng.png',
+    score: 4.6,
+    sellCount: 64,
+    description: '蜂鸟专送',
+    minPrice: 15,
+    deliveryPrice: 1,
+    deliveryTime: 30,
+    distance: '1.5km',
+    supports: [
+      {
+        type: 0,
+        name: '满减',
+        content: '满26元减11元，满40元减20元，满60元减25元'
+      },
+      {
+        type: 1,
+        name: '会员',
+        content: '超级会员领6元无门槛红包'
+      },
+      {
+        type: 0,
+        name: '配送',
+        content: '配送费立减3元'
+      },
+      {
+        type: 0,
+        name: '首单',
+        content: '饿了么新用户首单立减12元'
+      }
+    ],
+    bulletin: '欢迎光临,用餐高峰期请提前下单,谢谢',
+    pics: [
+      'https://fuss10.elemecdn.com/f/7f/d1422ec824a0a9d1fb879c57ab533jpeg.jpeg',
+      'https://fuss10.elemecdn.com/6/82/2cd3d681f5e93292b3eb49d6b412ajpeg.jpeg',
+      'https://fuss10.elemecdn.com/8/93/4cf527b6462eea634f69755374f88jpeg.jpeg',
+      'https://fuss10.elemecdn.com/3/f2/2a8796ba025a5773fd685a95ac369jpeg.jpeg',
+      'https://fuss10.elemecdn.com/a/c4/5a78f477fd616a51ce33586a76ddbjpeg.jpeg'
+    ],
+    foodScore: 4.5,
+    serviceScore: 4.8,
+    deliveryScore: 5.0,
+    category: '川湘菜/煎饼',
+    address: '乐山市市中区青江路南段1332号',
+    phone: '13628187972',
+    workTime: '8:30/20:30'
   }
 ]
 // 商家商品数组
@@ -133,6 +127,7 @@ const shopGoodsList = [
         icon: 'https://fuss10.elemecdn.com/b/91/8cf4f67e0e8223931cd595dc932fepng.png',
         foods: [
           {
+            id: 1,
             name: '一统鸡',
             icon: 'http://fuss10.elemecdn.com/8/a6/453f65f16b1391942af11511b7a90jpeg.jpeg?imageView2/1/w/114/h/114',
             description: '全翅+胸排+腿排+琵琶腿',
@@ -168,6 +163,7 @@ const shopGoodsList = [
             images: ['http://fuss10.elemecdn.com/8/a6/453f65f16b1391942af11511b7a90jpeg.jpeg?imageView2/1/w/750/h/750']
           },
           {
+            id: 2,
             name: '香酥鸡腿',
             icon: 'http://fuss10.elemecdn.com/8/a6/453f65f16b1391942af11511b7a90jpeg.jpeg?imageView2/1/w/114/h/114',
             description: '外焦里嫩,美味多汁',
@@ -188,6 +184,7 @@ const shopGoodsList = [
             images: ['http://fuss10.elemecdn.com/8/a6/453f65f16b1391942af11511b7a90jpeg.jpeg?imageView2/1/w/750/h/750']
           },
           {
+            id: 3,
             name: '椰蓉大福2个',
             icon: 'http://fuss10.elemecdn.com/8/a6/453f65f16b1391942af11511b7a90jpeg.jpeg?imageView2/1/w/114/h/114',
             description: '超好吃,就是奇特的缘分',
@@ -205,6 +202,7 @@ const shopGoodsList = [
             images: ['http://fuss10.elemecdn.com/8/a6/453f65f16b1391942af11511b7a90jpeg.jpeg?imageView2/1/w/750/h/750']
           },
           {
+            id: 4,
             name: '【特价】香辣鸡腿堡',
             icon: 'http://fuss10.elemecdn.com/8/a6/453f65f16b1391942af11511b7a90jpeg.jpeg?imageView2/1/w/114/h/114',
             description: '精选上等无骨鸡腿肉,用秘方腌制,手工裹上优质面粉,喷炸至黄金喷香,酥脆鲜嫩,配以金典沙拉,给你更美味的享受',
@@ -234,6 +232,7 @@ const shopGoodsList = [
         icon: 'https://fuss10.elemecdn.com/0/6a/05b267f338acfeb8bd682d16e836dpng.png',
         foods: [
           {
+            id: 4,
             name: '【特价】香辣鸡腿堡',
             icon: 'http://fuss10.elemecdn.com/8/a6/453f65f16b1391942af11511b7a90jpeg.jpeg?imageView2/1/w/114/h/114',
             description: '精选上等无骨鸡腿肉,用秘方腌制,手工裹上优质面粉,喷炸至黄金喷香,酥脆鲜嫩,配以金典沙拉,给你更美味的享受',
@@ -257,6 +256,7 @@ const shopGoodsList = [
             images: ['http://fuss10.elemecdn.com/8/a6/453f65f16b1391942af11511b7a90jpeg.jpeg?imageView2/1/w/750/h/750']
           },
           {
+            id: 5,
             name: '【超值】黄金板烧堡套餐',
             icon: 'http://fuss10.elemecdn.com/8/a6/453f65f16b1391942af11511b7a90jpeg.jpeg?imageView2/1/w/114/h/114',
             description: '黄金板烧堡+伴翅+2串脆骨+百分小吃+中可',
@@ -269,6 +269,7 @@ const shopGoodsList = [
             images: ['http://fuss10.elemecdn.com/8/a6/453f65f16b1391942af11511b7a90jpeg.jpeg?imageView2/1/w/750/h/750']
           },
           {
+            id: 6,
             name: '鲜香牛肉煲',
             icon: 'http://fuss10.elemecdn.com/8/a6/453f65f16b1391942af11511b7a90jpeg.jpeg?imageView2/1/w/114/h/114',
             description: '精选澳洲进口牛肉,搭配多情黑胡椒,加上特制酱汁,咬一口,唇齿留香,牛气冲天',
@@ -286,6 +287,7 @@ const shopGoodsList = [
             images: ['http://fuss10.elemecdn.com/8/a6/453f65f16b1391942af11511b7a90jpeg.jpeg?imageView2/1/w/750/h/750']
           },
           {
+            id: 7,
             name: '【热销】墨西哥鸡肉卷套餐',
             icon: 'http://fuss10.elemecdn.com/8/a6/453f65f16b1391942af11511b7a90jpeg.jpeg?imageView2/1/w/114/h/114',
             description: '墨西哥鸡肉卷+伴翅+1脆骨+中可',
@@ -298,6 +300,7 @@ const shopGoodsList = [
             images: ['http://fuss10.elemecdn.com/8/a6/453f65f16b1391942af11511b7a90jpeg.jpeg?imageView2/1/w/750/h/750']
           },
           {
+            id: 8,
             name: '【热销】Q弹鲜虾堡套餐',
             icon: 'http://fuss10.elemecdn.com/8/a6/453f65f16b1391942af11511b7a90jpeg.jpeg?imageView2/1/w/114/h/114',
             description: 'Q弹鲜虾堡+伴翅+上校+中可',
@@ -310,6 +313,7 @@ const shopGoodsList = [
             images: ['http://fuss10.elemecdn.com/8/a6/453f65f16b1391942af11511b7a90jpeg.jpeg?imageView2/1/w/750/h/750']
           },
           {
+            id: 9,
             name: '香芋甜心',
             icon: 'http://fuss10.elemecdn.com/8/a6/453f65f16b1391942af11511b7a90jpeg.jpeg?imageView2/1/w/114/h/114',
             description: '我是小甜心哦',
@@ -322,6 +326,7 @@ const shopGoodsList = [
             images: ['http://fuss10.elemecdn.com/8/a6/453f65f16b1391942af11511b7a90jpeg.jpeg?imageView2/1/w/750/h/750']
           },
           {
+            id: 10,
             name: '【全家福】全家福套餐',
             icon: 'http://fuss10.elemecdn.com/8/a6/453f65f16b1391942af11511b7a90jpeg.jpeg?imageView2/1/w/114/h/114',
             description: '蜜汁全鸡+鸡肉卷+2腿堡+鸡米花+薯条+伴翅(1对)+上校鸡块+百分小吃+3中可',
@@ -334,6 +339,7 @@ const shopGoodsList = [
             images: ['http://fuss10.elemecdn.com/8/a6/453f65f16b1391942af11511b7a90jpeg.jpeg?imageView2/1/w/750/h/750']
           },
           {
+            id: 11,
             name: '【招牌】香辣鸡腿堡套餐',
             icon: 'http://fuss10.elemecdn.com/8/a6/453f65f16b1391942af11511b7a90jpeg.jpeg?imageView2/1/w/114/h/114',
             description: '',
@@ -413,6 +419,7 @@ const shopGoodsList = [
             images: ['http://fuss10.elemecdn.com/8/a6/453f65f16b1391942af11511b7a90jpeg.jpeg?imageView2/1/w/750/h/750']
           },
           {
+            id: 1,
             name: '一统鸡',
             icon: 'http://fuss10.elemecdn.com/8/a6/453f65f16b1391942af11511b7a90jpeg.jpeg?imageView2/1/w/114/h/114',
             description: '全翅+胸排+腿排+琵琶腿',
@@ -1037,6 +1044,7 @@ const shopGoodsList = [
         icon: 'https://fuss10.elemecdn.com/b/91/8cf4f67e0e8223931cd595dc932fepng.png',
         foods: [
           {
+            id: 1,
             name: '一统鸡',
             icon: 'http://fuss10.elemecdn.com/8/a6/453f65f16b1391942af11511b7a90jpeg.jpeg?imageView2/1/w/114/h/114',
             description: '全翅+胸排+腿排+琵琶腿',
@@ -1317,6 +1325,7 @@ const shopGoodsList = [
             images: ['http://fuss10.elemecdn.com/8/a6/453f65f16b1391942af11511b7a90jpeg.jpeg?imageView2/1/w/750/h/750']
           },
           {
+            id: 1,
             name: '一统鸡',
             icon: 'http://fuss10.elemecdn.com/8/a6/453f65f16b1391942af11511b7a90jpeg.jpeg?imageView2/1/w/114/h/114',
             description: '全翅+胸排+腿排+琵琶腿',
@@ -2099,7 +2108,9 @@ export default {
   // shopsInfo的数据,返回值
   getShopInfo: config => {
     const id = getLast(config.url)
+    // console.log(id)
     const data = shopInfoList.find(item => item.id === parseInt(id))
+    // console.log(data)
     return {
       code: 0,
       data: data

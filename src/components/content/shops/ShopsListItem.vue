@@ -50,11 +50,7 @@ export default {
       this.$bus.$emit('itemImageLoad')
     },
     showDetail(id) {
-      // $router.push('/detail/' + shop.id)
-      this.$router.push({
-        path: '/detail',
-        query: { id }
-      })
+      this.$router.push('/detail/' + id)
     }
   },
   components: {

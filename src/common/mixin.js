@@ -2,6 +2,9 @@ import AlertTip from 'components/common/alertTip/AlertTip.vue'
 import { setSession, getSession } from './util'
 import { USER_INFO } from './const'
 
+// import { getSession } from 'common/util'
+// import { NOW_SHOP } from 'common/const'
+
 export const loginMixin = {
   data() {
     return {
@@ -18,7 +21,7 @@ export const loginMixin = {
         // 4.5.1 将user保存到sessionStorage中
         setSession(USER_INFO, user)
         // 4.5.2 跳转到个人中心界面
-        this.$router.replace('/profile')
+        this.$router.replace('/msite')
       } else {
         // 4.5.3 提示错误信息
         this.showAlert(this.result.msg)
@@ -50,3 +53,14 @@ export const userInfo = {
     this.userInfo = getSession(USER_INFO)
   }
 }
+
+// export const getNowShopId = {
+//   data() {
+//     return {
+//       nowShopId: 0
+//     }
+//   },
+//   methods: {
+
+//   }
+// }
