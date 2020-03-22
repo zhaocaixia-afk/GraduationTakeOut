@@ -39,7 +39,7 @@ const routes = [
       { path: '/info/:id', component: DetailInfo, name: 'info' }
     ]
   },
-  { path: '/confirmOrder', component: ConfirmOrder }
+  { path: '/confirmOrder/:id', component: ConfirmOrder }
 ]
 
 const router = new VueRouter({
@@ -53,7 +53,6 @@ router.beforeEach((to, from, next) => {
 
   // 获取token
   const tokenUserInfo = getSession(USER_INFO)
-  // console.log(tokenUserInfo)
   if (!tokenUserInfo) return next('/login')
   next()
 })

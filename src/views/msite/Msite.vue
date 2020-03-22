@@ -36,11 +36,13 @@ import Scroll from 'components/common/scroll/Scroll'
 import { swiper, swiperSlide } from 'vue-awesome-swiper'
 import ShopsList from 'components/content/shops/ShopsList'
 
-import { getURL, getFoodCategorys, getShops } from 'network/msite'
+import { getFoodCategorys, getShops } from 'network/msite'
 
 import { debounce } from 'common/util'
 
 import { userInfo } from 'common/mixin'
+
+import { mapState } from 'vuex'
 
 export default {
   name: 'Msite',
@@ -49,7 +51,6 @@ export default {
     return {
       latitude: 29.569186, // 纬度
       longitude: 103.742437, // 经度
-      address: {}, //地址信息对象（通过前面两个获得的）
       //swiper参数对象
       swiperOption: {
         loop: true,
@@ -64,6 +65,9 @@ export default {
     }
   },
   computed: {
+    ...mapState({
+      address: state => state.msite.address
+    }),
     // 1.食品分类列表 拆分 一个二维数组
     categorysArr() {
       const { categorysList } = this
@@ -83,7 +87,9 @@ export default {
     }
   },
   created() {
-    this.getAddress()
+    // this.getAddress()
+    this._getAddress()
+
     this.getFoodCategorys()
     this.getShops()
   },
@@ -96,12 +102,8 @@ export default {
   },
   methods: {
     // 1.根据经纬度获取地理信息
-    async getAddress() {
-      const geohash = `${this.latitude},${this.longitude}`
-      const result = await getURL(geohash)
-      if (result.code === 0) {
-        this.address = result.data
-      }
+    _getAddress() {
+      this.$store.dispatch('getAddress', { latitude: this.latitude, longitude: this.longitude })
     },
     // 2.食品分类列表
     async getFoodCategorys() {

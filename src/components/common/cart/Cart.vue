@@ -146,7 +146,7 @@ export default {
     },
     // 4.点击跳转到订单确认页面
     goConfirmOrder() {
-      console.log('a')
+      this.$router.push('/confirmOrder/' + this.$route.params.id)
     }
   },
   components: {
@@ -236,10 +236,9 @@ export default {
         color: #fff;
         &.not-enough {
           background: #2b333b;
-          // :disabled: false;
         }
         &.enough {
-          background: #00b43c;
+          background: $green;
         }
       }
     }

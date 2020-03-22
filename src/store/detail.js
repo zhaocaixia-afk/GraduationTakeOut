@@ -108,9 +108,6 @@ const actions = {
   }
 }
 const getters = {
-  a(state) {
-    return state.cartList.reduce((total, item) => total + item.count, 0)
-  },
   // 第二步存储
   getGoodsList(state) {
     if (getStore(getSession(NOW_SHOP))) {
