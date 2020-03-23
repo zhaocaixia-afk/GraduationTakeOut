@@ -11,7 +11,9 @@ const state = {
   shopInfo: {},
 
   temObj: {},
-  cartList: []
+  cartList: [],
+
+  totalList: []
 }
 const mutations = {
   headerOpen(state) {
@@ -37,10 +39,11 @@ const mutations = {
     state.cartList = []
     setStore(`cart${playload}`, state.cartList)
   },
-
+  // 增加
   increase(state, playload) {
     state.temObj = getStore(getSession(NOW_SHOP)) //总数组
     state.cartList = getStore(`cart${getSession(NOW_SHOP)}`) || [] //购物车数组
+
     if (!playload.good.count) {
       Vue.set(playload.good, 'count', 1)
       Vue.set(playload.good, 'topLevel', playload.topLevel)
@@ -60,25 +63,56 @@ const mutations = {
     state.temObj[playload.topLevel].foods.splice(a, 1, playload.good)
     // 第二大类
     setStore(getSession(NOW_SHOP), state.temObj)
+
+    // 总的购物车列表
+    state.totalList = getStore('totalList') || []
+    const b = state.totalList.findIndex(item => item.name === playload.shopName)
+    if (b === -1) {
+      var obj = {}
+      obj['name'] = playload.shopName
+      obj['list'] = state.cartList
+      state.totalList.push(obj)
+      setStore('totalList', state.totalList)
+    } else {
+      // 找出那一项,进行修改
+      state.totalList[b].list = state.cartList
+      setStore('totalList', state.totalList)
+    }
   },
+  // 减少
   decrease(state, playload) {
     state.temObj = getStore(getSession(NOW_SHOP))
     state.cartList = getStore(`cart${getSession(NOW_SHOP)}`) || []
     if (playload.good.count) {
       playload.good.count--
-      // 购物车中存储
+      // 当前购物车
       const indexD = state.cartList.findIndex(item => item.name === playload.good.name)
       state.cartList.splice(indexD, 1, playload.good)
       setStore(`cart${getSession(NOW_SHOP)}`, state.cartList)
-      // 总存储
+      // 总数据修改
       const b = state.temObj[playload.topLevel].foods.findIndex(item => item.name === playload.good.name)
       state.temObj[playload.topLevel].foods.splice(b, 1, playload.good)
       setStore(getSession(NOW_SHOP), state.temObj)
 
+      // 总购物车列表
+      state.totalList = getStore('totalList') || []
+      const a = state.totalList.findIndex(item => item.name === playload.shopName)
+      state.totalList[a].list = state.cartList
+      setStore('totalList', state.totalList)
+
       if (playload.good.count === 0) {
-        // 购物车
+        // 当前购物车
         state.cartList.splice(indexD, 1)
         setStore(`cart${getSession(NOW_SHOP)}`, state.cartList)
+
+        // 总购物车列表
+        state.totalList[a].list = state.cartList
+        if (!state.totalList[a].list.length) {
+          state.totalList.splice(a, 1)
+          setStore('totalList', state.totalList)
+        } else {
+          setStore('totalList', state.totalList)
+        }
       }
     }
   }
@@ -86,9 +120,9 @@ const mutations = {
 const actions = {
   updateFoodCount(context, playload) {
     if (playload.isAdd) {
-      context.commit('increase', { good: playload.good, topLevel: playload.topLevel })
+      context.commit('increase', { good: playload.good, topLevel: playload.topLevel, shopName: playload.shopName })
     } else {
-      context.commit('decrease', { good: playload.good, topLevel: playload.topLevel })
+      context.commit('decrease', { good: playload.good, topLevel: playload.topLevel, shopName: playload.shopName })
     }
   },
   // 2.同步操作,DetailHeader的展开与收缩显示

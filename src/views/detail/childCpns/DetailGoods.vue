@@ -26,7 +26,7 @@
                     <span class="now">¥{{ good.price }}</span>
                     <span class="old" v-if="good.oldPrice">¥{{ good.oldPrice }}</span>
                   </div>
-                  <cart-control :good="good" :top-level="index" />
+                  <cart-control :good="good" :top-level="index" :shop-name="shopInfo.name" />
                 </div>
               </div>
             </li>
@@ -54,7 +54,7 @@ import { getShopGoodsList } from 'network/detail'
 import { getSession, getStore, setStore } from 'common/util'
 import { NOW_SHOP } from 'common/const'
 
-import { mapGetters } from 'vuex'
+import { mapGetters, mapState } from 'vuex'
 
 export default {
   name: 'DetailGoods',
@@ -68,7 +68,10 @@ export default {
     }
   },
   computed: {
-    ...mapGetters(['getGoodsList'])
+    ...mapGetters(['getGoodsList']),
+    ...mapState({
+      shopInfo: state => state.detail.shopInfo
+    })
   },
   watch: {
     // 监听存储发生改变时候

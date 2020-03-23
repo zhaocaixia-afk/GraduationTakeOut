@@ -14,9 +14,9 @@
     </tab-bar-item>
     <tab-bar-item path="/order">
       <span slot="item-icon">
-        <i class="el-icon-tickets"></i>
+        <i class="el-icon-shopping-cart-full"></i>
       </span>
-      <p slot="item-text">订单</p>
+      <p slot="item-text">购物车</p>
     </tab-bar-item>
     <tab-bar-item path="/profile">
       <span slot="item-icon">

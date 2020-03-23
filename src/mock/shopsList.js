@@ -136,29 +136,6 @@ const shopGoodsList = [
             price: 30,
             // oldPrice: 12,
             rating: 100,
-            ratings: [
-              {
-                username: '3******c',
-                rateTime: 1469281964000,
-                rateType: 0,
-                text: '一统鸡 味道不错,分量也足,包装也很不错',
-                avatar: 'http://static.galileo.xiaojukeji.com/static/tms/default_header.png'
-              },
-              {
-                username: '2******3',
-                rateTime: 1469271264000,
-                rateType: 0,
-                text: '',
-                avatar: 'http://static.galileo.xiaojukeji.com/static/tms/default_header.png'
-              },
-              {
-                username: '3******b',
-                rateTime: 1469261964000,
-                rateType: 1,
-                text: '',
-                avatar: 'http://static.galileo.xiaojukeji.com/static/tms/default_header.png'
-              }
-            ],
             image: 'http://fuss10.elemecdn.com/8/a6/453f65f16b1391942af11511b7a90jpeg.jpeg?imageView2/1/w/750/h/750',
             images: ['http://fuss10.elemecdn.com/8/a6/453f65f16b1391942af11511b7a90jpeg.jpeg?imageView2/1/w/750/h/750']
           },
@@ -172,14 +149,6 @@ const shopGoodsList = [
             price: 10,
             // oldPrice: 12,
             rating: 100,
-            ratings: [
-              {
-                rateType: 0
-              },
-              {
-                rateType: 0
-              }
-            ],
             image: 'http://fuss10.elemecdn.com/8/a6/453f65f16b1391942af11511b7a90jpeg.jpeg?imageView2/1/w/750/h/750',
             images: ['http://fuss10.elemecdn.com/8/a6/453f65f16b1391942af11511b7a90jpeg.jpeg?imageView2/1/w/750/h/750']
           },
@@ -193,11 +162,6 @@ const shopGoodsList = [
             price: 6,
             // oldPrice: 12,
             rating: 100,
-            ratings: [
-              {
-                rateType: 0
-              }
-            ],
             image: 'http://fuss10.elemecdn.com/8/a6/453f65f16b1391942af11511b7a90jpeg.jpeg?imageView2/1/w/750/h/750',
             images: ['http://fuss10.elemecdn.com/8/a6/453f65f16b1391942af11511b7a90jpeg.jpeg?imageView2/1/w/750/h/750']
           },
@@ -211,17 +175,6 @@ const shopGoodsList = [
             price: 1,
             oldPrice: 12,
             rating: 100,
-            ratings: [
-              {
-                rateType: 0
-              },
-              {
-                rateType: 0
-              },
-              {
-                rateType: 0
-              }
-            ],
             image: 'http://fuss10.elemecdn.com/8/a6/453f65f16b1391942af11511b7a90jpeg.jpeg?imageView2/1/w/750/h/750',
             images: ['http://fuss10.elemecdn.com/8/a6/453f65f16b1391942af11511b7a90jpeg.jpeg?imageView2/1/w/750/h/750']
           }
@@ -241,17 +194,6 @@ const shopGoodsList = [
             price: 1,
             oldPrice: 12,
             rating: 100,
-            ratings: [
-              {
-                rateType: 0
-              },
-              {
-                rateType: 0
-              },
-              {
-                rateType: 0
-              }
-            ],
             image: 'http://fuss10.elemecdn.com/8/a6/453f65f16b1391942af11511b7a90jpeg.jpeg?imageView2/1/w/750/h/750',
             images: ['http://fuss10.elemecdn.com/8/a6/453f65f16b1391942af11511b7a90jpeg.jpeg?imageView2/1/w/750/h/750']
           },
@@ -264,7 +206,6 @@ const shopGoodsList = [
             sellCount: 34,
             price: 25,
             oldPrice: 47,
-            ratings: [],
             image: 'http://fuss10.elemecdn.com/8/a6/453f65f16b1391942af11511b7a90jpeg.jpeg?imageView2/1/w/750/h/750',
             images: ['http://fuss10.elemecdn.com/8/a6/453f65f16b1391942af11511b7a90jpeg.jpeg?imageView2/1/w/750/h/750']
           },
@@ -278,11 +219,6 @@ const shopGoodsList = [
             price: 7.7,
             oldPrice: 14,
             rating: 100,
-            ratings: [
-              {
-                rateType: 0
-              }
-            ],
             image: 'http://fuss10.elemecdn.com/8/a6/453f65f16b1391942af11511b7a90jpeg.jpeg?imageView2/1/w/750/h/750',
             images: ['http://fuss10.elemecdn.com/8/a6/453f65f16b1391942af11511b7a90jpeg.jpeg?imageView2/1/w/750/h/750']
           },
@@ -295,7 +231,6 @@ const shopGoodsList = [
             sellCount: 9,
             price: 19.8,
             oldPrice: 35,
-            ratings: [],
             image: 'http://fuss10.elemecdn.com/8/a6/453f65f16b1391942af11511b7a90jpeg.jpeg?imageView2/1/w/750/h/750',
             images: ['http://fuss10.elemecdn.com/8/a6/453f65f16b1391942af11511b7a90jpeg.jpeg?imageView2/1/w/750/h/750']
           },
@@ -308,7 +243,6 @@ const shopGoodsList = [
             sellCount: 9,
             price: 23,
             oldPrice: 38,
-            ratings: [],
             image: 'http://fuss10.elemecdn.com/8/a6/453f65f16b1391942af11511b7a90jpeg.jpeg?imageView2/1/w/750/h/750',
             images: ['http://fuss10.elemecdn.com/8/a6/453f65f16b1391942af11511b7a90jpeg.jpeg?imageView2/1/w/750/h/750']
           },
@@ -321,7 +255,6 @@ const shopGoodsList = [
             sellCount: 2,
             price: 5.5,
             oldPrice: 9,
-            ratings: [],
             image: 'http://fuss10.elemecdn.com/8/a6/453f65f16b1391942af11511b7a90jpeg.jpeg?imageView2/1/w/750/h/750',
             images: ['http://fuss10.elemecdn.com/8/a6/453f65f16b1391942af11511b7a90jpeg.jpeg?imageView2/1/w/750/h/750']
           },
@@ -334,7 +267,6 @@ const shopGoodsList = [
             sellCount: 5,
             price: 79.9,
             oldPrice: 125,
-            ratings: [],
             image: 'http://fuss10.elemecdn.com/8/a6/453f65f16b1391942af11511b7a90jpeg.jpeg?imageView2/1/w/750/h/750',
             images: ['http://fuss10.elemecdn.com/8/a6/453f65f16b1391942af11511b7a90jpeg.jpeg?imageView2/1/w/750/h/750']
           },
@@ -347,7 +279,6 @@ const shopGoodsList = [
             sellCount: 6,
             price: 23,
             oldPrice: 35,
-            ratings: [],
             image: 'http://fuss10.elemecdn.com/8/a6/453f65f16b1391942af11511b7a90jpeg.jpeg?imageView2/1/w/750/h/750',
             images: ['http://fuss10.elemecdn.com/8/a6/453f65f16b1391942af11511b7a90jpeg.jpeg?imageView2/1/w/750/h/750']
           },
@@ -359,7 +290,6 @@ const shopGoodsList = [
             sellCount: 4,
             price: 0.2,
             oldPrice: 0.3,
-            ratings: [],
             image: 'http://fuss10.elemecdn.com/8/a6/453f65f16b1391942af11511b7a90jpeg.jpeg?imageView2/1/w/750/h/750',
             images: ['http://fuss10.elemecdn.com/8/a6/453f65f16b1391942af11511b7a90jpeg.jpeg?imageView2/1/w/750/h/750']
           }
@@ -375,7 +305,6 @@ const shopGoodsList = [
             info: '鸡肉',
             sellCount: 23,
             price: 16,
-            ratings: [],
             image: 'http://fuss10.elemecdn.com/8/a6/453f65f16b1391942af11511b7a90jpeg.jpeg?imageView2/1/w/750/h/750',
             images: ['http://fuss10.elemecdn.com/8/a6/453f65f16b1391942af11511b7a90jpeg.jpeg?imageView2/1/w/750/h/750']
           }
@@ -391,7 +320,6 @@ const shopGoodsList = [
             sellCount: 77,
             price: 26,
             oldPrice: 28,
-            ratings: [],
             image: 'http://fuss10.elemecdn.com/8/a6/453f65f16b1391942af11511b7a90jpeg.jpeg?imageView2/1/w/750/h/750',
             images: ['http://fuss10.elemecdn.com/8/a6/453f65f16b1391942af11511b7a90jpeg.jpeg?imageView2/1/w/750/h/750']
           },
@@ -403,7 +331,6 @@ const shopGoodsList = [
             sellCount: 9,
             price: 8.4,
             oldPrice: 14,
-            ratings: [],
             image: 'http://fuss10.elemecdn.com/8/a6/453f65f16b1391942af11511b7a90jpeg.jpeg?imageView2/1/w/750/h/750',
             images: ['http://fuss10.elemecdn.com/8/a6/453f65f16b1391942af11511b7a90jpeg.jpeg?imageView2/1/w/750/h/750']
           },
@@ -414,7 +341,6 @@ const shopGoodsList = [
             info: '鳕鱼',
             sellCount: 2,
             price: 14,
-            ratings: [],
             image: 'http://fuss10.elemecdn.com/8/a6/453f65f16b1391942af11511b7a90jpeg.jpeg?imageView2/1/w/750/h/750',
             images: ['http://fuss10.elemecdn.com/8/a6/453f65f16b1391942af11511b7a90jpeg.jpeg?imageView2/1/w/750/h/750']
           },
@@ -428,29 +354,6 @@ const shopGoodsList = [
             price: 30,
             // oldPrice: 12,
             rating: 100,
-            ratings: [
-              {
-                username: '3******c',
-                rateTime: 1469281964000,
-                rateType: 0,
-                text: '一统鸡 味道不错,分量也足,包装也很不错',
-                avatar: 'http://static.galileo.xiaojukeji.com/static/tms/default_header.png'
-              },
-              {
-                username: '2******3',
-                rateTime: 1469271264000,
-                rateType: 0,
-                text: '',
-                avatar: 'http://static.galileo.xiaojukeji.com/static/tms/default_header.png'
-              },
-              {
-                username: '3******b',
-                rateTime: 1469261964000,
-                rateType: 1,
-                text: '',
-                avatar: 'http://static.galileo.xiaojukeji.com/static/tms/default_header.png'
-              }
-            ],
             image: 'http://fuss10.elemecdn.com/8/a6/453f65f16b1391942af11511b7a90jpeg.jpeg?imageView2/1/w/750/h/750',
             images: ['http://fuss10.elemecdn.com/8/a6/453f65f16b1391942af11511b7a90jpeg.jpeg?imageView2/1/w/750/h/750']
           }
@@ -467,29 +370,6 @@ const shopGoodsList = [
             sellCount: 84,
             rating: 100,
             info: '',
-            ratings: [
-              {
-                username: '3******c',
-                rateTime: 1469281964000,
-                rateType: 0,
-                text: '',
-                avatar: 'http://static.galileo.xiaojukeji.com/static/tms/default_header.png'
-              },
-              {
-                username: '2******3',
-                rateTime: 1469271264000,
-                rateType: 0,
-                text: '',
-                avatar: 'http://static.galileo.xiaojukeji.com/static/tms/default_header.png'
-              },
-              {
-                username: '3******b',
-                rateTime: 1469261964000,
-                rateType: 0,
-                text: '',
-                avatar: 'http://static.galileo.xiaojukeji.com/static/tms/default_header.png'
-              }
-            ],
             icon: 'http://fuss10.elemecdn.com/9/b5/469d8854f9a3a03797933fd01398bjpeg.jpeg?imageView2/1/w/114/h/114',
             image: 'http://fuss10.elemecdn.com/9/b5/469d8854f9a3a03797933fd01398bjpeg.jpeg?imageView2/1/w/750/h/750'
           },
@@ -501,29 +381,6 @@ const shopGoodsList = [
             sellCount: 28,
             rating: 100,
             info: '',
-            ratings: [
-              {
-                username: '3******c',
-                rateTime: 1469281964000,
-                rateType: 0,
-                text: '',
-                avatar: 'http://static.galileo.xiaojukeji.com/static/tms/default_header.png'
-              },
-              {
-                username: '2******3',
-                rateTime: 1469271264000,
-                rateType: 0,
-                text: '',
-                avatar: 'http://static.galileo.xiaojukeji.com/static/tms/default_header.png'
-              },
-              {
-                username: '3******b',
-                rateTime: 1469261964000,
-                rateType: 0,
-                text: '',
-                avatar: 'http://static.galileo.xiaojukeji.com/static/tms/default_header.png'
-              }
-            ],
             icon: 'http://fuss10.elemecdn.com/6/54/f654985b4e185f06eb07f8fa2b2e8jpeg.jpeg?imageView2/1/w/114/h/114',
             image: 'http://fuss10.elemecdn.com/6/54/f654985b4e185f06eb07f8fa2b2e8jpeg.jpeg?imageView2/1/w/750/h/750'
           }
@@ -540,15 +397,6 @@ const shopGoodsList = [
             sellCount: 3,
             rating: 100,
             info: '',
-            ratings: [
-              {
-                username: '2******3',
-                rateTime: 1469271264000,
-                rateType: 0,
-                text: '',
-                avatar: 'http://static.galileo.xiaojukeji.com/static/tms/default_header.png'
-              }
-            ],
             icon: 'http://fuss10.elemecdn.com/f/49/27f26ed00c025b2200a9ccbb7e67ejpeg.jpeg?imageView2/1/w/114/h/114',
             image: 'http://fuss10.elemecdn.com/f/49/27f26ed00c025b2200a9ccbb7e67ejpeg.jpeg?imageView2/1/w/750/h/750'
           },
@@ -560,15 +408,6 @@ const shopGoodsList = [
             sellCount: 12,
             rating: 100,
             info: '',
-            ratings: [
-              {
-                username: '2******3',
-                rateTime: 1469271264000,
-                rateType: 0,
-                text: '',
-                avatar: 'http://static.galileo.xiaojukeji.com/static/tms/default_header.png'
-              }
-            ],
             icon: 'http://fuss10.elemecdn.com/8/96/f444a8087f0e940ef264617f9d98ajpeg.jpeg?imageView2/1/w/114/h/114',
             image: 'http://fuss10.elemecdn.com/8/96/f444a8087f0e940ef264617f9d98ajpeg.jpeg?imageView2/1/w/750/h/750'
           }
@@ -585,7 +424,6 @@ const shopGoodsList = [
             sellCount: 1,
             rating: '',
             info: '',
-            ratings: [],
             icon: 'http://fuss10.elemecdn.com/b/5f/b3b04c259d5ec9fa52e1856ee50dajpeg.jpeg?imageView2/1/w/114/h/114',
             image: 'http://fuss10.elemecdn.com/b/5f/b3b04c259d5ec9fa52e1856ee50dajpeg.jpeg?imageView2/1/w/750/h/750'
           },
@@ -597,29 +435,6 @@ const shopGoodsList = [
             sellCount: 7,
             rating: 100,
             info: '',
-            ratings: [
-              {
-                username: '3******c',
-                rateTime: 1469281964000,
-                rateType: 0,
-                text: '',
-                avatar: 'http://static.galileo.xiaojukeji.com/static/tms/default_header.png'
-              },
-              {
-                username: '2******3',
-                rateTime: 1469271264000,
-                rateType: 0,
-                text: '',
-                avatar: 'http://static.galileo.xiaojukeji.com/static/tms/default_header.png'
-              },
-              {
-                username: '3******b',
-                rateTime: 1469261964000,
-                rateType: 0,
-                text: '',
-                avatar: 'http://static.galileo.xiaojukeji.com/static/tms/default_header.png'
-              }
-            ],
             icon: 'http://fuss10.elemecdn.com/b/9f/5e6c99c593cf65229225c5661bcdejpeg.jpeg?imageView2/1/w/114/h/114',
             image: 'http://fuss10.elemecdn.com/b/9f/5e6c99c593cf65229225c5661bcdejpeg.jpeg?imageView2/1/w/750/h/750'
           },
@@ -631,22 +446,6 @@ const shopGoodsList = [
             sellCount: 15,
             rating: 100,
             info: '',
-            ratings: [
-              {
-                username: '3******c',
-                rateTime: 1469281964000,
-                rateType: 0,
-                text: '还可以',
-                avatar: 'http://static.galileo.xiaojukeji.com/static/tms/default_header.png'
-              },
-              {
-                username: '2******3',
-                rateTime: 1469271264000,
-                rateType: 0,
-                text: '',
-                avatar: 'http://static.galileo.xiaojukeji.com/static/tms/default_header.png'
-              }
-            ],
             icon: 'http://fuss10.elemecdn.com/e/c6/f348e811772016ae24e968238bcbfjpeg.jpeg?imageView2/1/w/114/h/114',
             image: 'http://fuss10.elemecdn.com/e/c6/f348e811772016ae24e968238bcbfjpeg.jpeg?imageView2/1/w/750/h/750'
           }
@@ -663,29 +462,6 @@ const shopGoodsList = [
             sellCount: 188,
             rating: 96,
             info: '',
-            ratings: [
-              {
-                username: '3******c',
-                rateTime: 1469281964000,
-                rateType: 0,
-                text: '',
-                avatar: 'http://static.galileo.xiaojukeji.com/static/tms/default_header.png'
-              },
-              {
-                username: '2******3',
-                rateTime: 1469271264000,
-                rateType: 0,
-                text: '',
-                avatar: 'http://static.galileo.xiaojukeji.com/static/tms/default_header.png'
-              },
-              {
-                username: '3******b',
-                rateTime: 1469261964000,
-                rateType: 1,
-                text: '',
-                avatar: 'http://static.galileo.xiaojukeji.com/static/tms/default_header.png'
-              }
-            ],
             icon: 'http://fuss10.elemecdn.com/c/6b/29e3d29b0db63d36f7c500bca31d8jpeg.jpeg?imageView2/1/w/114/h/114',
             image: 'http://fuss10.elemecdn.com/c/6b/29e3d29b0db63d36f7c500bca31d8jpeg.jpeg?imageView2/1/w/750/h/750'
           },
@@ -697,29 +473,6 @@ const shopGoodsList = [
             sellCount: 124,
             rating: 85,
             info: '',
-            ratings: [
-              {
-                username: '3******c',
-                rateTime: 1469281964000,
-                rateType: 1,
-                text: '没啥味道',
-                avatar: 'http://static.galileo.xiaojukeji.com/static/tms/default_header.png'
-              },
-              {
-                username: '2******3',
-                rateTime: 1469271264000,
-                rateType: 1,
-                text: '很一般啊',
-                avatar: 'http://static.galileo.xiaojukeji.com/static/tms/default_header.png'
-              },
-              {
-                username: '3******b',
-                rateTime: 1469261964000,
-                rateType: 0,
-                text: '',
-                avatar: 'http://static.galileo.xiaojukeji.com/static/tms/default_header.png'
-              }
-            ],
             icon: 'http://fuss10.elemecdn.com/f/28/a51e7b18751bcdf871648a23fd3b4jpeg.jpeg?imageView2/1/w/114/h/114',
             image: 'http://fuss10.elemecdn.com/f/28/a51e7b18751bcdf871648a23fd3b4jpeg.jpeg?imageView2/1/w/750/h/750'
           },
@@ -731,29 +484,6 @@ const shopGoodsList = [
             sellCount: 114,
             rating: 91,
             info: '',
-            ratings: [
-              {
-                username: '3******c',
-                rateTime: 1469281964000,
-                rateType: 1,
-                text: '难吃不推荐',
-                avatar: 'http://static.galileo.xiaojukeji.com/static/tms/default_header.png'
-              },
-              {
-                username: '2******3',
-                rateTime: 1469271264000,
-                rateType: 0,
-                text: '',
-                avatar: 'http://static.galileo.xiaojukeji.com/static/tms/default_header.png'
-              },
-              {
-                username: '3******b',
-                rateTime: 1469261964000,
-                rateType: 0,
-                text: '',
-                avatar: 'http://static.galileo.xiaojukeji.com/static/tms/default_header.png'
-              }
-            ],
             icon: 'http://fuss10.elemecdn.com/d/b9/bcab0e8ad97758e65ae5a62b2664ejpeg.jpeg?imageView2/1/w/114/h/114',
             image: 'http://fuss10.elemecdn.com/d/b9/bcab0e8ad97758e65ae5a62b2664ejpeg.jpeg?imageView2/1/w/750/h/750'
           },
@@ -765,29 +495,6 @@ const shopGoodsList = [
             sellCount: 101,
             rating: 78,
             info: '',
-            ratings: [
-              {
-                username: '3******c',
-                rateTime: 1469281964000,
-                rateType: 1,
-                text: '不脆,不好吃',
-                avatar: 'http://static.galileo.xiaojukeji.com/static/tms/default_header.png'
-              },
-              {
-                username: '2******3',
-                rateTime: 1469271264000,
-                rateType: 0,
-                text: '',
-                avatar: 'http://static.galileo.xiaojukeji.com/static/tms/default_header.png'
-              },
-              {
-                username: '3******b',
-                rateTime: 1469261964000,
-                rateType: 0,
-                text: '',
-                avatar: 'http://static.galileo.xiaojukeji.com/static/tms/default_header.png'
-              }
-            ],
             icon: 'http://fuss10.elemecdn.com/7/72/9a580c1462ca1e4d3c07e112bc035jpeg.jpeg?imageView2/1/w/114/h/114',
             image: 'http://fuss10.elemecdn.com/7/72/9a580c1462ca1e4d3c07e112bc035jpeg.jpeg?imageView2/1/w/750/h/750'
           },
@@ -799,29 +506,6 @@ const shopGoodsList = [
             sellCount: 80,
             rating: 93,
             info: '',
-            ratings: [
-              {
-                username: '3******c',
-                rateTime: 1469281964000,
-                rateType: 0,
-                text: '',
-                avatar: 'http://static.galileo.xiaojukeji.com/static/tms/default_header.png'
-              },
-              {
-                username: '2******3',
-                rateTime: 1469271264000,
-                rateType: 0,
-                text: '',
-                avatar: 'http://static.galileo.xiaojukeji.com/static/tms/default_header.png'
-              },
-              {
-                username: '3******b',
-                rateTime: 1469261964000,
-                rateType: 0,
-                text: '',
-                avatar: 'http://static.galileo.xiaojukeji.com/static/tms/default_header.png'
-              }
-            ],
             icon: 'http://fuss10.elemecdn.com/0/05/097a2a59fd2a2292d08067e16380cjpeg.jpeg?imageView2/1/w/114/h/114',
             image: 'http://fuss10.elemecdn.com/0/05/097a2a59fd2a2292d08067e16380cjpeg.jpeg?imageView2/1/w/750/h/750'
           }
@@ -837,29 +521,6 @@ const shopGoodsList = [
             description: '咸粥',
             sellCount: 229,
             rating: 100,
-            ratings: [
-              {
-                username: '3******c',
-                rateTime: 1469281964000,
-                rateType: 0,
-                text: '很喜欢的粥',
-                avatar: 'http://static.galileo.xiaojukeji.com/static/tms/default_header.png'
-              },
-              {
-                username: '2******3',
-                rateTime: 1469271264000,
-                rateType: 0,
-                text: '',
-                avatar: 'http://static.galileo.xiaojukeji.com/static/tms/default_header.png'
-              },
-              {
-                username: '3******b',
-                rateTime: 1469261964000,
-                rateType: 1,
-                text: '',
-                avatar: 'http://static.galileo.xiaojukeji.com/static/tms/default_header.png'
-              }
-            ],
             icon: 'http://fuss10.elemecdn.com/c/cd/c12745ed8a5171e13b427dbc39401jpeg.jpeg?imageView2/1/w/114/h/114',
             image: 'http://fuss10.elemecdn.com/c/cd/c12745ed8a5171e13b427dbc39401jpeg.jpeg?imageView2/1/w/750/h/750'
           },
@@ -871,29 +532,6 @@ const shopGoodsList = [
             sellCount: 91,
             rating: 100,
             info: '',
-            ratings: [
-              {
-                username: '3******c',
-                rateTime: 1469281964000,
-                rateType: 0,
-                text: '',
-                avatar: 'http://static.galileo.xiaojukeji.com/static/tms/default_header.png'
-              },
-              {
-                username: '2******3',
-                rateTime: 1469271264000,
-                rateType: 0,
-                text: '',
-                avatar: 'http://static.galileo.xiaojukeji.com/static/tms/default_header.png'
-              },
-              {
-                username: '3******b',
-                rateTime: 1469261964000,
-                rateType: 0,
-                text: '',
-                avatar: 'http://static.galileo.xiaojukeji.com/static/tms/default_header.png'
-              }
-            ],
             icon: 'http://fuss10.elemecdn.com/8/a6/453f65f16b1391942af11511b7a90jpeg.jpeg?imageView2/1/w/114/h/114',
             image: 'http://fuss10.elemecdn.com/8/a6/453f65f16b1391942af11511b7a90jpeg.jpeg?imageView2/1/w/750/h/750'
           },
@@ -905,29 +543,6 @@ const shopGoodsList = [
             sellCount: 86,
             rating: 100,
             info: '',
-            ratings: [
-              {
-                username: '3******c',
-                rateTime: 1469281964000,
-                rateType: 0,
-                text: '',
-                avatar: 'http://static.galileo.xiaojukeji.com/static/tms/default_header.png'
-              },
-              {
-                username: '2******3',
-                rateTime: 1469271264000,
-                rateType: 0,
-                text: '',
-                avatar: 'http://static.galileo.xiaojukeji.com/static/tms/default_header.png'
-              },
-              {
-                username: '3******b',
-                rateTime: 1469261964000,
-                rateType: 0,
-                text: '',
-                avatar: 'http://static.galileo.xiaojukeji.com/static/tms/default_header.png'
-              }
-            ],
             icon: 'http://fuss10.elemecdn.com/d/22/260bd78ee6ac6051136c5447fe307jpeg.jpeg?imageView2/1/w/114/h/114',
             image: 'http://fuss10.elemecdn.com/d/22/260bd78ee6ac6051136c5447fe307jpeg.jpeg?imageView2/1/w/750/h/750'
           },
@@ -939,29 +554,6 @@ const shopGoodsList = [
             sellCount: 81,
             rating: 91,
             info: '',
-            ratings: [
-              {
-                username: '3******c',
-                rateTime: 1469281964000,
-                rateType: 0,
-                text: '',
-                avatar: 'http://static.galileo.xiaojukeji.com/static/tms/default_header.png'
-              },
-              {
-                username: '2******3',
-                rateTime: 1469271264000,
-                rateType: 0,
-                text: '',
-                avatar: 'http://static.galileo.xiaojukeji.com/static/tms/default_header.png'
-              },
-              {
-                username: '3******b',
-                rateTime: 1469261964000,
-                rateType: 0,
-                text: '',
-                avatar: 'http://static.galileo.xiaojukeji.com/static/tms/default_header.png'
-              }
-            ],
             icon: 'http://fuss10.elemecdn.com/9/b5/469d8854f9a3a03797933fd01398bjpeg.jpeg?imageView2/1/w/114/h/114',
             image: 'http://fuss10.elemecdn.com/9/b5/469d8854f9a3a03797933fd01398bjpeg.jpeg?imageView2/1/w/750/h/750'
           },
@@ -973,28 +565,6 @@ const shopGoodsList = [
             sellCount: 56,
             rating: 100,
             info: '',
-            ratings: [
-              {
-                username: '3******c',
-                rateTime: 1469281964000,
-                rateType: 0,
-                text: '',
-                avatar: 'http://static.galileo.xiaojukeji.com/static/tms/default_header.png'
-              },
-              {
-                username: '2******3',
-                rateTime: 1469271264000,
-                rateType: 0,
-                text: ''
-              },
-              {
-                username: '3******b',
-                rateTime: 1469261964000,
-                rateType: 0,
-                text: '',
-                avatar: 'http://static.galileo.xiaojukeji.com/static/tms/default_header.png'
-              }
-            ],
             icon: 'http://fuss10.elemecdn.com/e/a3/5317c68dd618929b6ac05804e429ajpeg.jpeg?imageView2/1/w/114/h/114',
             image: 'http://fuss10.elemecdn.com/e/a3/5317c68dd618929b6ac05804e429ajpeg.jpeg?imageView2/1/w/750/h/750'
           },
@@ -1006,29 +576,6 @@ const shopGoodsList = [
             sellCount: 33,
             rating: 100,
             info: '',
-            ratings: [
-              {
-                username: '3******c',
-                rateTime: 1469281964000,
-                rateType: 0,
-                text: '',
-                avatar: 'http://static.galileo.xiaojukeji.com/static/tms/default_header.png'
-              },
-              {
-                username: '2******3',
-                rateTime: 1469271264000,
-                rateType: 0,
-                text: '',
-                avatar: 'http://static.galileo.xiaojukeji.com/static/tms/default_header.png'
-              },
-              {
-                username: '3******b',
-                rateTime: 1469261964000,
-                rateType: 0,
-                text: '',
-                avatar: 'http://static.galileo.xiaojukeji.com/static/tms/default_header.png'
-              }
-            ],
             icon: 'http://fuss10.elemecdn.com/a/94/7371083792c19df00e546b29e344cjpeg.jpeg?imageView2/1/w/114/h/114',
             image: 'http://fuss10.elemecdn.com/a/94/7371083792c19df00e546b29e344cjpeg.jpeg?imageView2/1/w/750/h/750'
           }
@@ -1053,29 +600,6 @@ const shopGoodsList = [
             price: 30,
             // oldPrice: 12,
             rating: 100,
-            ratings: [
-              {
-                username: '3******c',
-                rateTime: 1469281964000,
-                rateType: 0,
-                text: '一统鸡 味道不错,分量也足,包装也很不错',
-                avatar: 'http://static.galileo.xiaojukeji.com/static/tms/default_header.png'
-              },
-              {
-                username: '2******3',
-                rateTime: 1469271264000,
-                rateType: 0,
-                text: '',
-                avatar: 'http://static.galileo.xiaojukeji.com/static/tms/default_header.png'
-              },
-              {
-                username: '3******b',
-                rateTime: 1469261964000,
-                rateType: 1,
-                text: '',
-                avatar: 'http://static.galileo.xiaojukeji.com/static/tms/default_header.png'
-              }
-            ],
             image: 'http://fuss10.elemecdn.com/8/a6/453f65f16b1391942af11511b7a90jpeg.jpeg?imageView2/1/w/750/h/750',
             images: ['http://fuss10.elemecdn.com/8/a6/453f65f16b1391942af11511b7a90jpeg.jpeg?imageView2/1/w/750/h/750']
           },
@@ -1088,14 +612,6 @@ const shopGoodsList = [
             price: 10,
             // oldPrice: 12,
             rating: 100,
-            ratings: [
-              {
-                rateType: 0
-              },
-              {
-                rateType: 0
-              }
-            ],
             image: 'http://fuss10.elemecdn.com/8/a6/453f65f16b1391942af11511b7a90jpeg.jpeg?imageView2/1/w/750/h/750',
             images: ['http://fuss10.elemecdn.com/8/a6/453f65f16b1391942af11511b7a90jpeg.jpeg?imageView2/1/w/750/h/750']
           },
@@ -1108,11 +624,6 @@ const shopGoodsList = [
             price: 6,
             // oldPrice: 12,
             rating: 100,
-            ratings: [
-              {
-                rateType: 0
-              }
-            ],
             image: 'http://fuss10.elemecdn.com/8/a6/453f65f16b1391942af11511b7a90jpeg.jpeg?imageView2/1/w/750/h/750',
             images: ['http://fuss10.elemecdn.com/8/a6/453f65f16b1391942af11511b7a90jpeg.jpeg?imageView2/1/w/750/h/750']
           },
@@ -1125,17 +636,6 @@ const shopGoodsList = [
             price: 1,
             oldPrice: 12,
             rating: 100,
-            ratings: [
-              {
-                rateType: 0
-              },
-              {
-                rateType: 0
-              },
-              {
-                rateType: 0
-              }
-            ],
             image: 'http://fuss10.elemecdn.com/8/a6/453f65f16b1391942af11511b7a90jpeg.jpeg?imageView2/1/w/750/h/750',
             images: ['http://fuss10.elemecdn.com/8/a6/453f65f16b1391942af11511b7a90jpeg.jpeg?imageView2/1/w/750/h/750']
           }
@@ -1154,17 +654,6 @@ const shopGoodsList = [
             price: 1,
             oldPrice: 12,
             rating: 100,
-            ratings: [
-              {
-                rateType: 0
-              },
-              {
-                rateType: 0
-              },
-              {
-                rateType: 0
-              }
-            ],
             image: 'http://fuss10.elemecdn.com/8/a6/453f65f16b1391942af11511b7a90jpeg.jpeg?imageView2/1/w/750/h/750',
             images: ['http://fuss10.elemecdn.com/8/a6/453f65f16b1391942af11511b7a90jpeg.jpeg?imageView2/1/w/750/h/750']
           },
@@ -1176,7 +665,6 @@ const shopGoodsList = [
             sellCount: 34,
             price: 25,
             oldPrice: 47,
-            ratings: [],
             image: 'http://fuss10.elemecdn.com/8/a6/453f65f16b1391942af11511b7a90jpeg.jpeg?imageView2/1/w/750/h/750',
             images: ['http://fuss10.elemecdn.com/8/a6/453f65f16b1391942af11511b7a90jpeg.jpeg?imageView2/1/w/750/h/750']
           },
@@ -1189,11 +677,6 @@ const shopGoodsList = [
             price: 7.7,
             oldPrice: 14,
             rating: 100,
-            ratings: [
-              {
-                rateType: 0
-              }
-            ],
             image: 'http://fuss10.elemecdn.com/8/a6/453f65f16b1391942af11511b7a90jpeg.jpeg?imageView2/1/w/750/h/750',
             images: ['http://fuss10.elemecdn.com/8/a6/453f65f16b1391942af11511b7a90jpeg.jpeg?imageView2/1/w/750/h/750']
           },
@@ -1205,7 +688,6 @@ const shopGoodsList = [
             sellCount: 9,
             price: 19.8,
             oldPrice: 35,
-            ratings: [],
             image: 'http://fuss10.elemecdn.com/8/a6/453f65f16b1391942af11511b7a90jpeg.jpeg?imageView2/1/w/750/h/750',
             images: ['http://fuss10.elemecdn.com/8/a6/453f65f16b1391942af11511b7a90jpeg.jpeg?imageView2/1/w/750/h/750']
           },
@@ -1217,7 +699,6 @@ const shopGoodsList = [
             sellCount: 9,
             price: 23,
             oldPrice: 38,
-            ratings: [],
             image: 'http://fuss10.elemecdn.com/8/a6/453f65f16b1391942af11511b7a90jpeg.jpeg?imageView2/1/w/750/h/750',
             images: ['http://fuss10.elemecdn.com/8/a6/453f65f16b1391942af11511b7a90jpeg.jpeg?imageView2/1/w/750/h/750']
           },
@@ -1229,7 +710,6 @@ const shopGoodsList = [
             sellCount: 2,
             price: 5.5,
             oldPrice: 9,
-            ratings: [],
             image: 'http://fuss10.elemecdn.com/8/a6/453f65f16b1391942af11511b7a90jpeg.jpeg?imageView2/1/w/750/h/750',
             images: ['http://fuss10.elemecdn.com/8/a6/453f65f16b1391942af11511b7a90jpeg.jpeg?imageView2/1/w/750/h/750']
           },
@@ -1241,7 +721,6 @@ const shopGoodsList = [
             sellCount: 5,
             price: 79.9,
             oldPrice: 125,
-            ratings: [],
             image: 'http://fuss10.elemecdn.com/8/a6/453f65f16b1391942af11511b7a90jpeg.jpeg?imageView2/1/w/750/h/750',
             images: ['http://fuss10.elemecdn.com/8/a6/453f65f16b1391942af11511b7a90jpeg.jpeg?imageView2/1/w/750/h/750']
           },
@@ -1253,7 +732,6 @@ const shopGoodsList = [
             sellCount: 6,
             price: 23,
             oldPrice: 35,
-            ratings: [],
             image: 'http://fuss10.elemecdn.com/8/a6/453f65f16b1391942af11511b7a90jpeg.jpeg?imageView2/1/w/750/h/750',
             images: ['http://fuss10.elemecdn.com/8/a6/453f65f16b1391942af11511b7a90jpeg.jpeg?imageView2/1/w/750/h/750']
           },
@@ -1265,7 +743,6 @@ const shopGoodsList = [
             sellCount: 4,
             price: 0.2,
             oldPrice: 0.3,
-            ratings: [],
             image: 'http://fuss10.elemecdn.com/8/a6/453f65f16b1391942af11511b7a90jpeg.jpeg?imageView2/1/w/750/h/750',
             images: ['http://fuss10.elemecdn.com/8/a6/453f65f16b1391942af11511b7a90jpeg.jpeg?imageView2/1/w/750/h/750']
           }
@@ -1281,7 +758,6 @@ const shopGoodsList = [
             info: '鸡肉',
             sellCount: 23,
             price: 16,
-            ratings: [],
             image: 'http://fuss10.elemecdn.com/8/a6/453f65f16b1391942af11511b7a90jpeg.jpeg?imageView2/1/w/750/h/750',
             images: ['http://fuss10.elemecdn.com/8/a6/453f65f16b1391942af11511b7a90jpeg.jpeg?imageView2/1/w/750/h/750']
           }
@@ -1297,7 +773,6 @@ const shopGoodsList = [
             sellCount: 77,
             price: 26,
             oldPrice: 28,
-            ratings: [],
             image: 'http://fuss10.elemecdn.com/8/a6/453f65f16b1391942af11511b7a90jpeg.jpeg?imageView2/1/w/750/h/750',
             images: ['http://fuss10.elemecdn.com/8/a6/453f65f16b1391942af11511b7a90jpeg.jpeg?imageView2/1/w/750/h/750']
           },
@@ -1309,7 +784,6 @@ const shopGoodsList = [
             sellCount: 9,
             price: 8.4,
             oldPrice: 14,
-            ratings: [],
             image: 'http://fuss10.elemecdn.com/8/a6/453f65f16b1391942af11511b7a90jpeg.jpeg?imageView2/1/w/750/h/750',
             images: ['http://fuss10.elemecdn.com/8/a6/453f65f16b1391942af11511b7a90jpeg.jpeg?imageView2/1/w/750/h/750']
           },
@@ -1320,7 +794,6 @@ const shopGoodsList = [
             info: '鳕鱼',
             sellCount: 2,
             price: 14,
-            ratings: [],
             image: 'http://fuss10.elemecdn.com/8/a6/453f65f16b1391942af11511b7a90jpeg.jpeg?imageView2/1/w/750/h/750',
             images: ['http://fuss10.elemecdn.com/8/a6/453f65f16b1391942af11511b7a90jpeg.jpeg?imageView2/1/w/750/h/750']
           },
@@ -1334,29 +807,6 @@ const shopGoodsList = [
             price: 30,
             // oldPrice: 12,
             rating: 100,
-            ratings: [
-              {
-                username: '3******c',
-                rateTime: 1469281964000,
-                rateType: 0,
-                text: '一统鸡 味道不错,分量也足,包装也很不错',
-                avatar: 'http://static.galileo.xiaojukeji.com/static/tms/default_header.png'
-              },
-              {
-                username: '2******3',
-                rateTime: 1469271264000,
-                rateType: 0,
-                text: '',
-                avatar: 'http://static.galileo.xiaojukeji.com/static/tms/default_header.png'
-              },
-              {
-                username: '3******b',
-                rateTime: 1469261964000,
-                rateType: 1,
-                text: '',
-                avatar: 'http://static.galileo.xiaojukeji.com/static/tms/default_header.png'
-              }
-            ],
             image: 'http://fuss10.elemecdn.com/8/a6/453f65f16b1391942af11511b7a90jpeg.jpeg?imageView2/1/w/750/h/750',
             images: ['http://fuss10.elemecdn.com/8/a6/453f65f16b1391942af11511b7a90jpeg.jpeg?imageView2/1/w/750/h/750']
           }
@@ -1373,29 +823,6 @@ const shopGoodsList = [
             sellCount: 84,
             rating: 100,
             info: '',
-            ratings: [
-              {
-                username: '3******c',
-                rateTime: 1469281964000,
-                rateType: 0,
-                text: '',
-                avatar: 'http://static.galileo.xiaojukeji.com/static/tms/default_header.png'
-              },
-              {
-                username: '2******3',
-                rateTime: 1469271264000,
-                rateType: 0,
-                text: '',
-                avatar: 'http://static.galileo.xiaojukeji.com/static/tms/default_header.png'
-              },
-              {
-                username: '3******b',
-                rateTime: 1469261964000,
-                rateType: 0,
-                text: '',
-                avatar: 'http://static.galileo.xiaojukeji.com/static/tms/default_header.png'
-              }
-            ],
             icon: 'http://fuss10.elemecdn.com/9/b5/469d8854f9a3a03797933fd01398bjpeg.jpeg?imageView2/1/w/114/h/114',
             image: 'http://fuss10.elemecdn.com/9/b5/469d8854f9a3a03797933fd01398bjpeg.jpeg?imageView2/1/w/750/h/750'
           },
@@ -1407,29 +834,6 @@ const shopGoodsList = [
             sellCount: 28,
             rating: 100,
             info: '',
-            ratings: [
-              {
-                username: '3******c',
-                rateTime: 1469281964000,
-                rateType: 0,
-                text: '',
-                avatar: 'http://static.galileo.xiaojukeji.com/static/tms/default_header.png'
-              },
-              {
-                username: '2******3',
-                rateTime: 1469271264000,
-                rateType: 0,
-                text: '',
-                avatar: 'http://static.galileo.xiaojukeji.com/static/tms/default_header.png'
-              },
-              {
-                username: '3******b',
-                rateTime: 1469261964000,
-                rateType: 0,
-                text: '',
-                avatar: 'http://static.galileo.xiaojukeji.com/static/tms/default_header.png'
-              }
-            ],
             icon: 'http://fuss10.elemecdn.com/6/54/f654985b4e185f06eb07f8fa2b2e8jpeg.jpeg?imageView2/1/w/114/h/114',
             image: 'http://fuss10.elemecdn.com/6/54/f654985b4e185f06eb07f8fa2b2e8jpeg.jpeg?imageView2/1/w/750/h/750'
           }
@@ -1446,15 +850,6 @@ const shopGoodsList = [
             sellCount: 3,
             rating: 100,
             info: '',
-            ratings: [
-              {
-                username: '2******3',
-                rateTime: 1469271264000,
-                rateType: 0,
-                text: '',
-                avatar: 'http://static.galileo.xiaojukeji.com/static/tms/default_header.png'
-              }
-            ],
             icon: 'http://fuss10.elemecdn.com/f/49/27f26ed00c025b2200a9ccbb7e67ejpeg.jpeg?imageView2/1/w/114/h/114',
             image: 'http://fuss10.elemecdn.com/f/49/27f26ed00c025b2200a9ccbb7e67ejpeg.jpeg?imageView2/1/w/750/h/750'
           },
@@ -1466,15 +861,6 @@ const shopGoodsList = [
             sellCount: 12,
             rating: 100,
             info: '',
-            ratings: [
-              {
-                username: '2******3',
-                rateTime: 1469271264000,
-                rateType: 0,
-                text: '',
-                avatar: 'http://static.galileo.xiaojukeji.com/static/tms/default_header.png'
-              }
-            ],
             icon: 'http://fuss10.elemecdn.com/8/96/f444a8087f0e940ef264617f9d98ajpeg.jpeg?imageView2/1/w/114/h/114',
             image: 'http://fuss10.elemecdn.com/8/96/f444a8087f0e940ef264617f9d98ajpeg.jpeg?imageView2/1/w/750/h/750'
           }
@@ -1491,7 +877,6 @@ const shopGoodsList = [
             sellCount: 1,
             rating: '',
             info: '',
-            ratings: [],
             icon: 'http://fuss10.elemecdn.com/b/5f/b3b04c259d5ec9fa52e1856ee50dajpeg.jpeg?imageView2/1/w/114/h/114',
             image: 'http://fuss10.elemecdn.com/b/5f/b3b04c259d5ec9fa52e1856ee50dajpeg.jpeg?imageView2/1/w/750/h/750'
           },
@@ -1503,29 +888,6 @@ const shopGoodsList = [
             sellCount: 7,
             rating: 100,
             info: '',
-            ratings: [
-              {
-                username: '3******c',
-                rateTime: 1469281964000,
-                rateType: 0,
-                text: '',
-                avatar: 'http://static.galileo.xiaojukeji.com/static/tms/default_header.png'
-              },
-              {
-                username: '2******3',
-                rateTime: 1469271264000,
-                rateType: 0,
-                text: '',
-                avatar: 'http://static.galileo.xiaojukeji.com/static/tms/default_header.png'
-              },
-              {
-                username: '3******b',
-                rateTime: 1469261964000,
-                rateType: 0,
-                text: '',
-                avatar: 'http://static.galileo.xiaojukeji.com/static/tms/default_header.png'
-              }
-            ],
             icon: 'http://fuss10.elemecdn.com/b/9f/5e6c99c593cf65229225c5661bcdejpeg.jpeg?imageView2/1/w/114/h/114',
             image: 'http://fuss10.elemecdn.com/b/9f/5e6c99c593cf65229225c5661bcdejpeg.jpeg?imageView2/1/w/750/h/750'
           },
@@ -1537,22 +899,6 @@ const shopGoodsList = [
             sellCount: 15,
             rating: 100,
             info: '',
-            ratings: [
-              {
-                username: '3******c',
-                rateTime: 1469281964000,
-                rateType: 0,
-                text: '还可以',
-                avatar: 'http://static.galileo.xiaojukeji.com/static/tms/default_header.png'
-              },
-              {
-                username: '2******3',
-                rateTime: 1469271264000,
-                rateType: 0,
-                text: '',
-                avatar: 'http://static.galileo.xiaojukeji.com/static/tms/default_header.png'
-              }
-            ],
             icon: 'http://fuss10.elemecdn.com/e/c6/f348e811772016ae24e968238bcbfjpeg.jpeg?imageView2/1/w/114/h/114',
             image: 'http://fuss10.elemecdn.com/e/c6/f348e811772016ae24e968238bcbfjpeg.jpeg?imageView2/1/w/750/h/750'
           }
@@ -1569,29 +915,6 @@ const shopGoodsList = [
             sellCount: 188,
             rating: 96,
             info: '',
-            ratings: [
-              {
-                username: '3******c',
-                rateTime: 1469281964000,
-                rateType: 0,
-                text: '',
-                avatar: 'http://static.galileo.xiaojukeji.com/static/tms/default_header.png'
-              },
-              {
-                username: '2******3',
-                rateTime: 1469271264000,
-                rateType: 0,
-                text: '',
-                avatar: 'http://static.galileo.xiaojukeji.com/static/tms/default_header.png'
-              },
-              {
-                username: '3******b',
-                rateTime: 1469261964000,
-                rateType: 1,
-                text: '',
-                avatar: 'http://static.galileo.xiaojukeji.com/static/tms/default_header.png'
-              }
-            ],
             icon: 'http://fuss10.elemecdn.com/c/6b/29e3d29b0db63d36f7c500bca31d8jpeg.jpeg?imageView2/1/w/114/h/114',
             image: 'http://fuss10.elemecdn.com/c/6b/29e3d29b0db63d36f7c500bca31d8jpeg.jpeg?imageView2/1/w/750/h/750'
           },
@@ -1603,29 +926,6 @@ const shopGoodsList = [
             sellCount: 124,
             rating: 85,
             info: '',
-            ratings: [
-              {
-                username: '3******c',
-                rateTime: 1469281964000,
-                rateType: 1,
-                text: '没啥味道',
-                avatar: 'http://static.galileo.xiaojukeji.com/static/tms/default_header.png'
-              },
-              {
-                username: '2******3',
-                rateTime: 1469271264000,
-                rateType: 1,
-                text: '很一般啊',
-                avatar: 'http://static.galileo.xiaojukeji.com/static/tms/default_header.png'
-              },
-              {
-                username: '3******b',
-                rateTime: 1469261964000,
-                rateType: 0,
-                text: '',
-                avatar: 'http://static.galileo.xiaojukeji.com/static/tms/default_header.png'
-              }
-            ],
             icon: 'http://fuss10.elemecdn.com/f/28/a51e7b18751bcdf871648a23fd3b4jpeg.jpeg?imageView2/1/w/114/h/114',
             image: 'http://fuss10.elemecdn.com/f/28/a51e7b18751bcdf871648a23fd3b4jpeg.jpeg?imageView2/1/w/750/h/750'
           },
@@ -1637,29 +937,6 @@ const shopGoodsList = [
             sellCount: 114,
             rating: 91,
             info: '',
-            ratings: [
-              {
-                username: '3******c',
-                rateTime: 1469281964000,
-                rateType: 1,
-                text: '难吃不推荐',
-                avatar: 'http://static.galileo.xiaojukeji.com/static/tms/default_header.png'
-              },
-              {
-                username: '2******3',
-                rateTime: 1469271264000,
-                rateType: 0,
-                text: '',
-                avatar: 'http://static.galileo.xiaojukeji.com/static/tms/default_header.png'
-              },
-              {
-                username: '3******b',
-                rateTime: 1469261964000,
-                rateType: 0,
-                text: '',
-                avatar: 'http://static.galileo.xiaojukeji.com/static/tms/default_header.png'
-              }
-            ],
             icon: 'http://fuss10.elemecdn.com/d/b9/bcab0e8ad97758e65ae5a62b2664ejpeg.jpeg?imageView2/1/w/114/h/114',
             image: 'http://fuss10.elemecdn.com/d/b9/bcab0e8ad97758e65ae5a62b2664ejpeg.jpeg?imageView2/1/w/750/h/750'
           },
@@ -1671,29 +948,6 @@ const shopGoodsList = [
             sellCount: 101,
             rating: 78,
             info: '',
-            ratings: [
-              {
-                username: '3******c',
-                rateTime: 1469281964000,
-                rateType: 1,
-                text: '不脆,不好吃',
-                avatar: 'http://static.galileo.xiaojukeji.com/static/tms/default_header.png'
-              },
-              {
-                username: '2******3',
-                rateTime: 1469271264000,
-                rateType: 0,
-                text: '',
-                avatar: 'http://static.galileo.xiaojukeji.com/static/tms/default_header.png'
-              },
-              {
-                username: '3******b',
-                rateTime: 1469261964000,
-                rateType: 0,
-                text: '',
-                avatar: 'http://static.galileo.xiaojukeji.com/static/tms/default_header.png'
-              }
-            ],
             icon: 'http://fuss10.elemecdn.com/7/72/9a580c1462ca1e4d3c07e112bc035jpeg.jpeg?imageView2/1/w/114/h/114',
             image: 'http://fuss10.elemecdn.com/7/72/9a580c1462ca1e4d3c07e112bc035jpeg.jpeg?imageView2/1/w/750/h/750'
           },
@@ -1705,29 +959,6 @@ const shopGoodsList = [
             sellCount: 80,
             rating: 93,
             info: '',
-            ratings: [
-              {
-                username: '3******c',
-                rateTime: 1469281964000,
-                rateType: 0,
-                text: '',
-                avatar: 'http://static.galileo.xiaojukeji.com/static/tms/default_header.png'
-              },
-              {
-                username: '2******3',
-                rateTime: 1469271264000,
-                rateType: 0,
-                text: '',
-                avatar: 'http://static.galileo.xiaojukeji.com/static/tms/default_header.png'
-              },
-              {
-                username: '3******b',
-                rateTime: 1469261964000,
-                rateType: 0,
-                text: '',
-                avatar: 'http://static.galileo.xiaojukeji.com/static/tms/default_header.png'
-              }
-            ],
             icon: 'http://fuss10.elemecdn.com/0/05/097a2a59fd2a2292d08067e16380cjpeg.jpeg?imageView2/1/w/114/h/114',
             image: 'http://fuss10.elemecdn.com/0/05/097a2a59fd2a2292d08067e16380cjpeg.jpeg?imageView2/1/w/750/h/750'
           }
@@ -1743,29 +974,6 @@ const shopGoodsList = [
             description: '咸粥',
             sellCount: 229,
             rating: 100,
-            ratings: [
-              {
-                username: '3******c',
-                rateTime: 1469281964000,
-                rateType: 0,
-                text: '很喜欢的粥',
-                avatar: 'http://static.galileo.xiaojukeji.com/static/tms/default_header.png'
-              },
-              {
-                username: '2******3',
-                rateTime: 1469271264000,
-                rateType: 0,
-                text: '',
-                avatar: 'http://static.galileo.xiaojukeji.com/static/tms/default_header.png'
-              },
-              {
-                username: '3******b',
-                rateTime: 1469261964000,
-                rateType: 1,
-                text: '',
-                avatar: 'http://static.galileo.xiaojukeji.com/static/tms/default_header.png'
-              }
-            ],
             icon: 'http://fuss10.elemecdn.com/c/cd/c12745ed8a5171e13b427dbc39401jpeg.jpeg?imageView2/1/w/114/h/114',
             image: 'http://fuss10.elemecdn.com/c/cd/c12745ed8a5171e13b427dbc39401jpeg.jpeg?imageView2/1/w/750/h/750'
           },
@@ -1777,29 +985,6 @@ const shopGoodsList = [
             sellCount: 91,
             rating: 100,
             info: '',
-            ratings: [
-              {
-                username: '3******c',
-                rateTime: 1469281964000,
-                rateType: 0,
-                text: '',
-                avatar: 'http://static.galileo.xiaojukeji.com/static/tms/default_header.png'
-              },
-              {
-                username: '2******3',
-                rateTime: 1469271264000,
-                rateType: 0,
-                text: '',
-                avatar: 'http://static.galileo.xiaojukeji.com/static/tms/default_header.png'
-              },
-              {
-                username: '3******b',
-                rateTime: 1469261964000,
-                rateType: 0,
-                text: '',
-                avatar: 'http://static.galileo.xiaojukeji.com/static/tms/default_header.png'
-              }
-            ],
             icon: 'http://fuss10.elemecdn.com/8/a6/453f65f16b1391942af11511b7a90jpeg.jpeg?imageView2/1/w/114/h/114',
             image: 'http://fuss10.elemecdn.com/8/a6/453f65f16b1391942af11511b7a90jpeg.jpeg?imageView2/1/w/750/h/750'
           },
@@ -1811,29 +996,6 @@ const shopGoodsList = [
             sellCount: 86,
             rating: 100,
             info: '',
-            ratings: [
-              {
-                username: '3******c',
-                rateTime: 1469281964000,
-                rateType: 0,
-                text: '',
-                avatar: 'http://static.galileo.xiaojukeji.com/static/tms/default_header.png'
-              },
-              {
-                username: '2******3',
-                rateTime: 1469271264000,
-                rateType: 0,
-                text: '',
-                avatar: 'http://static.galileo.xiaojukeji.com/static/tms/default_header.png'
-              },
-              {
-                username: '3******b',
-                rateTime: 1469261964000,
-                rateType: 0,
-                text: '',
-                avatar: 'http://static.galileo.xiaojukeji.com/static/tms/default_header.png'
-              }
-            ],
             icon: 'http://fuss10.elemecdn.com/d/22/260bd78ee6ac6051136c5447fe307jpeg.jpeg?imageView2/1/w/114/h/114',
             image: 'http://fuss10.elemecdn.com/d/22/260bd78ee6ac6051136c5447fe307jpeg.jpeg?imageView2/1/w/750/h/750'
           },
@@ -1845,29 +1007,6 @@ const shopGoodsList = [
             sellCount: 81,
             rating: 91,
             info: '',
-            ratings: [
-              {
-                username: '3******c',
-                rateTime: 1469281964000,
-                rateType: 0,
-                text: '',
-                avatar: 'http://static.galileo.xiaojukeji.com/static/tms/default_header.png'
-              },
-              {
-                username: '2******3',
-                rateTime: 1469271264000,
-                rateType: 0,
-                text: '',
-                avatar: 'http://static.galileo.xiaojukeji.com/static/tms/default_header.png'
-              },
-              {
-                username: '3******b',
-                rateTime: 1469261964000,
-                rateType: 0,
-                text: '',
-                avatar: 'http://static.galileo.xiaojukeji.com/static/tms/default_header.png'
-              }
-            ],
             icon: 'http://fuss10.elemecdn.com/9/b5/469d8854f9a3a03797933fd01398bjpeg.jpeg?imageView2/1/w/114/h/114',
             image: 'http://fuss10.elemecdn.com/9/b5/469d8854f9a3a03797933fd01398bjpeg.jpeg?imageView2/1/w/750/h/750'
           },
@@ -1879,28 +1018,6 @@ const shopGoodsList = [
             sellCount: 56,
             rating: 100,
             info: '',
-            ratings: [
-              {
-                username: '3******c',
-                rateTime: 1469281964000,
-                rateType: 0,
-                text: '',
-                avatar: 'http://static.galileo.xiaojukeji.com/static/tms/default_header.png'
-              },
-              {
-                username: '2******3',
-                rateTime: 1469271264000,
-                rateType: 0,
-                text: ''
-              },
-              {
-                username: '3******b',
-                rateTime: 1469261964000,
-                rateType: 0,
-                text: '',
-                avatar: 'http://static.galileo.xiaojukeji.com/static/tms/default_header.png'
-              }
-            ],
             icon: 'http://fuss10.elemecdn.com/e/a3/5317c68dd618929b6ac05804e429ajpeg.jpeg?imageView2/1/w/114/h/114',
             image: 'http://fuss10.elemecdn.com/e/a3/5317c68dd618929b6ac05804e429ajpeg.jpeg?imageView2/1/w/750/h/750'
           },
@@ -1912,29 +1029,6 @@ const shopGoodsList = [
             sellCount: 33,
             rating: 100,
             info: '',
-            ratings: [
-              {
-                username: '3******c',
-                rateTime: 1469281964000,
-                rateType: 0,
-                text: '',
-                avatar: 'http://static.galileo.xiaojukeji.com/static/tms/default_header.png'
-              },
-              {
-                username: '2******3',
-                rateTime: 1469271264000,
-                rateType: 0,
-                text: '',
-                avatar: 'http://static.galileo.xiaojukeji.com/static/tms/default_header.png'
-              },
-              {
-                username: '3******b',
-                rateTime: 1469261964000,
-                rateType: 0,
-                text: '',
-                avatar: 'http://static.galileo.xiaojukeji.com/static/tms/default_header.png'
-              }
-            ],
             icon: 'http://fuss10.elemecdn.com/a/94/7371083792c19df00e546b29e344cjpeg.jpeg?imageView2/1/w/114/h/114',
             image: 'http://fuss10.elemecdn.com/a/94/7371083792c19df00e546b29e344cjpeg.jpeg?imageView2/1/w/750/h/750'
           }
@@ -2108,9 +1202,7 @@ export default {
   // shopsInfo的数据,返回值
   getShopInfo: config => {
     const id = getLast(config.url)
-    // console.log(id)
     const data = shopInfoList.find(item => item.id === parseInt(id))
-    // console.log(data)
     return {
       code: 0,
       data: data
