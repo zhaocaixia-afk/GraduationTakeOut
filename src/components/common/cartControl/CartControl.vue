@@ -26,11 +26,12 @@ export default {
       }
     },
     topLevel: Number,
-    shopName: String
+    shopName: String,
+    shopId: Number
   },
   methods: {
     updateFoodCount(isAdd) {
-      this.$store.dispatch('updateFoodCount', { isAdd, good: this.good, topLevel: this.topLevel, shopName: this.shopName })
+      this.$store.dispatch('updateFoodCount', { isAdd, good: this.good, topLevel: this.topLevel, shopName: this.shopName, shopId: this.shopId })
     }
   }
 }

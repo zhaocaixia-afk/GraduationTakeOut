@@ -12,7 +12,6 @@ const state = {
 
   temObj: {},
   cartList: [],
-
   totalList: []
 }
 const mutations = {
@@ -41,64 +40,60 @@ const mutations = {
   },
   // 增加
   increase(state, playload) {
-    state.temObj = getStore(getSession(NOW_SHOP)) //总数组
     state.cartList = getStore(`cart${getSession(NOW_SHOP)}`) || [] //购物车数组
-
     if (!playload.good.count) {
       Vue.set(playload.good, 'count', 1)
       Vue.set(playload.good, 'topLevel', playload.topLevel)
       state.cartList.push(playload.good)
       // 第一大类：存储购物车列表(sessionStorage)
-      setStore(`cart${getSession(NOW_SHOP)}`, state.cartList)
+      // setStore(`cart${getSession(NOW_SHOP)}`, state.cartList)
     } else {
       playload.good.count++
       // 第一大类：存储购物车列表
       const index = state.cartList.findIndex(item => item.name === playload.good.name)
       state.cartList.splice(index, 1, playload.good)
-      setStore(`cart${getSession(NOW_SHOP)}`, state.cartList)
+      // setStore(`cart${getSession(NOW_SHOP)}`, state.cartList)
     }
-    // 第二大类(总列表)
+    setStore(`cart${getSession(NOW_SHOP)}`, state.cartList)
+
+    state.temObj = getStore(getSession(NOW_SHOP)) //总数组
     let a = state.temObj[playload.topLevel].foods.findIndex(item => item.name === playload.good.name)
-    // 第二大类
     state.temObj[playload.topLevel].foods.splice(a, 1, playload.good)
-    // 第二大类
     setStore(getSession(NOW_SHOP), state.temObj)
 
-    // 总的购物车列表
-    state.totalList = getStore('totalList') || []
+    state.totalList = getStore('totalList') || [] // 总的购物车列表
     const b = state.totalList.findIndex(item => item.name === playload.shopName)
     if (b === -1) {
       var obj = {}
+      obj['shopId'] = playload.id
       obj['name'] = playload.shopName
       obj['list'] = state.cartList
-      state.totalList.push(obj)
-      setStore('totalList', state.totalList)
+      state.totalList.unshift(obj)
     } else {
       // 找出那一项,进行修改
       state.totalList[b].list = state.cartList
-      setStore('totalList', state.totalList)
     }
+    setStore('totalList', state.totalList)
   },
   // 减少
   decrease(state, playload) {
-    state.temObj = getStore(getSession(NOW_SHOP))
-    state.cartList = getStore(`cart${getSession(NOW_SHOP)}`) || []
     if (playload.good.count) {
       playload.good.count--
-      // 当前购物车
+
+      state.cartList = getStore(`cart${getSession(NOW_SHOP)}`) // 当前购物车
       const indexD = state.cartList.findIndex(item => item.name === playload.good.name)
       state.cartList.splice(indexD, 1, playload.good)
       setStore(`cart${getSession(NOW_SHOP)}`, state.cartList)
-      // 总数据修改
+
+      state.totalList = getStore('totalList') // 总购物车列表
+      let a = state.totalList.findIndex(item => item.name === playload.shopName)
+      state.totalList[a].list = state.cartList
+      setStore('totalList', state.totalList)
+
+      state.temObj = getStore(getSession(NOW_SHOP)) // 总数据修改
       const b = state.temObj[playload.topLevel].foods.findIndex(item => item.name === playload.good.name)
       state.temObj[playload.topLevel].foods.splice(b, 1, playload.good)
       setStore(getSession(NOW_SHOP), state.temObj)
-
-      // 总购物车列表
-      state.totalList = getStore('totalList') || []
-      const a = state.totalList.findIndex(item => item.name === playload.shopName)
-      state.totalList[a].list = state.cartList
-      setStore('totalList', state.totalList)
 
       if (playload.good.count === 0) {
         // 当前购物车
@@ -120,9 +115,9 @@ const mutations = {
 const actions = {
   updateFoodCount(context, playload) {
     if (playload.isAdd) {
-      context.commit('increase', { good: playload.good, topLevel: playload.topLevel, shopName: playload.shopName })
+      context.commit('increase', { good: playload.good, topLevel: playload.topLevel, shopName: playload.shopName, id: playload.shopId })
     } else {
-      context.commit('decrease', { good: playload.good, topLevel: playload.topLevel, shopName: playload.shopName })
+      context.commit('decrease', { good: playload.good, topLevel: playload.topLevel, shopName: playload.shopName, id: playload.shopId })
     }
   },
   // 2.同步操作,DetailHeader的展开与收缩显示
@@ -154,6 +149,12 @@ const getters = {
       state.cartList = getStore(`cart${getSession(NOW_SHOP)}`)
     }
     return state.cartList
+  },
+  getTotalList(state) {
+    if (getStore('totalList')) {
+      state.totalList = getStore('totalList')
+    }
+    return state.totalList
   }
 }
 export default {

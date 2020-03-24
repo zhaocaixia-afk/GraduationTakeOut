@@ -26,7 +26,7 @@
                     <span class="now">¥{{ good.price }}</span>
                     <span class="old" v-if="good.oldPrice">¥{{ good.oldPrice }}</span>
                   </div>
-                  <cart-control :good="good" :top-level="index" :shop-name="shopInfo.name" />
+                  <cart-control :good="good" :top-level="index" :shop-name="shopInfo.name" :shop-id="shopInfo.id" />
                 </div>
               </div>
             </li>
@@ -89,6 +89,7 @@ export default {
     }
   },
   methods: {
+    // 刷新操作
     shuaxin() {
       this.$nextTick(() => {
         // better-scroll的刷新

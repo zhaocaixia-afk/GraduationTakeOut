@@ -33,7 +33,8 @@
               <span class="name">{{ food.name }}</span>
               <div class="price-count">
                 <span class="price">¥{{ food.price }}</span>
-                <cart-control :good="food" :top-level="food.topLevel"></cart-control>
+                <!-- :good="good" :top-level="index" :shop-name="shopInfo.name" :shop-id="shopInfo.id" -->
+                <cart-control :good="food" :top-level="food.topLevel" :shop-name="shopInfo.name" :shop-id="shopInfo.id"></cart-control>
               </div>
             </li>
           </scroll>
