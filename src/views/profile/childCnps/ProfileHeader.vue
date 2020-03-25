@@ -8,7 +8,7 @@
         {{ userInfo.name ? userInfo.name : '登录/注册' }}
       </div>
       <div class="phone">
-        <img src="~assets/img/profile/phone.svg" />
+        <i class="el-icon-mobile-phone"></i>
         {{ userInfo.phone ? userInfo.phone : '暂无绑定手机号' }}
       </div>
     </div>
@@ -17,6 +17,7 @@
     </div>
   </div>
 </template>
+
 <script>
 export default {
   name: 'Profile',
@@ -33,12 +34,11 @@ export default {
   }
 }
 </script>
+
 <style scoped lang="scss">
 .profile-header {
   display: flex;
   align-items: center;
-  background: #ff5777;
-  color: #fff;
   height: 85px;
   padding-left: 15px;
   .avatar {
@@ -46,7 +46,7 @@ export default {
       width: 70px;
       height: 70px;
       border-radius: 35px;
-      background: #f2f2f2;
+      background: $b-g;
       vertical-align: middle;
     }
   }
@@ -60,10 +60,6 @@ export default {
       margin-top: 9px;
       display: flex;
       align-items: center;
-      img {
-        width: 18px;
-        height: 18px;
-      }
     }
   }
   .arrow {

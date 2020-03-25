@@ -51,8 +51,9 @@ import Good from './Good'
 
 import { getShopGoodsList } from 'network/detail'
 
-import { getSession, getStore, setStore } from 'common/util'
-import { NOW_SHOP } from 'common/const'
+// getSession
+import { getStore, setStore } from 'common/util'
+// import { NOW_SHOP } from 'common/const'
 
 import { mapGetters, mapState } from 'vuex'
 
@@ -100,7 +101,7 @@ export default {
       })
     },
     async _getShopGoodsList() {
-      const result = await getShopGoodsList(getSession(NOW_SHOP) || this.$route.params.id)
+      const result = await getShopGoodsList(this.$route.params.id)
       if (result.code === 0) {
         this.goodsList = result.data.goods
         // 存储

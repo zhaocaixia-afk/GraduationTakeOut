@@ -7,7 +7,7 @@
     </div>
 
     <!-- 搜索结果 -->
-    <scroll v-if="searchList.length" class="search-list">
+    <scroll v-if="Object.keys(searchList).length !== 0" class="search-list">
       <li class="search-item b-b" v-for="(item, index) in searchList" :key="index">
         <img :src="`${basicURL}${item.image_path}`" alt="" class="avatar" />
         <div class="text">
@@ -40,7 +40,7 @@
 import { getSearchList } from 'network/search'
 import HistorySearch from './childCpns/HistorySearch'
 import Scroll from 'components/common/scroll/Scroll'
-import { debounce, setStore, getStore, unsetStore } from 'common/util'
+import { debounce, setStore, getStore } from 'common/util'
 import { SEARCH_LIST, BASIC_IMG } from 'common/const'
 
 export default {
@@ -129,17 +129,20 @@ export default {
     },
     // 8.清空历史搜索记录
     clearStore() {
-      this.$confirm('点击确定将清空历史记录, 是否继续?', '提示', {
-        confirmButtonText: '确定',
-        cancelButtonText: '取消',
-        type: 'warning',
-        center: true
-      })
-        .then(() => {
-          unsetStore(SEARCH_LIST)
-          this.historySearch.list = getStore(SEARCH_LIST)
+      let searchList = getStore(SEARCH_LIST) || []
+      if (searchList.length) {
+        this.$confirm('点击确定将清空历史记录, 是否继续?', '提示', {
+          confirmButtonText: '确定',
+          cancelButtonText: '取消',
+          type: 'warning',
+          center: true
         })
-        .catch(() => {})
+          .then(() => {
+            setStore(SEARCH_LIST, [])
+            this.historySearch.list = getStore(SEARCH_LIST)
+          })
+          .catch(() => {})
+      }
     }
     // 4.失去焦点或者按回车键(手机端没有什么意义,看是否与键盘搜索按钮有关)
     // 问题：应该有,但是失去焦点和提交会导致两次触发
@@ -158,6 +161,7 @@ export default {
 
 <style lang="scss" scoped>
 .search {
+  color: #333;
   .form {
     display: flex;
     justify-content: space-between;
@@ -175,7 +179,6 @@ export default {
   }
   .search-list {
     padding: 0 10px;
-    height: calc(100% - 40px);
     .search-item {
       display: flex;
       align-items: center;

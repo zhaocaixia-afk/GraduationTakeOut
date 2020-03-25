@@ -72,7 +72,6 @@ export default {
   }
   .text {
     flex: 1;
-    // border-bottom: 1px solid #eee;
     font-size: 15px;
     .title {
       width: 200px;
@@ -88,7 +87,6 @@ export default {
         display: inline-block;
         font-size: 11px;
         line-height: 11px;
-        color: #333;
         background-color: #ffd930;
         padding: 3px;
         border-radius: 2px;
@@ -110,7 +108,7 @@ export default {
         }
       }
       .delivery_mode {
-        background: rgb(3, 166, 255);
+        background: $blue;
         color: $white;
         font-size: 12px;
         height: 12px;
@@ -118,7 +116,6 @@ export default {
     }
     .second-line {
       font-size: 12px;
-      // margin: 10px 0;
       display: flex;
       justify-content: space-between;
       color: $text-color;

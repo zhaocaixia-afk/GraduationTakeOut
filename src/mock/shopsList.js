@@ -127,20 +127,17 @@ const shopGoodsList = [
         icon: 'https://fuss10.elemecdn.com/b/91/8cf4f67e0e8223931cd595dc932fepng.png',
         foods: [
           {
-            id: 1,
             name: '一统鸡',
             icon: 'http://fuss10.elemecdn.com/8/a6/453f65f16b1391942af11511b7a90jpeg.jpeg?imageView2/1/w/114/h/114',
             description: '全翅+胸排+腿排+琵琶腿',
             info: '鸡肉',
             sellCount: 114,
             price: 30,
-            // oldPrice: 12,
             rating: 100,
             image: 'http://fuss10.elemecdn.com/8/a6/453f65f16b1391942af11511b7a90jpeg.jpeg?imageView2/1/w/750/h/750',
             images: ['http://fuss10.elemecdn.com/8/a6/453f65f16b1391942af11511b7a90jpeg.jpeg?imageView2/1/w/750/h/750']
           },
           {
-            id: 2,
             name: '香酥鸡腿',
             icon: 'http://fuss10.elemecdn.com/8/a6/453f65f16b1391942af11511b7a90jpeg.jpeg?imageView2/1/w/114/h/114',
             description: '外焦里嫩,美味多汁',
@@ -153,7 +150,6 @@ const shopGoodsList = [
             images: ['http://fuss10.elemecdn.com/8/a6/453f65f16b1391942af11511b7a90jpeg.jpeg?imageView2/1/w/750/h/750']
           },
           {
-            id: 3,
             name: '椰蓉大福2个',
             icon: 'http://fuss10.elemecdn.com/8/a6/453f65f16b1391942af11511b7a90jpeg.jpeg?imageView2/1/w/114/h/114',
             description: '超好吃,就是奇特的缘分',
@@ -166,7 +162,6 @@ const shopGoodsList = [
             images: ['http://fuss10.elemecdn.com/8/a6/453f65f16b1391942af11511b7a90jpeg.jpeg?imageView2/1/w/750/h/750']
           },
           {
-            id: 4,
             name: '【特价】香辣鸡腿堡',
             icon: 'http://fuss10.elemecdn.com/8/a6/453f65f16b1391942af11511b7a90jpeg.jpeg?imageView2/1/w/114/h/114',
             description: '精选上等无骨鸡腿肉,用秘方腌制,手工裹上优质面粉,喷炸至黄金喷香,酥脆鲜嫩,配以金典沙拉,给你更美味的享受',
@@ -185,7 +180,6 @@ const shopGoodsList = [
         icon: 'https://fuss10.elemecdn.com/0/6a/05b267f338acfeb8bd682d16e836dpng.png',
         foods: [
           {
-            id: 4,
             name: '【特价】香辣鸡腿堡',
             icon: 'http://fuss10.elemecdn.com/8/a6/453f65f16b1391942af11511b7a90jpeg.jpeg?imageView2/1/w/114/h/114',
             description: '精选上等无骨鸡腿肉,用秘方腌制,手工裹上优质面粉,喷炸至黄金喷香,酥脆鲜嫩,配以金典沙拉,给你更美味的享受',
@@ -198,7 +192,6 @@ const shopGoodsList = [
             images: ['http://fuss10.elemecdn.com/8/a6/453f65f16b1391942af11511b7a90jpeg.jpeg?imageView2/1/w/750/h/750']
           },
           {
-            id: 5,
             name: '【超值】黄金板烧堡套餐',
             icon: 'http://fuss10.elemecdn.com/8/a6/453f65f16b1391942af11511b7a90jpeg.jpeg?imageView2/1/w/114/h/114',
             description: '黄金板烧堡+伴翅+2串脆骨+百分小吃+中可',
@@ -210,7 +203,6 @@ const shopGoodsList = [
             images: ['http://fuss10.elemecdn.com/8/a6/453f65f16b1391942af11511b7a90jpeg.jpeg?imageView2/1/w/750/h/750']
           },
           {
-            id: 6,
             name: '鲜香牛肉煲',
             icon: 'http://fuss10.elemecdn.com/8/a6/453f65f16b1391942af11511b7a90jpeg.jpeg?imageView2/1/w/114/h/114',
             description: '精选澳洲进口牛肉,搭配多情黑胡椒,加上特制酱汁,咬一口,唇齿留香,牛气冲天',
@@ -223,7 +215,6 @@ const shopGoodsList = [
             images: ['http://fuss10.elemecdn.com/8/a6/453f65f16b1391942af11511b7a90jpeg.jpeg?imageView2/1/w/750/h/750']
           },
           {
-            id: 7,
             name: '【热销】墨西哥鸡肉卷套餐',
             icon: 'http://fuss10.elemecdn.com/8/a6/453f65f16b1391942af11511b7a90jpeg.jpeg?imageView2/1/w/114/h/114',
             description: '墨西哥鸡肉卷+伴翅+1脆骨+中可',
@@ -235,7 +226,6 @@ const shopGoodsList = [
             images: ['http://fuss10.elemecdn.com/8/a6/453f65f16b1391942af11511b7a90jpeg.jpeg?imageView2/1/w/750/h/750']
           },
           {
-            id: 8,
             name: '【热销】Q弹鲜虾堡套餐',
             icon: 'http://fuss10.elemecdn.com/8/a6/453f65f16b1391942af11511b7a90jpeg.jpeg?imageView2/1/w/114/h/114',
             description: 'Q弹鲜虾堡+伴翅+上校+中可',
@@ -247,7 +237,6 @@ const shopGoodsList = [
             images: ['http://fuss10.elemecdn.com/8/a6/453f65f16b1391942af11511b7a90jpeg.jpeg?imageView2/1/w/750/h/750']
           },
           {
-            id: 9,
             name: '香芋甜心',
             icon: 'http://fuss10.elemecdn.com/8/a6/453f65f16b1391942af11511b7a90jpeg.jpeg?imageView2/1/w/114/h/114',
             description: '我是小甜心哦',
@@ -259,7 +248,6 @@ const shopGoodsList = [
             images: ['http://fuss10.elemecdn.com/8/a6/453f65f16b1391942af11511b7a90jpeg.jpeg?imageView2/1/w/750/h/750']
           },
           {
-            id: 10,
             name: '【全家福】全家福套餐',
             icon: 'http://fuss10.elemecdn.com/8/a6/453f65f16b1391942af11511b7a90jpeg.jpeg?imageView2/1/w/114/h/114',
             description: '蜜汁全鸡+鸡肉卷+2腿堡+鸡米花+薯条+伴翅(1对)+上校鸡块+百分小吃+3中可',
@@ -271,7 +259,6 @@ const shopGoodsList = [
             images: ['http://fuss10.elemecdn.com/8/a6/453f65f16b1391942af11511b7a90jpeg.jpeg?imageView2/1/w/750/h/750']
           },
           {
-            id: 11,
             name: '【招牌】香辣鸡腿堡套餐',
             icon: 'http://fuss10.elemecdn.com/8/a6/453f65f16b1391942af11511b7a90jpeg.jpeg?imageView2/1/w/114/h/114',
             description: '',
@@ -296,7 +283,7 @@ const shopGoodsList = [
         ]
       },
       {
-        name: '店长力推',
+        name: '主食类',
         foods: [
           {
             name: '墨西哥鸡肉卷+小可套餐',
@@ -311,7 +298,7 @@ const shopGoodsList = [
         ]
       },
       {
-        name: '主食类',
+        name: '小吃类',
         foods: [
           {
             name: '脆皮全鸡',
@@ -345,7 +332,6 @@ const shopGoodsList = [
             images: ['http://fuss10.elemecdn.com/8/a6/453f65f16b1391942af11511b7a90jpeg.jpeg?imageView2/1/w/750/h/750']
           },
           {
-            id: 1,
             name: '一统鸡',
             icon: 'http://fuss10.elemecdn.com/8/a6/453f65f16b1391942af11511b7a90jpeg.jpeg?imageView2/1/w/114/h/114',
             description: '全翅+胸排+腿排+琵琶腿',
@@ -360,224 +346,170 @@ const shopGoodsList = [
         ]
       },
       {
-        name: '爽口凉菜',
+        name: '营养套饭',
         foods: [
           {
-            name: '八宝酱菜',
-            price: 4,
-            oldPrice: '',
-            description: '',
-            sellCount: 84,
+            name: '咖喱鸡肉饭套餐',
+            price: 19.8,
+            oldPrice: 28,
+            description: '咖喱鸡肉饭+小可',
+            sellCount: 8,
             rating: 100,
-            info: '',
+            info: '鸡肉',
             icon: 'http://fuss10.elemecdn.com/9/b5/469d8854f9a3a03797933fd01398bjpeg.jpeg?imageView2/1/w/114/h/114',
             image: 'http://fuss10.elemecdn.com/9/b5/469d8854f9a3a03797933fd01398bjpeg.jpeg?imageView2/1/w/750/h/750'
           },
           {
-            name: '拍黄瓜',
-            price: 9,
-            oldPrice: '',
-            description: '',
-            sellCount: 28,
+            name: '酱香排骨饭套餐',
+            price: 19.8,
+            oldPrice: 28,
+            description: '酱香排骨饭+小可',
+            sellCount: 7,
             rating: 100,
-            info: '',
+            info: '鸡肉',
             icon: 'http://fuss10.elemecdn.com/6/54/f654985b4e185f06eb07f8fa2b2e8jpeg.jpeg?imageView2/1/w/114/h/114',
             image: 'http://fuss10.elemecdn.com/6/54/f654985b4e185f06eb07f8fa2b2e8jpeg.jpeg?imageView2/1/w/750/h/750'
           }
         ]
       },
       {
-        name: '精选套餐',
+        name: '单人套餐',
         foods: [
           {
-            name: '红豆薏米粥套餐',
-            price: 37,
-            oldPrice: '',
-            description: '红豆薏米粥,三鲜干蒸烧卖,拍黄瓜',
-            sellCount: 3,
+            name: '【招牌】香辣鸡腿堡套餐',
+            price: 23,
+            oldPrice: 31,
+            description: '香辣鸡腿堡+鸡腿+2上校+中可',
+            sellCount: 6,
             rating: 100,
-            info: '',
+            info: '鸡肉',
             icon: 'http://fuss10.elemecdn.com/f/49/27f26ed00c025b2200a9ccbb7e67ejpeg.jpeg?imageView2/1/w/114/h/114',
             image: 'http://fuss10.elemecdn.com/f/49/27f26ed00c025b2200a9ccbb7e67ejpeg.jpeg?imageView2/1/w/750/h/750'
           },
           {
-            name: '皮蛋瘦肉粥套餐',
-            price: 31,
-            oldPrice: '',
-            description: '',
-            sellCount: 12,
+            name: '【热销】墨西哥鸡肉卷套餐',
+            price: 35,
+            // oldPrice: '',
+            description: '墨西哥鸡肉卷+伴翅+1脆骨+中可',
+            sellCount: 22,
             rating: 100,
-            info: '',
+            info: '鸡肉',
             icon: 'http://fuss10.elemecdn.com/8/96/f444a8087f0e940ef264617f9d98ajpeg.jpeg?imageView2/1/w/114/h/114',
             image: 'http://fuss10.elemecdn.com/8/96/f444a8087f0e940ef264617f9d98ajpeg.jpeg?imageView2/1/w/750/h/750'
           }
         ]
       },
       {
-        name: '果拼果汁',
+        name: '多人套餐',
         foods: [
           {
-            name: '蜜瓜圣女萝莉杯',
-            price: 6,
-            oldPrice: '',
-            description: '',
-            sellCount: 1,
+            name: '【全家福】全家福套餐',
+            price: 79.9,
+            oldPrice: 119,
+            description: '蜜汁全鸡+鸡肉卷+2腿堡+鸡米花+小薯+2伴翅+4上校+百分小吃+3中可',
+            sellCount: 5,
             rating: '',
-            info: '',
+            info: '鸡肉',
             icon: 'http://fuss10.elemecdn.com/b/5f/b3b04c259d5ec9fa52e1856ee50dajpeg.jpeg?imageView2/1/w/114/h/114',
             image: 'http://fuss10.elemecdn.com/b/5f/b3b04c259d5ec9fa52e1856ee50dajpeg.jpeg?imageView2/1/w/750/h/750'
           },
           {
-            name: '加多宝',
-            price: 6,
-            oldPrice: '',
-            description: '',
-            sellCount: 7,
-            rating: 100,
-            info: '',
+            name: '【情侣】情侣套餐',
+            price: 39.9,
+            oldPrice: 56,
+            description: '香辣鸡腿堡+鸡肉卷+小薯+鸡腿+1伴翅+2中可',
+            sellCount: 0,
+            // rating: 100,
+            info: '鸡肉',
             icon: 'http://fuss10.elemecdn.com/b/9f/5e6c99c593cf65229225c5661bcdejpeg.jpeg?imageView2/1/w/114/h/114',
             image: 'http://fuss10.elemecdn.com/b/9f/5e6c99c593cf65229225c5661bcdejpeg.jpeg?imageView2/1/w/750/h/750'
-          },
-          {
-            name: 'VC无限橙果汁',
-            price: 8,
-            oldPrice: 10,
-            description: '',
-            sellCount: 15,
-            rating: 100,
-            info: '',
-            icon: 'http://fuss10.elemecdn.com/e/c6/f348e811772016ae24e968238bcbfjpeg.jpeg?imageView2/1/w/114/h/114',
-            image: 'http://fuss10.elemecdn.com/e/c6/f348e811772016ae24e968238bcbfjpeg.jpeg?imageView2/1/w/750/h/750'
           }
         ]
       },
       {
-        name: '小吃主食',
+        name: '夜宵',
         foods: [
           {
-            name: '扁豆焖面',
-            price: 14,
-            oldPrice: '',
-            description: '',
-            sellCount: 188,
+            name: '蜜汁全鸡+中可',
+            price: 28.6,
+            oldPrice: 34,
+            description: '蜜汁全鸡+中可',
+            sellCount: 6,
             rating: 96,
-            info: '',
+            info: '鸡肉',
             icon: 'http://fuss10.elemecdn.com/c/6b/29e3d29b0db63d36f7c500bca31d8jpeg.jpeg?imageView2/1/w/114/h/114',
             image: 'http://fuss10.elemecdn.com/c/6b/29e3d29b0db63d36f7c500bca31d8jpeg.jpeg?imageView2/1/w/750/h/750'
           },
           {
-            name: '葱花饼',
-            price: 10,
-            oldPrice: '',
-            description: '',
-            sellCount: 124,
+            name: '【今晚吃鸡】一统鸡+中可',
+            price: 29.8,
+            oldPrice: 42,
+            description: '一统鸡+中可',
+            sellCount: 1,
             rating: 85,
-            info: '',
+            info: '鸡肉',
             icon: 'http://fuss10.elemecdn.com/f/28/a51e7b18751bcdf871648a23fd3b4jpeg.jpeg?imageView2/1/w/114/h/114',
             image: 'http://fuss10.elemecdn.com/f/28/a51e7b18751bcdf871648a23fd3b4jpeg.jpeg?imageView2/1/w/750/h/750'
-          },
-          {
-            name: '牛肉馅饼',
-            price: 14,
-            oldPrice: '',
-            description: '',
-            sellCount: 114,
-            rating: 91,
-            info: '',
-            icon: 'http://fuss10.elemecdn.com/d/b9/bcab0e8ad97758e65ae5a62b2664ejpeg.jpeg?imageView2/1/w/114/h/114',
-            image: 'http://fuss10.elemecdn.com/d/b9/bcab0e8ad97758e65ae5a62b2664ejpeg.jpeg?imageView2/1/w/750/h/750'
-          },
-          {
-            name: '招牌猪肉白菜锅贴/10个',
-            price: 17,
-            oldPrice: '',
-            description: '',
-            sellCount: 101,
-            rating: 78,
-            info: '',
-            icon: 'http://fuss10.elemecdn.com/7/72/9a580c1462ca1e4d3c07e112bc035jpeg.jpeg?imageView2/1/w/114/h/114',
-            image: 'http://fuss10.elemecdn.com/7/72/9a580c1462ca1e4d3c07e112bc035jpeg.jpeg?imageView2/1/w/750/h/750'
-          },
-          {
-            name: '糊塌子',
-            price: 10,
-            oldPrice: '',
-            description: '',
-            sellCount: 80,
-            rating: 93,
-            info: '',
-            icon: 'http://fuss10.elemecdn.com/0/05/097a2a59fd2a2292d08067e16380cjpeg.jpeg?imageView2/1/w/114/h/114',
-            image: 'http://fuss10.elemecdn.com/0/05/097a2a59fd2a2292d08067e16380cjpeg.jpeg?imageView2/1/w/750/h/750'
           }
         ]
       },
       {
-        name: '特色粥品',
+        name: '饮品类',
         foods: [
           {
-            name: '皮蛋瘦肉粥',
-            price: 10,
-            oldPrice: '',
-            description: '咸粥',
-            sellCount: 229,
+            name: '美年达',
+            price: 7,
+            // oldPrice: '',
+            description: '口渴与清凉之间的最近距离',
+            sellCount: 3,
             rating: 100,
+            info: '汽水',
             icon: 'http://fuss10.elemecdn.com/c/cd/c12745ed8a5171e13b427dbc39401jpeg.jpeg?imageView2/1/w/114/h/114',
             image: 'http://fuss10.elemecdn.com/c/cd/c12745ed8a5171e13b427dbc39401jpeg.jpeg?imageView2/1/w/750/h/750'
           },
           {
-            name: '南瓜粥',
-            price: 9,
-            oldPrice: '',
-            description: '甜粥',
-            sellCount: 91,
+            name: '浓情牛奶',
+            price: 5,
+            // oldPrice: '',
+            description: '奶香浓郁,香甜可口',
+            sellCount: 5,
             rating: 100,
-            info: '',
+            info: '牛奶',
             icon: 'http://fuss10.elemecdn.com/8/a6/453f65f16b1391942af11511b7a90jpeg.jpeg?imageView2/1/w/114/h/114',
             image: 'http://fuss10.elemecdn.com/8/a6/453f65f16b1391942af11511b7a90jpeg.jpeg?imageView2/1/w/750/h/750'
           },
           {
-            name: '红豆薏米美肤粥',
-            price: 12,
-            oldPrice: '',
-            description: '甜粥',
-            sellCount: 86,
+            name: '可乐',
+            price: 30,
+            // oldPrice: '',
+            description: '口渴与清凉之间的最近距离',
+            sellCount: 30,
             rating: 100,
-            info: '',
+            info: '可乐',
             icon: 'http://fuss10.elemecdn.com/d/22/260bd78ee6ac6051136c5447fe307jpeg.jpeg?imageView2/1/w/114/h/114',
             image: 'http://fuss10.elemecdn.com/d/22/260bd78ee6ac6051136c5447fe307jpeg.jpeg?imageView2/1/w/750/h/750'
           },
           {
-            name: '红枣山药糙米粥',
-            price: 10,
-            oldPrice: '',
-            description: '',
-            sellCount: 81,
+            name: '浓情咖啡',
+            price: 9,
+            // oldPrice: '',
+            description: '苦苦的追求,甜甜的享受',
+            sellCount: 1,
             rating: 91,
-            info: '',
+            info: '咖啡',
             icon: 'http://fuss10.elemecdn.com/9/b5/469d8854f9a3a03797933fd01398bjpeg.jpeg?imageView2/1/w/114/h/114',
             image: 'http://fuss10.elemecdn.com/9/b5/469d8854f9a3a03797933fd01398bjpeg.jpeg?imageView2/1/w/750/h/750'
           },
           {
-            name: '鲜蔬菌菇粥',
-            price: 11,
-            oldPrice: '',
-            description: '咸粥',
-            sellCount: 56,
+            name: '香醇奶茶',
+            price: 9,
+            // oldPrice: '',
+            description: '浓郁的奶香,茶味醇厚,滋味更佳',
+            sellCount: 11,
             rating: 100,
-            info: '',
+            info: '阿萨姆红茶',
             icon: 'http://fuss10.elemecdn.com/e/a3/5317c68dd618929b6ac05804e429ajpeg.jpeg?imageView2/1/w/114/h/114',
             image: 'http://fuss10.elemecdn.com/e/a3/5317c68dd618929b6ac05804e429ajpeg.jpeg?imageView2/1/w/750/h/750'
-          },
-          {
-            name: '田园蔬菜粥',
-            price: 10,
-            oldPrice: '',
-            description: '咸粥',
-            sellCount: 33,
-            rating: 100,
-            info: '',
-            icon: 'http://fuss10.elemecdn.com/a/94/7371083792c19df00e546b29e344cjpeg.jpeg?imageView2/1/w/114/h/114',
-            image: 'http://fuss10.elemecdn.com/a/94/7371083792c19df00e546b29e344cjpeg.jpeg?imageView2/1/w/750/h/750'
           }
         ]
       }
@@ -591,50 +523,13 @@ const shopGoodsList = [
         icon: 'https://fuss10.elemecdn.com/b/91/8cf4f67e0e8223931cd595dc932fepng.png',
         foods: [
           {
-            id: 1,
-            name: '一统鸡',
+            name: '牛肉豆腐脑',
             icon: 'http://fuss10.elemecdn.com/8/a6/453f65f16b1391942af11511b7a90jpeg.jpeg?imageView2/1/w/114/h/114',
-            description: '全翅+胸排+腿排+琵琶腿',
-            info: '鸡肉',
-            sellCount: 114,
-            price: 30,
+            description: '其色泽美观、营养丰富又利于消化，食后回味悠长',
+            info: '牛肉',
+            sellCount: 18,
+            price: 12,
             // oldPrice: 12,
-            rating: 100,
-            image: 'http://fuss10.elemecdn.com/8/a6/453f65f16b1391942af11511b7a90jpeg.jpeg?imageView2/1/w/750/h/750',
-            images: ['http://fuss10.elemecdn.com/8/a6/453f65f16b1391942af11511b7a90jpeg.jpeg?imageView2/1/w/750/h/750']
-          },
-          {
-            name: '香酥鸡腿',
-            icon: 'http://fuss10.elemecdn.com/8/a6/453f65f16b1391942af11511b7a90jpeg.jpeg?imageView2/1/w/114/h/114',
-            description: '外焦里嫩,美味多汁',
-            info: '鸡腿',
-            sellCount: 52,
-            price: 10,
-            // oldPrice: 12,
-            rating: 100,
-            image: 'http://fuss10.elemecdn.com/8/a6/453f65f16b1391942af11511b7a90jpeg.jpeg?imageView2/1/w/750/h/750',
-            images: ['http://fuss10.elemecdn.com/8/a6/453f65f16b1391942af11511b7a90jpeg.jpeg?imageView2/1/w/750/h/750']
-          },
-          {
-            name: '椰蓉大福2个',
-            icon: 'http://fuss10.elemecdn.com/8/a6/453f65f16b1391942af11511b7a90jpeg.jpeg?imageView2/1/w/114/h/114',
-            description: '超好吃,就是奇特的缘分',
-            info: '糯米',
-            sellCount: 24,
-            price: 6,
-            // oldPrice: 12,
-            rating: 100,
-            image: 'http://fuss10.elemecdn.com/8/a6/453f65f16b1391942af11511b7a90jpeg.jpeg?imageView2/1/w/750/h/750',
-            images: ['http://fuss10.elemecdn.com/8/a6/453f65f16b1391942af11511b7a90jpeg.jpeg?imageView2/1/w/750/h/750']
-          },
-          {
-            name: '【特价】香辣鸡腿堡',
-            icon: 'http://fuss10.elemecdn.com/8/a6/453f65f16b1391942af11511b7a90jpeg.jpeg?imageView2/1/w/114/h/114',
-            description: '精选上等无骨鸡腿肉,用秘方腌制,手工裹上优质面粉,喷炸至黄金喷香,酥脆鲜嫩,配以金典沙拉,给你更美味的享受',
-            info: '鸡肉',
-            sellCount: 38,
-            price: 1,
-            oldPrice: 12,
             rating: 100,
             image: 'http://fuss10.elemecdn.com/8/a6/453f65f16b1391942af11511b7a90jpeg.jpeg?imageView2/1/w/750/h/750',
             images: ['http://fuss10.elemecdn.com/8/a6/453f65f16b1391942af11511b7a90jpeg.jpeg?imageView2/1/w/750/h/750']
@@ -642,395 +537,318 @@ const shopGoodsList = [
         ]
       },
       {
-        name: '优惠',
+        name: '豆腐脑',
         icon: 'https://fuss10.elemecdn.com/0/6a/05b267f338acfeb8bd682d16e836dpng.png',
         foods: [
           {
-            name: '【特价】香辣鸡腿堡',
-            icon: 'http://fuss10.elemecdn.com/8/a6/453f65f16b1391942af11511b7a90jpeg.jpeg?imageView2/1/w/114/h/114',
-            description: '精选上等无骨鸡腿肉,用秘方腌制,手工裹上优质面粉,喷炸至黄金喷香,酥脆鲜嫩,配以金典沙拉,给你更美味的享受',
-            info: '鸡肉',
-            sellCount: 38,
-            price: 1,
-            oldPrice: 12,
-            rating: 100,
-            image: 'http://fuss10.elemecdn.com/8/a6/453f65f16b1391942af11511b7a90jpeg.jpeg?imageView2/1/w/750/h/750',
-            images: ['http://fuss10.elemecdn.com/8/a6/453f65f16b1391942af11511b7a90jpeg.jpeg?imageView2/1/w/750/h/750']
-          },
-          {
-            name: '【超值】黄金板烧堡套餐',
-            icon: 'http://fuss10.elemecdn.com/8/a6/453f65f16b1391942af11511b7a90jpeg.jpeg?imageView2/1/w/114/h/114',
-            description: '黄金板烧堡+伴翅+2串脆骨+百分小吃+中可',
-            info: '鸡肉',
-            sellCount: 34,
-            price: 25,
-            oldPrice: 47,
-            image: 'http://fuss10.elemecdn.com/8/a6/453f65f16b1391942af11511b7a90jpeg.jpeg?imageView2/1/w/750/h/750',
-            images: ['http://fuss10.elemecdn.com/8/a6/453f65f16b1391942af11511b7a90jpeg.jpeg?imageView2/1/w/750/h/750']
-          },
-          {
-            name: '鲜香牛肉煲',
-            icon: 'http://fuss10.elemecdn.com/8/a6/453f65f16b1391942af11511b7a90jpeg.jpeg?imageView2/1/w/114/h/114',
-            description: '精选澳洲进口牛肉,搭配多情黑胡椒,加上特制酱汁,咬一口,唇齿留香,牛气冲天',
-            info: '牛肉',
-            sellCount: 2,
-            price: 7.7,
-            oldPrice: 14,
-            rating: 100,
-            image: 'http://fuss10.elemecdn.com/8/a6/453f65f16b1391942af11511b7a90jpeg.jpeg?imageView2/1/w/750/h/750',
-            images: ['http://fuss10.elemecdn.com/8/a6/453f65f16b1391942af11511b7a90jpeg.jpeg?imageView2/1/w/750/h/750']
-          },
-          {
-            name: '【热销】墨西哥鸡肉卷套餐',
-            icon: 'http://fuss10.elemecdn.com/8/a6/453f65f16b1391942af11511b7a90jpeg.jpeg?imageView2/1/w/114/h/114',
-            description: '墨西哥鸡肉卷+伴翅+1脆骨+中可',
-            info: '鸡肉',
-            sellCount: 9,
-            price: 19.8,
-            oldPrice: 35,
-            image: 'http://fuss10.elemecdn.com/8/a6/453f65f16b1391942af11511b7a90jpeg.jpeg?imageView2/1/w/750/h/750',
-            images: ['http://fuss10.elemecdn.com/8/a6/453f65f16b1391942af11511b7a90jpeg.jpeg?imageView2/1/w/750/h/750']
-          },
-          {
-            name: '【热销】Q弹鲜虾堡套餐',
-            icon: 'http://fuss10.elemecdn.com/8/a6/453f65f16b1391942af11511b7a90jpeg.jpeg?imageView2/1/w/114/h/114',
-            description: 'Q弹鲜虾堡+伴翅+上校+中可',
-            info: '虾',
-            sellCount: 9,
-            price: 23,
-            oldPrice: 38,
-            image: 'http://fuss10.elemecdn.com/8/a6/453f65f16b1391942af11511b7a90jpeg.jpeg?imageView2/1/w/750/h/750',
-            images: ['http://fuss10.elemecdn.com/8/a6/453f65f16b1391942af11511b7a90jpeg.jpeg?imageView2/1/w/750/h/750']
-          },
-          {
-            name: '香芋甜心',
-            icon: 'http://fuss10.elemecdn.com/8/a6/453f65f16b1391942af11511b7a90jpeg.jpeg?imageView2/1/w/114/h/114',
-            description: '我是小甜心哦',
-            info: '香芋',
-            sellCount: 2,
-            price: 5.5,
-            oldPrice: 9,
-            image: 'http://fuss10.elemecdn.com/8/a6/453f65f16b1391942af11511b7a90jpeg.jpeg?imageView2/1/w/750/h/750',
-            images: ['http://fuss10.elemecdn.com/8/a6/453f65f16b1391942af11511b7a90jpeg.jpeg?imageView2/1/w/750/h/750']
-          },
-          {
-            name: '【全家福】全家福套餐',
-            icon: 'http://fuss10.elemecdn.com/8/a6/453f65f16b1391942af11511b7a90jpeg.jpeg?imageView2/1/w/114/h/114',
-            description: '蜜汁全鸡+鸡肉卷+2腿堡+鸡米花+薯条+伴翅(1对)+上校鸡块+百分小吃+3中可',
-            info: '鸡肉',
-            sellCount: 5,
-            price: 79.9,
-            oldPrice: 125,
-            image: 'http://fuss10.elemecdn.com/8/a6/453f65f16b1391942af11511b7a90jpeg.jpeg?imageView2/1/w/750/h/750',
-            images: ['http://fuss10.elemecdn.com/8/a6/453f65f16b1391942af11511b7a90jpeg.jpeg?imageView2/1/w/750/h/750']
-          },
-          {
-            name: '【招牌】香辣鸡腿堡套餐',
+            name: '蛋冲牛肉豆腐脑',
             icon: 'http://fuss10.elemecdn.com/8/a6/453f65f16b1391942af11511b7a90jpeg.jpeg?imageView2/1/w/114/h/114',
             description: '',
-            info: '鸡肉',
-            sellCount: 6,
-            price: 23,
-            oldPrice: 35,
-            image: 'http://fuss10.elemecdn.com/8/a6/453f65f16b1391942af11511b7a90jpeg.jpeg?imageView2/1/w/750/h/750',
-            images: ['http://fuss10.elemecdn.com/8/a6/453f65f16b1391942af11511b7a90jpeg.jpeg?imageView2/1/w/750/h/750']
-          },
-          {
-            name: '番茄酱',
-            icon: 'http://fuss10.elemecdn.com/8/a6/453f65f16b1391942af11511b7a90jpeg.jpeg?imageView2/1/w/114/h/114',
-            description: '亲,点我味道更好哟!',
-            info: '番茄',
+            info: '',
             sellCount: 4,
-            price: 0.2,
-            oldPrice: 0.3,
+            price: 13,
+            // oldPrice: 12,
+            rating: 100,
+            image: 'http://fuss10.elemecdn.com/8/a6/453f65f16b1391942af11511b7a90jpeg.jpeg?imageView2/1/w/750/h/750',
+            images: ['http://fuss10.elemecdn.com/8/a6/453f65f16b1391942af11511b7a90jpeg.jpeg?imageView2/1/w/750/h/750']
+          },
+          {
+            name: '肥肠豆腐脑',
+            icon: 'http://fuss10.elemecdn.com/8/a6/453f65f16b1391942af11511b7a90jpeg.jpeg?imageView2/1/w/114/h/114',
+            description: '肥肠鲜香厚重,质感香醇,豆花滑嫩,辣而不燥,开胃爽口,适合有便秘和气血虚的人群',
+            info: '猪大肠',
+            sellCount: 4,
+            price: 12,
+            // oldPrice: 12,
+            rating: 100,
+            image: 'http://fuss10.elemecdn.com/8/a6/453f65f16b1391942af11511b7a90jpeg.jpeg?imageView2/1/w/750/h/750',
+            images: ['http://fuss10.elemecdn.com/8/a6/453f65f16b1391942af11511b7a90jpeg.jpeg?imageView2/1/w/750/h/750']
+          },
+          {
+            name: '牛肉豆腐脑',
+            icon: 'http://fuss10.elemecdn.com/8/a6/453f65f16b1391942af11511b7a90jpeg.jpeg?imageView2/1/w/114/h/114',
+            description: '其色泽美观、营养丰富又利于消化，食后回味悠长',
+            info: '牛肉',
+            sellCount: 18,
+            price: 12,
+            // oldPrice: 47,
+            image: 'http://fuss10.elemecdn.com/8/a6/453f65f16b1391942af11511b7a90jpeg.jpeg?imageView2/1/w/750/h/750',
+            images: ['http://fuss10.elemecdn.com/8/a6/453f65f16b1391942af11511b7a90jpeg.jpeg?imageView2/1/w/750/h/750']
+          },
+          {
+            name: '糖醋豆腐脑',
+            icon: 'http://fuss10.elemecdn.com/8/a6/453f65f16b1391942af11511b7a90jpeg.jpeg?imageView2/1/w/114/h/114',
+            description: '',
+            info: '其他',
+            sellCount: 4,
+            price: 12,
+            // oldPrice: 14,
+            rating: 100,
+            image: 'http://fuss10.elemecdn.com/8/a6/453f65f16b1391942af11511b7a90jpeg.jpeg?imageView2/1/w/750/h/750',
+            images: ['http://fuss10.elemecdn.com/8/a6/453f65f16b1391942af11511b7a90jpeg.jpeg?imageView2/1/w/750/h/750']
+          },
+          {
+            name: '素豆腐脑',
+            icon: 'http://fuss10.elemecdn.com/8/a6/453f65f16b1391942af11511b7a90jpeg.jpeg?imageView2/1/w/114/h/114',
+            description: '细嫩以及柔软、口感润滑',
+            info: '豆腐',
+            sellCount: 3,
+            price: 8,
+            // oldPrice: 35,
+            image: 'http://fuss10.elemecdn.com/8/a6/453f65f16b1391942af11511b7a90jpeg.jpeg?imageView2/1/w/750/h/750',
+            images: ['http://fuss10.elemecdn.com/8/a6/453f65f16b1391942af11511b7a90jpeg.jpeg?imageView2/1/w/750/h/750']
+          },
+          {
+            name: '酥肉豆腐脑',
+            icon: 'http://fuss10.elemecdn.com/8/a6/453f65f16b1391942af11511b7a90jpeg.jpeg?imageView2/1/w/114/h/114',
+            description: '香酥、嫩滑、爽口、肥而不腻',
+            info: '猪肉',
+            sellCount: 5,
+            price: 12,
+            // oldPrice: 38,
+            image: 'http://fuss10.elemecdn.com/8/a6/453f65f16b1391942af11511b7a90jpeg.jpeg?imageView2/1/w/750/h/750',
+            images: ['http://fuss10.elemecdn.com/8/a6/453f65f16b1391942af11511b7a90jpeg.jpeg?imageView2/1/w/750/h/750']
+          },
+          {
+            name: '新客专享素豆腐脑',
+            icon: 'http://fuss10.elemecdn.com/8/a6/453f65f16b1391942af11511b7a90jpeg.jpeg?imageView2/1/w/114/h/114',
+            description: '',
+            info: '',
+            sellCount: 0,
+            price: 15,
+            // oldPrice: 9,
             image: 'http://fuss10.elemecdn.com/8/a6/453f65f16b1391942af11511b7a90jpeg.jpeg?imageView2/1/w/750/h/750',
             images: ['http://fuss10.elemecdn.com/8/a6/453f65f16b1391942af11511b7a90jpeg.jpeg?imageView2/1/w/750/h/750']
           }
         ]
       },
       {
-        name: '店长力推',
+        name: '小吃',
         foods: [
           {
-            name: '墨西哥鸡肉卷+小可套餐',
+            name: '醪糟汤圆蛋',
             icon: 'http://fuss10.elemecdn.com/8/a6/453f65f16b1391942af11511b7a90jpeg.jpeg?imageView2/1/w/114/h/114',
-            description: '墨西哥鸡肉卷+小可',
-            info: '鸡肉',
-            sellCount: 23,
-            price: 16,
-            image: 'http://fuss10.elemecdn.com/8/a6/453f65f16b1391942af11511b7a90jpeg.jpeg?imageView2/1/w/750/h/750',
-            images: ['http://fuss10.elemecdn.com/8/a6/453f65f16b1391942af11511b7a90jpeg.jpeg?imageView2/1/w/750/h/750']
-          }
-        ]
-      },
-      {
-        name: '主食类',
-        foods: [
-          {
-            name: '脆皮全鸡',
-            icon: 'http://fuss10.elemecdn.com/8/a6/453f65f16b1391942af11511b7a90jpeg.jpeg?imageView2/1/w/114/h/114',
-            info: '鸡肉',
-            sellCount: 77,
-            price: 26,
-            oldPrice: 28,
+            description: '两个蛋',
+            info: '其他',
+            sellCount: 0,
+            price: 12,
             image: 'http://fuss10.elemecdn.com/8/a6/453f65f16b1391942af11511b7a90jpeg.jpeg?imageView2/1/w/750/h/750',
             images: ['http://fuss10.elemecdn.com/8/a6/453f65f16b1391942af11511b7a90jpeg.jpeg?imageView2/1/w/750/h/750']
           },
           {
-            name: '美味鳕鱼堡',
+            name: '怪味小土豆',
             icon: 'http://fuss10.elemecdn.com/8/a6/453f65f16b1391942af11511b7a90jpeg.jpeg?imageView2/1/w/114/h/114',
-            description: '甄选亚洲渔港进口鳕鱼,搭配香酥营养的面包,加上浓郁的沙拉酱,饱满多汁的鱼肉存留在齿尖丝丝鲜美,体味海鲜的绝妙好味',
-            info: '鳕鱼',
-            sellCount: 9,
-            price: 8.4,
-            oldPrice: 14,
+            description: '糖醋麻辣味',
+            info: '其他',
+            sellCount: 3,
+            price: 9,
             image: 'http://fuss10.elemecdn.com/8/a6/453f65f16b1391942af11511b7a90jpeg.jpeg?imageView2/1/w/750/h/750',
             images: ['http://fuss10.elemecdn.com/8/a6/453f65f16b1391942af11511b7a90jpeg.jpeg?imageView2/1/w/750/h/750']
           },
           {
-            name: '美味鳕鱼卷',
+            name: '锅巴土豆(麻辣味)',
             icon: 'http://fuss10.elemecdn.com/8/a6/453f65f16b1391942af11511b7a90jpeg.jpeg?imageView2/1/w/114/h/114',
-            description: '甄选亚洲渔港进口鳕鱼,饱满多汁的鱼肉存留在齿尖丝丝鲜美,体味海鲜的绝妙好味',
-            info: '鳕鱼',
+            description: '不要葱请备注一下',
+            info: '其他',
             sellCount: 2,
+            price: 9,
+            image: 'http://fuss10.elemecdn.com/8/a6/453f65f16b1391942af11511b7a90jpeg.jpeg?imageView2/1/w/750/h/750',
+            images: ['http://fuss10.elemecdn.com/8/a6/453f65f16b1391942af11511b7a90jpeg.jpeg?imageView2/1/w/750/h/750']
+          },
+          {
+            name: '牛肉粉',
+            icon: 'http://fuss10.elemecdn.com/8/a6/453f65f16b1391942af11511b7a90jpeg.jpeg?imageView2/1/w/114/h/114',
+            description: '',
+            info: '其他',
+            sellCount: 1,
+            price: 12,
+            image: 'http://fuss10.elemecdn.com/8/a6/453f65f16b1391942af11511b7a90jpeg.jpeg?imageView2/1/w/750/h/750',
+            images: ['http://fuss10.elemecdn.com/8/a6/453f65f16b1391942af11511b7a90jpeg.jpeg?imageView2/1/w/750/h/750']
+          },
+          {
+            name: '蒸饺',
+            icon: 'http://fuss10.elemecdn.com/8/a6/453f65f16b1391942af11511b7a90jpeg.jpeg?imageView2/1/w/114/h/114',
+            description: '',
+            info: '其他',
+            sellCount: 3,
             price: 14,
             image: 'http://fuss10.elemecdn.com/8/a6/453f65f16b1391942af11511b7a90jpeg.jpeg?imageView2/1/w/750/h/750',
             images: ['http://fuss10.elemecdn.com/8/a6/453f65f16b1391942af11511b7a90jpeg.jpeg?imageView2/1/w/750/h/750']
           },
           {
-            id: 1,
-            name: '一统鸡',
+            name: '抄手',
             icon: 'http://fuss10.elemecdn.com/8/a6/453f65f16b1391942af11511b7a90jpeg.jpeg?imageView2/1/w/114/h/114',
-            description: '全翅+胸排+腿排+琵琶腿',
-            info: '鸡肉',
-            sellCount: 114,
-            price: 30,
-            // oldPrice: 12,
-            rating: 100,
+            description: '',
+            info: '其他',
+            sellCount: 3,
+            price: 9,
+            image: 'http://fuss10.elemecdn.com/8/a6/453f65f16b1391942af11511b7a90jpeg.jpeg?imageView2/1/w/750/h/750',
+            images: ['http://fuss10.elemecdn.com/8/a6/453f65f16b1391942af11511b7a90jpeg.jpeg?imageView2/1/w/750/h/750']
+          },
+          {
+            name: '牛肉面',
+            icon: 'http://fuss10.elemecdn.com/8/a6/453f65f16b1391942af11511b7a90jpeg.jpeg?imageView2/1/w/114/h/114',
+            description: '',
+            info: '其他',
+            sellCount: 3,
+            price: 9,
+            image: 'http://fuss10.elemecdn.com/8/a6/453f65f16b1391942af11511b7a90jpeg.jpeg?imageView2/1/w/750/h/750',
+            images: ['http://fuss10.elemecdn.com/8/a6/453f65f16b1391942af11511b7a90jpeg.jpeg?imageView2/1/w/750/h/750']
+          },
+          {
+            name: '臊子面',
+            icon: 'http://fuss10.elemecdn.com/8/a6/453f65f16b1391942af11511b7a90jpeg.jpeg?imageView2/1/w/114/h/114',
+            description: '',
+            info: '其他',
+            sellCount: 3,
+            price: 9,
+            image: 'http://fuss10.elemecdn.com/8/a6/453f65f16b1391942af11511b7a90jpeg.jpeg?imageView2/1/w/750/h/750',
+            images: ['http://fuss10.elemecdn.com/8/a6/453f65f16b1391942af11511b7a90jpeg.jpeg?imageView2/1/w/750/h/750']
+          },
+          {
+            name: '芋圆西米露',
+            icon: 'http://fuss10.elemecdn.com/8/a6/453f65f16b1391942af11511b7a90jpeg.jpeg?imageView2/1/w/114/h/114',
+            description: '两蛋',
+            info: '小麦粉',
+            sellCount: 0,
+            price: 20,
+            image: 'http://fuss10.elemecdn.com/8/a6/453f65f16b1391942af11511b7a90jpeg.jpeg?imageView2/1/w/750/h/750',
+            images: ['http://fuss10.elemecdn.com/8/a6/453f65f16b1391942af11511b7a90jpeg.jpeg?imageView2/1/w/750/h/750']
+          },
+          {
+            name: '酸辣粉',
+            icon: 'http://fuss10.elemecdn.com/8/a6/453f65f16b1391942af11511b7a90jpeg.jpeg?imageView2/1/w/114/h/114',
+            description: '',
+            info: '其他',
+            sellCount: 2,
+            price: 11,
+            image: 'http://fuss10.elemecdn.com/8/a6/453f65f16b1391942af11511b7a90jpeg.jpeg?imageView2/1/w/750/h/750',
+            images: ['http://fuss10.elemecdn.com/8/a6/453f65f16b1391942af11511b7a90jpeg.jpeg?imageView2/1/w/750/h/750']
+          },
+          {
+            name: '鸡汤饭',
+            icon: 'http://fuss10.elemecdn.com/8/a6/453f65f16b1391942af11511b7a90jpeg.jpeg?imageView2/1/w/114/h/114',
+            description: '',
+            info: '其他',
+            sellCount: 3,
+            price: 14,
+            image: 'http://fuss10.elemecdn.com/8/a6/453f65f16b1391942af11511b7a90jpeg.jpeg?imageView2/1/w/750/h/750',
+            images: ['http://fuss10.elemecdn.com/8/a6/453f65f16b1391942af11511b7a90jpeg.jpeg?imageView2/1/w/750/h/750']
+          },
+          {
+            name: '芒果西米露',
+            icon: 'http://fuss10.elemecdn.com/8/a6/453f65f16b1391942af11511b7a90jpeg.jpeg?imageView2/1/w/114/h/114',
+            description: '',
+            info: '其他',
+            sellCount: 1,
+            price: 35,
+            image: 'http://fuss10.elemecdn.com/8/a6/453f65f16b1391942af11511b7a90jpeg.jpeg?imageView2/1/w/750/h/750',
+            images: ['http://fuss10.elemecdn.com/8/a6/453f65f16b1391942af11511b7a90jpeg.jpeg?imageView2/1/w/750/h/750']
+          },
+          {
+            name: '钵钵鸡',
+            icon: 'http://fuss10.elemecdn.com/8/a6/453f65f16b1391942af11511b7a90jpeg.jpeg?imageView2/1/w/114/h/114',
+            description: '',
+            info: '酱菜',
+            sellCount: 4,
+            price: 20,
+            image: 'http://fuss10.elemecdn.com/8/a6/453f65f16b1391942af11511b7a90jpeg.jpeg?imageView2/1/w/750/h/750',
+            images: ['http://fuss10.elemecdn.com/8/a6/453f65f16b1391942af11511b7a90jpeg.jpeg?imageView2/1/w/750/h/750']
+          },
+          {
+            name: '椰奶西米露',
+            icon: 'http://fuss10.elemecdn.com/8/a6/453f65f16b1391942af11511b7a90jpeg.jpeg?imageView2/1/w/114/h/114',
+            description: '水果和西米融合，味道极好',
+            info: '椰果',
+            sellCount: 1,
+            price: 15,
+            image: 'http://fuss10.elemecdn.com/8/a6/453f65f16b1391942af11511b7a90jpeg.jpeg?imageView2/1/w/750/h/750',
+            images: ['http://fuss10.elemecdn.com/8/a6/453f65f16b1391942af11511b7a90jpeg.jpeg?imageView2/1/w/750/h/750']
+          },
+          {
+            name: '狼牙土豆(麻辣味)',
+            icon: 'http://fuss10.elemecdn.com/8/a6/453f65f16b1391942af11511b7a90jpeg.jpeg?imageView2/1/w/114/h/114',
+            description: '不要葱请备注一下',
+            info: '其他',
+            sellCount: 9,
+            price: 9,
             image: 'http://fuss10.elemecdn.com/8/a6/453f65f16b1391942af11511b7a90jpeg.jpeg?imageView2/1/w/750/h/750',
             images: ['http://fuss10.elemecdn.com/8/a6/453f65f16b1391942af11511b7a90jpeg.jpeg?imageView2/1/w/750/h/750']
           }
         ]
       },
       {
-        name: '爽口凉菜',
+        name: '夹饼',
         foods: [
           {
-            name: '八宝酱菜',
-            price: 4,
-            oldPrice: '',
+            name: '牛肉夹饼',
+            icon: 'http://fuss10.elemecdn.com/8/a6/453f65f16b1391942af11511b7a90jpeg.jpeg?imageView2/1/w/114/h/114',
+            description: '麻辣、咸鲜、爽口',
+            info: '牛肉',
+            sellCount: 5,
+            price: 8.8,
+            // oldPrice: 28,
+            image: 'http://fuss10.elemecdn.com/8/a6/453f65f16b1391942af11511b7a90jpeg.jpeg?imageView2/1/w/750/h/750',
+            images: ['http://fuss10.elemecdn.com/8/a6/453f65f16b1391942af11511b7a90jpeg.jpeg?imageView2/1/w/750/h/750']
+          },
+          {
+            name: '白饼',
+            icon: 'http://fuss10.elemecdn.com/8/a6/453f65f16b1391942af11511b7a90jpeg.jpeg?imageView2/1/w/114/h/114',
             description: '',
-            sellCount: 84,
-            rating: 100,
             info: '',
+            sellCount: 1,
+            price: 3,
+            // oldPrice: 14,
+            image: 'http://fuss10.elemecdn.com/8/a6/453f65f16b1391942af11511b7a90jpeg.jpeg?imageView2/1/w/750/h/750',
+            images: ['http://fuss10.elemecdn.com/8/a6/453f65f16b1391942af11511b7a90jpeg.jpeg?imageView2/1/w/750/h/750']
+          },
+          {
+            name: '肥肠夹饼',
+            icon: 'http://fuss10.elemecdn.com/8/a6/453f65f16b1391942af11511b7a90jpeg.jpeg?imageView2/1/w/114/h/114',
+            description: '夹饼咸鲜香辣、重油重酱',
+            info: '猪大肠',
+            sellCount: 5,
+            price: 8.8,
+            image: 'http://fuss10.elemecdn.com/8/a6/453f65f16b1391942af11511b7a90jpeg.jpeg?imageView2/1/w/750/h/750',
+            images: ['http://fuss10.elemecdn.com/8/a6/453f65f16b1391942af11511b7a90jpeg.jpeg?imageView2/1/w/750/h/750']
+          }
+        ]
+      },
+      {
+        name: '蒸肉',
+        foods: [
+          {
+            name: '蒸牛肉10笼',
+            price: 28,
+            // oldPrice: '',
+            description: '麻、辣、香、白味咸鲜中仍带点微辣',
+            sellCount: 1,
+            rating: 100,
+            info: '牛肉',
             icon: 'http://fuss10.elemecdn.com/9/b5/469d8854f9a3a03797933fd01398bjpeg.jpeg?imageView2/1/w/114/h/114',
             image: 'http://fuss10.elemecdn.com/9/b5/469d8854f9a3a03797933fd01398bjpeg.jpeg?imageView2/1/w/750/h/750'
           },
           {
-            name: '拍黄瓜',
-            price: 9,
-            oldPrice: '',
+            name: '小笼蒸肉',
+            price: 3,
+            // oldPrice: '',
             description: '',
-            sellCount: 28,
+            sellCount: 8,
             rating: 100,
             info: '',
             icon: 'http://fuss10.elemecdn.com/6/54/f654985b4e185f06eb07f8fa2b2e8jpeg.jpeg?imageView2/1/w/114/h/114',
             image: 'http://fuss10.elemecdn.com/6/54/f654985b4e185f06eb07f8fa2b2e8jpeg.jpeg?imageView2/1/w/750/h/750'
-          }
-        ]
-      },
-      {
-        name: '精选套餐',
-        foods: [
-          {
-            name: '红豆薏米粥套餐',
-            price: 37,
-            oldPrice: '',
-            description: '红豆薏米粥,三鲜干蒸烧卖,拍黄瓜',
-            sellCount: 3,
-            rating: 100,
-            info: '',
-            icon: 'http://fuss10.elemecdn.com/f/49/27f26ed00c025b2200a9ccbb7e67ejpeg.jpeg?imageView2/1/w/114/h/114',
-            image: 'http://fuss10.elemecdn.com/f/49/27f26ed00c025b2200a9ccbb7e67ejpeg.jpeg?imageView2/1/w/750/h/750'
           },
           {
-            name: '皮蛋瘦肉粥套餐',
-            price: 31,
-            oldPrice: '',
-            description: '',
-            sellCount: 12,
-            rating: 100,
-            info: '',
-            icon: 'http://fuss10.elemecdn.com/8/96/f444a8087f0e940ef264617f9d98ajpeg.jpeg?imageView2/1/w/114/h/114',
-            image: 'http://fuss10.elemecdn.com/8/96/f444a8087f0e940ef264617f9d98ajpeg.jpeg?imageView2/1/w/750/h/750'
-          }
-        ]
-      },
-      {
-        name: '果拼果汁',
-        foods: [
-          {
-            name: '蜜瓜圣女萝莉杯',
-            price: 6,
-            oldPrice: '',
-            description: '',
+            name: '蒸肥肠10笼',
+            price: 28,
+            // oldPrice: '',
+            description: '营养丰富,味道鲜美,而且有着健脾开胃的作用',
             sellCount: 1,
-            rating: '',
-            info: '',
-            icon: 'http://fuss10.elemecdn.com/b/5f/b3b04c259d5ec9fa52e1856ee50dajpeg.jpeg?imageView2/1/w/114/h/114',
-            image: 'http://fuss10.elemecdn.com/b/5f/b3b04c259d5ec9fa52e1856ee50dajpeg.jpeg?imageView2/1/w/750/h/750'
-          },
-          {
-            name: '加多宝',
-            price: 6,
-            oldPrice: '',
-            description: '',
-            sellCount: 7,
             rating: 100,
-            info: '',
-            icon: 'http://fuss10.elemecdn.com/b/9f/5e6c99c593cf65229225c5661bcdejpeg.jpeg?imageView2/1/w/114/h/114',
-            image: 'http://fuss10.elemecdn.com/b/9f/5e6c99c593cf65229225c5661bcdejpeg.jpeg?imageView2/1/w/750/h/750'
-          },
-          {
-            name: 'VC无限橙果汁',
-            price: 8,
-            oldPrice: 10,
-            description: '',
-            sellCount: 15,
-            rating: 100,
-            info: '',
-            icon: 'http://fuss10.elemecdn.com/e/c6/f348e811772016ae24e968238bcbfjpeg.jpeg?imageView2/1/w/114/h/114',
-            image: 'http://fuss10.elemecdn.com/e/c6/f348e811772016ae24e968238bcbfjpeg.jpeg?imageView2/1/w/750/h/750'
-          }
-        ]
-      },
-      {
-        name: '小吃主食',
-        foods: [
-          {
-            name: '扁豆焖面',
-            price: 14,
-            oldPrice: '',
-            description: '',
-            sellCount: 188,
-            rating: 96,
-            info: '',
-            icon: 'http://fuss10.elemecdn.com/c/6b/29e3d29b0db63d36f7c500bca31d8jpeg.jpeg?imageView2/1/w/114/h/114',
-            image: 'http://fuss10.elemecdn.com/c/6b/29e3d29b0db63d36f7c500bca31d8jpeg.jpeg?imageView2/1/w/750/h/750'
-          },
-          {
-            name: '葱花饼',
-            price: 10,
-            oldPrice: '',
-            description: '',
-            sellCount: 124,
-            rating: 85,
-            info: '',
-            icon: 'http://fuss10.elemecdn.com/f/28/a51e7b18751bcdf871648a23fd3b4jpeg.jpeg?imageView2/1/w/114/h/114',
-            image: 'http://fuss10.elemecdn.com/f/28/a51e7b18751bcdf871648a23fd3b4jpeg.jpeg?imageView2/1/w/750/h/750'
-          },
-          {
-            name: '牛肉馅饼',
-            price: 14,
-            oldPrice: '',
-            description: '',
-            sellCount: 114,
-            rating: 91,
-            info: '',
-            icon: 'http://fuss10.elemecdn.com/d/b9/bcab0e8ad97758e65ae5a62b2664ejpeg.jpeg?imageView2/1/w/114/h/114',
-            image: 'http://fuss10.elemecdn.com/d/b9/bcab0e8ad97758e65ae5a62b2664ejpeg.jpeg?imageView2/1/w/750/h/750'
-          },
-          {
-            name: '招牌猪肉白菜锅贴/10个',
-            price: 17,
-            oldPrice: '',
-            description: '',
-            sellCount: 101,
-            rating: 78,
-            info: '',
-            icon: 'http://fuss10.elemecdn.com/7/72/9a580c1462ca1e4d3c07e112bc035jpeg.jpeg?imageView2/1/w/114/h/114',
-            image: 'http://fuss10.elemecdn.com/7/72/9a580c1462ca1e4d3c07e112bc035jpeg.jpeg?imageView2/1/w/750/h/750'
-          },
-          {
-            name: '糊塌子',
-            price: 10,
-            oldPrice: '',
-            description: '',
-            sellCount: 80,
-            rating: 93,
-            info: '',
-            icon: 'http://fuss10.elemecdn.com/0/05/097a2a59fd2a2292d08067e16380cjpeg.jpeg?imageView2/1/w/114/h/114',
-            image: 'http://fuss10.elemecdn.com/0/05/097a2a59fd2a2292d08067e16380cjpeg.jpeg?imageView2/1/w/750/h/750'
-          }
-        ]
-      },
-      {
-        name: '特色粥品',
-        foods: [
-          {
-            name: '皮蛋瘦肉粥',
-            price: 10,
-            oldPrice: '',
-            description: '咸粥',
-            sellCount: 229,
-            rating: 100,
-            icon: 'http://fuss10.elemecdn.com/c/cd/c12745ed8a5171e13b427dbc39401jpeg.jpeg?imageView2/1/w/114/h/114',
-            image: 'http://fuss10.elemecdn.com/c/cd/c12745ed8a5171e13b427dbc39401jpeg.jpeg?imageView2/1/w/750/h/750'
-          },
-          {
-            name: '南瓜粥',
-            price: 9,
-            oldPrice: '',
-            description: '甜粥',
-            sellCount: 91,
-            rating: 100,
-            info: '',
-            icon: 'http://fuss10.elemecdn.com/8/a6/453f65f16b1391942af11511b7a90jpeg.jpeg?imageView2/1/w/114/h/114',
-            image: 'http://fuss10.elemecdn.com/8/a6/453f65f16b1391942af11511b7a90jpeg.jpeg?imageView2/1/w/750/h/750'
-          },
-          {
-            name: '红豆薏米美肤粥',
-            price: 12,
-            oldPrice: '',
-            description: '甜粥',
-            sellCount: 86,
-            rating: 100,
-            info: '',
-            icon: 'http://fuss10.elemecdn.com/d/22/260bd78ee6ac6051136c5447fe307jpeg.jpeg?imageView2/1/w/114/h/114',
-            image: 'http://fuss10.elemecdn.com/d/22/260bd78ee6ac6051136c5447fe307jpeg.jpeg?imageView2/1/w/750/h/750'
-          },
-          {
-            name: '红枣山药糙米粥',
-            price: 10,
-            oldPrice: '',
-            description: '',
-            sellCount: 81,
-            rating: 91,
-            info: '',
+            info: '猪大肠',
             icon: 'http://fuss10.elemecdn.com/9/b5/469d8854f9a3a03797933fd01398bjpeg.jpeg?imageView2/1/w/114/h/114',
             image: 'http://fuss10.elemecdn.com/9/b5/469d8854f9a3a03797933fd01398bjpeg.jpeg?imageView2/1/w/750/h/750'
-          },
-          {
-            name: '鲜蔬菌菇粥',
-            price: 11,
-            oldPrice: '',
-            description: '咸粥',
-            sellCount: 56,
-            rating: 100,
-            info: '',
-            icon: 'http://fuss10.elemecdn.com/e/a3/5317c68dd618929b6ac05804e429ajpeg.jpeg?imageView2/1/w/114/h/114',
-            image: 'http://fuss10.elemecdn.com/e/a3/5317c68dd618929b6ac05804e429ajpeg.jpeg?imageView2/1/w/750/h/750'
-          },
-          {
-            name: '田园蔬菜粥',
-            price: 10,
-            oldPrice: '',
-            description: '咸粥',
-            sellCount: 33,
-            rating: 100,
-            info: '',
-            icon: 'http://fuss10.elemecdn.com/a/94/7371083792c19df00e546b29e344cjpeg.jpeg?imageView2/1/w/114/h/114',
-            image: 'http://fuss10.elemecdn.com/a/94/7371083792c19df00e546b29e344cjpeg.jpeg?imageView2/1/w/750/h/750'
           }
         ]
       }

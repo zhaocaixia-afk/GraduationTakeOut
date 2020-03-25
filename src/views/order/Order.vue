@@ -1,6 +1,6 @@
 <template>
   <div class="cart">
-    <nav-bar bgColor="red">
+    <nav-bar>
       <div slot="left">
         <i class="el-icon-back" @click="$router.back()"></i>
       </div>

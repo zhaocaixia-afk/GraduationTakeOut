@@ -31,11 +31,10 @@ export default {
   }
   .content {
     span {
-      background: #eee;
+      background: $b-g;
       padding: 5px 15px;
       border-radius: 5px;
       display: inline-block;
-      margin-right: 10px;
       margin: 0 10px 10px 0;
     }
   }

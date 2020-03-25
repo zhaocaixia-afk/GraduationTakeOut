@@ -2,13 +2,15 @@ $green: #00b43c;
 $gray: #999;
 $white: #fff;
 $orgin: #F5A100;
-$text-color: #666;
-$blue: rgb(64, 158, 255);
 
+$text-color: rgb(136, 136, 136);
+$blue: rgb(1,168,243);
+$b-g: rgb(245, 245, 245);
 // 下边框偏白色
 .b-b {
   border-bottom: 1px solid #eee;
 }
+// 红色字体
 .c-r {
   color: red;
 }

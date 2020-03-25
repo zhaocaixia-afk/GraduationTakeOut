@@ -1,6 +1,6 @@
 <template>
   <div class="msite">
-    <nav-bar bgColor="red">
+    <nav-bar>
       <div slot="left">
         <i class="el-icon-search" @click="goSearch"></i>
       </div>
@@ -21,8 +21,8 @@
         <div class="swiper-pagination" slot="pagination"></div>
       </swiper>
       <img v-else src="~assets/img/msite/msite_back.svg" alt="" />
-      <div class="recommend">
-        <i class="iconfont icongengduo"></i>
+      <div class="nearby">
+        <i class="el-icon-s-operation"></i>
         <span>附近商家</span>
       </div>
       <shops-list :shops-list="shops"></shops-list>
@@ -34,6 +34,7 @@
 import NavBar from 'components/common/navbar/NavBar'
 import Scroll from 'components/common/scroll/Scroll'
 import { swiper, swiperSlide } from 'vue-awesome-swiper'
+
 import ShopsList from 'components/content/shops/ShopsList'
 
 import { getFoodCategorys, getShops } from 'network/msite'
@@ -68,10 +69,10 @@ export default {
     ...mapState({
       address: state => state.msite.address
     }),
-    // 1.食品分类列表 拆分 一个二维数组
+    // 1.食品分类列表 拆分成一个二维数组
     categorysArr() {
       const { categorysList } = this
-      const arr = []
+      let arr = []
       let minArr = []
       categorysList.forEach(c => {
         minArr.push(c)
@@ -87,9 +88,7 @@ export default {
     }
   },
   created() {
-    // this.getAddress()
     this._getAddress()
-
     this.getFoodCategorys()
     this.getShops()
   },
@@ -149,7 +148,7 @@ export default {
     // right: 0;
     .swiper-container {
       height: 200px;
-      border-bottom: 10px solid rgb(245, 245, 245);
+      border-bottom: 10px solid $b-g;
       .swiper-wrapper {
         .swiper-slide {
           display: flex;
@@ -171,8 +170,8 @@ export default {
         }
       }
     }
-    .recommend {
-      color: rgb(136, 136, 136);
+    .nearby {
+      color: $text-color;
       padding-top: 5px;
       i {
         margin: 0 5px;

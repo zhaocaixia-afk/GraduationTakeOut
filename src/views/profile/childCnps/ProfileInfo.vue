@@ -28,14 +28,15 @@ export default {}
 </script>
 <style scoped lang="scss">
 .profile-info {
+  border-top: 1px solid $b-g;
   display: flex;
   font-size: 14px;
   text-align: center;
   justify-content: space-between;
-  background: #f8f8f8;
+  background: $b-g;
   .info-item {
     width: 33%;
-    background: #fff;
+    background: $white;
     padding: 25px 0;
     div {
       .count {

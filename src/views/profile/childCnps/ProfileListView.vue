@@ -23,10 +23,10 @@ export default {
 
 <style scoped lang="scss">
 .profile-list-view {
-  border-top: 18px solid #f8f8f8;
+  border-top: 10px solid $b-g;
   .list-item {
     height: 50px;
-    background: #fff;
+    background: $white;
     margin-left: 16px;
     display: flex;
     align-items: center;

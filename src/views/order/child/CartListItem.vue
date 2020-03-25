@@ -37,7 +37,7 @@
         <p>
           合计<span class="c-r">¥{{ totalPrice }}</span>
         </p>
-        <p class="btn">去结算</p>
+        <p class="btn" @click="goplay(shop.shopId)">去结算</p>
       </div>
     </div>
   </div>
@@ -86,6 +86,9 @@ export default {
         .catch(() => {
           // console.log('取消')
         })
+    },
+    goplay(id) {
+      this.$router.push('/confirmOrder/' + id)
     }
   }
 }

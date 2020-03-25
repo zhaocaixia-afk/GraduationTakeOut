@@ -201,6 +201,7 @@ export default {
         // 跳转页面
         setTimeout(() => {
           this.isSuccess = false
+          this.$router.push('/msite')
         }, 2000)
       }, 2000)
     }
@@ -398,7 +399,7 @@ export default {
     flex-direction: column;
     align-items: center;
     background: rgb(240, 249, 235);
-    color: $green;
+    color: rgb(0, 133, 253);
     z-index: 10;
     padding: 10px 20px;
     i {

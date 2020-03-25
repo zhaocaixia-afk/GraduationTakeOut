@@ -1,6 +1,6 @@
 <template>
   <div class="profile">
-    <nav-bar bgColor="red">
+    <nav-bar>
       <div slot="center">我的</div>
     </nav-bar>
     <router-link :to="userInfo._id ? '/userInfo' : '/login'">
@@ -67,9 +67,10 @@ export default {
 <style lang="scss">
 .profile {
   .logout {
-    margin-top: 10px;
+    margin-top: 20px;
     text-align: center;
     button {
+      background: #f2f2f2;
       padding: 10px 90px;
       border-radius: 5px;
     }
