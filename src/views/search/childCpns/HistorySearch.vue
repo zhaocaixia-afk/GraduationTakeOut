@@ -5,7 +5,7 @@
       <slot name="delete"></slot>
     </p>
     <div class="content">
-      <span v-for="(item, index) in obj.list" :key="index">{{ item }}</span>
+      <span v-for="(item, index) in obj.list" :key="index" @click="goSearch(item)">{{ item }}</span>
     </div>
   </div>
 </template>
@@ -15,6 +15,11 @@ export default {
   name: 'HistorySearch',
   props: {
     obj: Object
+  },
+  methods: {
+    goSearch(val) {
+      this.$emit('search', val)
+    }
   }
 }
 </script>

@@ -44,6 +44,9 @@ export default {
   .center {
     flex: 1;
     font-size: 18px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 }
 </style>

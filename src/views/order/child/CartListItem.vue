@@ -166,7 +166,7 @@ export default {
       justify-content: space-between;
       align-items: center;
       .btn {
-        background: $green;
+        background: $blue;
         color: $white;
         font-size: 14px;
         padding: 10px 10px;

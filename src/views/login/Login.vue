@@ -42,7 +42,7 @@ export default {
     margin-top: 50px;
     font-size: 40px;
     font-weight: bold;
-    color: $green;
+    color: $blue;
     text-align: center;
   }
   .login-title {
@@ -53,8 +53,8 @@ export default {
     font-size: 15px;
     font-weight: 700;
     .active {
-      color: $green;
-      border-bottom: 2px solid $green;
+      color: $blue;
+      border-bottom: 2px solid $blue;
       padding-bottom: 5px;
     }
   }

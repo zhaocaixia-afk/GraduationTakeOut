@@ -7,7 +7,7 @@
       <div slot="center">{{ address.address }}</div>
       <router-link tag="div" :to="userInfo ? '/userinfo' : '/login'" slot="right">
         <i class="el-icon-user" v-if="userInfo !== null"></i>
-        <span v-else>登录|注册</span>
+        <span v-else>登录</span>
       </router-link>
     </nav-bar>
     <scroll ref="scroll" class="scroll">

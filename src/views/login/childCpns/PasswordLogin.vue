@@ -87,7 +87,7 @@ export default {
   .btn {
     text-align: center;
     .el-button {
-      background: $green;
+      background: $blue;
       color: white;
       padding: 13px 100px;
       margin-top: 20px;

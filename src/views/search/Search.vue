@@ -8,7 +8,7 @@
 
     <!-- 搜索结果 -->
     <scroll v-if="Object.keys(searchList).length !== 0" class="search-list">
-      <li class="search-item b-b" v-for="(item, index) in searchList" :key="index">
+      <li class="search-item b-b" v-for="(item, index) in searchList" :key="index" @click="goDetail(item.id)">
         <img :src="`${basicURL}${item.image_path}`" alt="" class="avatar" />
         <div class="text">
           <p class="name">
@@ -26,7 +26,7 @@
     </scroll>
 
     <div v-if="historyShow">
-      <history-search :obj="historySearch">
+      <history-search :obj="historySearch" @search="search">
         <i slot="delete" class="el-icon-delete" @click="clearStore"></i>
       </history-search>
       <history-search :obj="searchFind" />
@@ -97,7 +97,6 @@ export default {
     // 2.搜索请求函数
     async _getSearchList() {
       const res = await getSearchList(this.keyword)
-      // console.log(res)
       if (!res.code) {
         this.searchList = res.data
         this.sorry = false
@@ -143,6 +142,15 @@ export default {
           })
           .catch(() => {})
       }
+    },
+    // 9.根据搜索的结果,进入到详情页
+    goDetail(id) {
+      this.saveSearchList() //点击搜索出来的项时,要保存
+      this.$router.push('/detail/' + id)
+    },
+    // 10.点击历史搜索
+    search(val) {
+      this.keyword = val
     }
     // 4.失去焦点或者按回车键(手机端没有什么意义,看是否与键盘搜索按钮有关)
     // 问题：应该有,但是失去焦点和提交会导致两次触发
@@ -150,7 +158,7 @@ export default {
     // enter() {
     //   this.saveSearchList()
     //   this._getSearchList()
-    // },
+    // }
   },
   components: {
     HistorySearch,
